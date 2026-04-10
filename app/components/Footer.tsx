@@ -243,23 +243,26 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: 24, flexWrap: "wrap", gap: 16 }}>
-             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-               <div style={{ width: 30, height: 30, borderRadius: 8, background: "linear-gradient(135deg,#8b5cf6,#6c3bff)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                 <IconCloud size={14} color="#fff" />
-               </div>
-               <span style={{ fontWeight: 700, color: "#fff", fontSize: "1em" }}>Clivik</span>
-               <span style={{ color: "rgba(255,255,255,0.3)" }}>·</span>
-               <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.9em" }}>Digital Presence Agency</span>
-             </div>
-             
-             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95em", fontWeight: 500 }}>
-               &quot;Your Business. Online. In 5 Days.&quot;
-             </p>
+          <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: 24, display: "flex", flexDirection: "column", gap: 12 }}>
+            {/* Row 1: logo + tagline */}
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "nowrap" }}>
+              <div style={{ width: 30, height: 30, borderRadius: 8, background: "linear-gradient(135deg,#8b5cf6,#6c3bff)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <IconCloud size={14} color="#fff" />
+              </div>
+              <span style={{ fontWeight: 700, color: "#fff", fontSize: "1em", whiteSpace: "nowrap" }}>Clivik</span>
+              <span style={{ color: "rgba(255,255,255,0.3)", flexShrink: 0 }}>·</span>
+              <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.9em" }}>Digital Presence Agency</span>
+            </div>
 
-             <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "0.9em" }}>
-               &copy; 2026 Clivik. All rights reserved.
-             </p>
+            {/* Row 2: motto */}
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95em", fontWeight: 500, margin: 0 }}>
+              &quot;Your Business. Online. In 5 Days.&quot;
+            </p>
+
+            {/* Row 3: copyright */}
+            <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "0.88em", margin: 0 }}>
+              &copy; 2026 Clivik. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

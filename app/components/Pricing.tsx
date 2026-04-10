@@ -154,7 +154,14 @@ export default function Pricing() {
           <a
             href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20need%20help%20choosing%20the%20right%20plan%20for%20my%20business."
             target="_blank" rel="noopener noreferrer"
-            style={{ display: "inline-flex", background: "#25D366", color: "#fff", padding: "14px 28px", borderRadius: 12, fontSize: "1.05em", fontWeight: 600, cursor: "pointer", alignItems: "center", gap: 8, textDecoration: "none", transition: "opacity 0.2s", whiteSpace: "nowrap" }}
+            style={{
+              display: "block", width: "100%", textAlign: "center",
+              background: "#25D366", color: "#fff",
+              padding: "15px 20px", borderRadius: 12,
+              fontSize: "1.05em", fontWeight: 700, cursor: "pointer",
+              textDecoration: "none", transition: "opacity 0.2s",
+              whiteSpace: "nowrap", boxSizing: "border-box",
+            }}
             onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.9"}
             onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}
           >
