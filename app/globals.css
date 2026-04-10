@@ -240,3 +240,162 @@ body {
     --hero-py: 40px;
   }
 }
+
+/* ============================================================
+   MOBILE & TABLET — COMPREHENSIVE RESPONSIVE STYLES
+   ============================================================ */
+
+/* Global: prevent horizontal scroll */
+html, body { overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* ---- All grids: collapse to 1 col on mobile ---- */
+@media (max-width: 768px) {
+  /* Services, About values, Pricing cards, Contact */
+  div[style*="minmax(300px, 1fr)"],
+  div[style*="minmax(340px, 1fr)"],
+  div[style*="minmax(260px, 1fr)"],
+  div[style*="minmax(300px,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Stats / small item grids → 2-columns */
+  div[style*="minmax(180px,1fr)"],
+  div[style*="minmax(180px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Founder two-col grid */
+  div[style*="minmax(300px,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Portfolio alternating: remove order so image sits above text */
+  div[style*="order: 2"],
+  div[style*="order: 1"] {
+    order: 0 !important;
+  }
+
+  /* Founder photo: make it landscape on mobile instead of tall portrait */
+  div[style*="aspectRatio: \"3/4\""] {
+    aspect-ratio: 4 / 3 !important;
+    min-height: unset !important;
+  }
+
+  /* Featured pricing card: remove scale bump */
+  div[style*="scale(1.04)"] {
+    transform: none !important;
+    z-index: auto !important;
+  }
+
+  /* CTA hero buttons: full width */
+  section a[style*="borderRadius: 12"],
+  section button[style*="borderRadius: 12"] {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Subtitle max-width: full on mobile */
+  p[style*="maxWidth: 5"],
+  p[style*="maxWidth: 4"],
+  p[style*="maxWidth: 480"],
+  p[style*="maxWidth: 520"] {
+    max-width: 100% !important;
+  }
+
+  /* Filter pills row: wrap & center */
+  div[style*="gap: 12"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* General section padding collapse */
+  section {
+    padding-left: clamp(16px, 5vw, 48px) !important;
+    padding-right: clamp(16px, 5vw, 48px) !important;
+  }
+
+  /* Prevent card inner padding from overflowing */
+  div[style*="padding: \"40px 32px\""],
+  div[style*="padding: \"40px 36px\""] {
+    padding: 24px 20px !important;
+  }
+
+  div[style*="padding: \"60px 40px\""] {
+    padding: 32px 20px !important;
+  }
+
+  div[style*="padding: \"48px\""] {
+    padding: 24px !important;
+  }
+
+  /* CTA dark boxes */
+  div[style*="borderRadius: 32"] {
+    border-radius: 20px !important;
+  }
+
+  /* Typography: break long words */
+  h1, h2, h3, h4, p, a, span, li {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Footer bottom bar: stack on mobile */
+  div[style*="justifyContent: \"space-between\""][style*="borderTop"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+
+  /* Footer grids */
+  div[style*="var(--footer-grid-1)"] {
+    grid-template-columns: 1fr !important;
+  }
+  div[style*="var(--footer-grid-2)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ---- Tablet: 769–1024px ---- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Services & About values: 2 columns */
+  div[style*="minmax(340px, 1fr)"],
+  div[style*="minmax(260px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Pricing: stack side-by-side is fine but remove scale transform */
+  div[style*="scale(1.04)"] {
+    transform: none !important;
+  }
+}
+
+/* ---- Extra small mobile: <480px ---- */
+@media (max-width: 480px) {
+  /* Hero headings: shrink further */
+  h1[style*="clamp(2.8em"] {
+    font-size: clamp(1.9em, 8vw, 2.6em) !important;
+  }
+  h1[style*="clamp(2.2em"] {
+    font-size: clamp(1.8em, 7vw, 2.4em) !important;
+  }
+
+  /* Stats grid: 1 column on very small */
+  div[style*="minmax(180px,1fr)"],
+  div[style*="minmax(180px, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Filter buttons: smaller padding */
+  button[style*="borderRadius: 999"] {
+    padding: 6px 14px !important;
+    font-size: 0.85em !important;
+  }
+
+  /* Cards: compact padding */
+  div[style*="padding: \"32px\""] {
+    padding: 20px !important;
+  }
+}
