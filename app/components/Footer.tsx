@@ -164,10 +164,10 @@ export default function Footer() {
       {/* Footer */}
       <footer style={{ background: "#f2f2f7", padding: "0 var(--pricing-outer-px) var(--pricing-outer-px)" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", background: "#0d0e1a", borderTop: "1px solid rgba(255,255,255,0.07)", padding: "calc(var(--pricing-inner-py) * 0.8) var(--pricing-inner-px) calc(var(--pricing-inner-py) / 2)", borderBottomLeftRadius: 40, borderBottomRightRadius: 40 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "var(--footer-grid-2)", gap: "clamp(20px, 5vw, 80px)", marginBottom: 56 }}>
+          <div className="footer-cols-grid" style={{ display: "grid", gridTemplateColumns: "var(--footer-grid-2)", gap: "clamp(20px, 5vw, 80px)", marginBottom: 56 }}>
             {/* Brand */}
             <div>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24 }}>
+              <div className="footer-brand-row" style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24 }}>
                 <div style={{ width: 40, height: 40, borderRadius: 10, background: "linear-gradient(135deg,#8b5cf6,#6c3bff)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <IconCloud size={20} color="#fff" />
                 </div>
@@ -196,44 +196,49 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Pages */}
-            <div>
-              <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "1em", marginBottom: 20 }}>Pages</h4>
-              {[
-                { label: "Home", href: "/" },
-                { label: "Services", href: "/services" },
-                { label: "Portfolio", href: "/portfolio" },
-                { label: "Pricing", href: "/pricing" },
-                { label: "About", href: "/about" },
-                { label: "Contact", href: "/contact" },
-              ].map(link => (
-                <a key={link.label} href={link.href} style={{
-                  display: "block", color: "rgba(255,255,255,0.5)", textDecoration: "none",
-                  fontSize: "1em", marginBottom: 14, transition: "color 0.2s",
-                }}
-                  onMouseEnter={e => e.currentTarget.style.color = "#fff"}
-                  onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
-                >{link.label}</a>
-              ))}
-            </div>
+            <div className="footer-links-pair">
+              {/* Pages */}
+              <div>
+                <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "1em", marginBottom: 20 }}>Pages</h4>
+                {[
+                  { label: "Home", href: "/" },
+                  { label: "Services", href: "/services" },
+                  { label: "Portfolio", href: "/portfolio" },
+                  { label: "Pricing", href: "/pricing" },
+                  { label: "About", href: "/about" },
+                  { label: "Contact", href: "/contact" },
+                ].map(link => (
+                  <a key={link.label} href={link.href} style={{
+                    display: "block", color: "rgba(255,255,255,0.5)", textDecoration: "none",
+                    fontSize: "1em", marginBottom: 14, transition: "color 0.2s",
+                  }}
+                    onMouseEnter={e => e.currentTarget.style.color = "#fff"}
+                    onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
+                  >{link.label}</a>
+                ))}
+              </div>
 
-            {/* Information */}
-            <div>
-              <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "1em", marginBottom: 20 }}>Contact Us</h4>
-              {[
-                { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.5)" />, text: "WhatsApp: +91 6265022474", href: "https://wa.me/916265022474" },
-                { icon: <IconMail size={16} color="rgba(255,255,255,0.5)" />, text: "helloclivik@gmail.com", href: "mailto:helloclivik@gmail.com" },
-                { icon: <IconMapPin size={16} color="rgba(255,255,255,0.5)" />, text: "Bhopal, Madhya Pradesh", href: "https://maps.google.com/?q=Bhopal,Madhya+Pradesh" },
-                { icon: <IconClock2 size={16} color="rgba(255,255,255,0.5)" />, text: "Response: Same Day", href: "#" },
-              ].map(link => (
-                <a key={link.text} href={link.href} style={{
-                  display: "flex", alignItems: "center", gap: 8, color: "rgba(255,255,255,0.5)", textDecoration: "none",
-                  fontSize: "1em", marginBottom: 14, transition: "color 0.2s",
-                }}
-                  onMouseEnter={e => e.currentTarget.style.color = "#fff"}
-                  onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
-                >{link.icon}{link.text}</a>
-              ))}
+              {/* Information */}
+              <div>
+                <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "1em", marginBottom: 20 }}>Contact Us</h4>
+                {[
+                  { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.5)" />, text: "+91 6265022474", href: "https://wa.me/916265022474" },
+                  { icon: <IconMail size={16} color="rgba(255,255,255,0.5)" />, text: "helloclivik@gmail.com", href: "mailto:helloclivik@gmail.com" },
+                  { icon: <IconMapPin size={16} color="rgba(255,255,255,0.5)" />, text: "Bhopal, M.P.", href: "https://maps.google.com/?q=Bhopal,Madhya+Pradesh" },
+                  { icon: <IconClock2 size={16} color="rgba(255,255,255,0.5)" />, text: "Same Day Response", href: "#" },
+                ].map(link => (
+                  <a key={link.text} href={link.href} style={{
+                    display: "flex", alignItems: "flex-start", gap: 8, color: "rgba(255,255,255,0.5)", textDecoration: "none",
+                    fontSize: "0.92em", marginBottom: 14, transition: "color 0.2s", lineHeight: 1.4,
+                  }}
+                    onMouseEnter={e => e.currentTarget.style.color = "#fff"}
+                    onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
+                  >
+                    <span style={{ flexShrink: 0, marginTop: 2 }}>{link.icon}</span>
+                    <span>{link.text}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

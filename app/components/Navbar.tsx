@@ -132,16 +132,20 @@ export default function Navbar() {
             }} />
           </button>
         ) : (
-          <Link href="/contact" style={{
-            padding: "10px 22px", borderRadius: 999,
-            background: "#6c3bff", color: "#fff", textDecoration: "none",
-            fontSize: "0.9em", fontWeight: 600, transition: "all 0.2s",
-          }}
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))}
+            style={{
+              padding: "10px 22px", borderRadius: 999,
+              background: "#6c3bff", color: "#fff",
+              border: "none", cursor: "pointer",
+              fontSize: "0.9em", fontWeight: 600, transition: "all 0.2s",
+              fontFamily: "inherit",
+            }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#5a2fe0"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#6c3bff"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
           >
-            Get Free Consultation →
-          </Link>
+            Get Free Consultation &rarr;
+          </button>
         )}
       </nav>
 
@@ -178,14 +182,19 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <Link href="/contact" onClick={handleLinkClick} style={{
-              display: "block", marginTop: 16, padding: "14px 0",
-              textAlign: "center", borderRadius: 12,
-              background: "#6c3bff", color: "#fff", textDecoration: "none",
-              fontSize: "1em", fontWeight: 700,
-            }}>
-              Get Free Consultation →
-            </Link>
+            <button
+              onClick={() => { handleLinkClick(); window.dispatchEvent(new CustomEvent('open-contact-modal')); }}
+              style={{
+                display: "block", width: "100%", marginTop: 16, padding: "14px 0",
+                textAlign: "center", borderRadius: 12,
+                background: "#6c3bff", color: "#fff",
+                border: "none", cursor: "pointer",
+                fontSize: "1em", fontWeight: 700,
+                fontFamily: "inherit",
+              }}
+            >
+              Get Free Consultation &rarr;
+            </button>
           </div>
         </div>
       )}

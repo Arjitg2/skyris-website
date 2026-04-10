@@ -474,3 +474,128 @@ img, video, iframe { max-width: 100%; height: auto; }
     min-width: unset !important;
   }
 }
+
+/* ============================================================
+   HEADING SIZES — Prevent word mid-break on mobile
+   The --title-size CSS variable controls all h2s.
+   On mobile we reduce it so even long words like "Businesses"
+   always wrap at a space, not mid-character.
+   ============================================================ */
+@media (max-width: 480px) {
+  :root {
+    --title-size: 2.2em;
+  }
+
+  /* Catch h1 inner page headings using clamp */
+  h1 {
+    font-size: clamp(1.9em, 8.5vw, 2.6em) !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h2 {
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/* ============================================================
+   HEADING TEXT ALIGNMENT — left-align like FAQ (not centered)
+   on mobile, matching the FAQ section style
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Keep all section headings left-aligned on mobile */
+  .heading-left-mobile h1,
+  .heading-left-mobile h2 {
+    text-align: left !important;
+  }
+
+  /* All h2s inside sections: left-align (like FAQ) */
+  section h2 {
+    text-align: left !important;
+  }
+
+  /* Pricing section text-align: center for internal elements only */
+  section[id="pricing"] h2 {
+    text-align: center !important;
+  }
+
+  /* Section badge pills: left align */
+  section > div > div[style*="inline-block"] {
+    text-align: left !important;
+  }
+}
+
+/* ============================================================
+   FOOTER — 3 column grid to single column on mobile
+   Fixes "Clivi k" brand text wrapping
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Main 3-col footer grid: stack all columns */
+  .footer-cols-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  /* Brand row: prevent icon+text from squishing */
+  .footer-brand-row {
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  /* Brand name: never wrap */
+  .footer-brand-row span {
+    white-space: nowrap !important;
+    font-size: 1.2em !important;
+  }
+
+  /* After brand section, put Pages + Contact in 2-col */
+  .footer-cols-grid > div:nth-child(2),
+  .footer-cols-grid > div:nth-child(3) {
+    display: inline-block;
+    width: 48% !important;
+    vertical-align: top !important;
+  }
+  /* Grid override to arrange them side-by-side */
+  .footer-cols-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* But make 2nd and 3rd children share a row */
+  .footer-cols-grid > div:nth-child(2) {
+    grid-column: 1;
+  }
+}
+
+/* Pages + Contact inline 2-col inside full grid */
+@media (max-width: 768px) {
+  .footer-cols-grid {
+    grid-template-areas:
+      "brand"
+      "links"  !important;
+  }
+
+  /* Use a CSS sub-grid trick: wrap pages+contact in row */
+  .footer-cols-grid > div:first-child {
+    grid-area: brand;
+  }
+}
+
+/* Simpler approach: use flex on footer grid on mobile */
+@media (max-width: 768px) {
+  .footer-cols-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  /* Pages and Contact: side by side */
+  .footer-links-pair {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+}
