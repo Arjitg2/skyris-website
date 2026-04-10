@@ -1,9 +1,8 @@
 "use client";
 import { IconWhatsApp } from "./icons";
 
-// Replace with your actual WhatsApp number (e.g. 911234567890)
-const WHATSAPP_NUMBER = "911234567890";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I am interested in your work. Could you please share more details?");
+const WHATSAPP_NUMBER = "916265022474";
+const WHATSAPP_MESSAGE = encodeURIComponent("Hi Clivik! I'd like to get a free mockup for my business.");
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
 export default function WhatsAppButton() {
@@ -13,36 +12,34 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       title="Chat on WhatsApp"
+      aria-label="Chat on WhatsApp"
       style={{
         position: "fixed",
-        bottom: 32,
-        right: 32,
+        bottom: 28,
+        right: 24,
         zIndex: 1000,
+        width: 56,
+        height: 56,
+        borderRadius: "50%",
+        background: "#25D366",
         display: "flex",
         alignItems: "center",
-        gap: 10,
-        padding: "13px 20px",
-        borderRadius: 999,
-        background: "#25D366",
-        color: "#fff",
-        textDecoration: "none",
-        fontSize: "1em",
-        fontWeight: 600,
-        boxShadow: "0 6px 32px rgba(37,211,102,0.4)",
+        justifyContent: "center",
+        boxShadow: "0 6px 28px rgba(37,211,102,0.45)",
         transition: "transform 0.25s ease, box-shadow 0.25s ease",
-        fontFamily: "Inter, sans-serif",
+        textDecoration: "none",
+        flexShrink: 0,
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.transform = "translateY(-4px) scale(1.03)";
-        e.currentTarget.style.boxShadow = "0 12px 48px rgba(37,211,102,0.55)";
+        e.currentTarget.style.transform = "scale(1.1)";
+        e.currentTarget.style.boxShadow = "0 10px 40px rgba(37,211,102,0.55)";
       }}
       onMouseLeave={e => {
-        e.currentTarget.style.transform = "translateY(0) scale(1)";
-        e.currentTarget.style.boxShadow = "0 6px 32px rgba(37,211,102,0.4)";
+        e.currentTarget.style.transform = "scale(1)";
+        e.currentTarget.style.boxShadow = "0 6px 28px rgba(37,211,102,0.45)";
       }}
     >
-      <IconWhatsApp size={22} color="#fff" />
-      <span>Chat on WhatsApp</span>
+      <IconWhatsApp size={28} color="#fff" />
     </a>
   );
 }

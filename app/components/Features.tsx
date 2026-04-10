@@ -29,11 +29,12 @@ export default function Features() {
           }}>Why Choose Clivik</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
-            lineHeight: 1.1, letterSpacing: "-0.04em", maxWidth: "100%",
-            fontFamily: "'FullerSansDT', 'Inter', sans-serif"
+            lineHeight: 1.15, letterSpacing: "-0.04em", maxWidth: "100%",
+            fontFamily: "'FullerSansDT', 'Inter', sans-serif",
+            wordBreak: "break-word", overflowWrap: "break-word",
           }}>
-            <span style={{ display: "inline-block", whiteSpace: "nowrap" }}>Everything Your Business Needs</span><br/>
-            <span style={{ display: "inline-block", whiteSpace: "nowrap" }}>to Get Found Online</span>
+            Everything Your Business Needs<br/>
+            to Get Found Online
           </h2>
         </div>
 
@@ -57,25 +58,26 @@ export default function Features() {
             
             <div style={{ display: "flex", flexDirection: "column", gap: 24, marginTop: "auto" }}>
               {/* Agency Row */}
-              <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, width: 85 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 80, flexShrink: 0 }}>
                   <div style={{ width: 24, height: 24, borderRadius: "50%", border: "1px solid #ddd", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: "#666", fontWeight: 600 }}>?</div>
-                  <span style={{ fontSize: "0.95em", fontWeight: 500, color: "#111" }}>Agency</span>
+                  <span style={{ fontSize: "0.9em", fontWeight: 500, color: "#111" }}>Agency</span>
                 </div>
-                <div style={{ flex: 1, background: "#f5f5f5", borderRadius: 8, padding: "14px 20px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontSize: "0.95em", fontWeight: 600, color: "#111" }}>Rs. 50,000</span>
+                <div style={{ flex: 1, background: "#f0f0f0", borderRadius: 8, padding: "12px 16px", display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                  <span style={{ fontSize: "0.9em", fontWeight: 600, color: "#111" }}>Rs. 50,000</span>
                 </div>
               </div>
               {/* Clivik Row */}
-              <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, width: 85 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 80, flexShrink: 0 }}>
                   <div style={{ width: 24, height: 24, borderRadius: 8, background: "linear-gradient(135deg,#8b5cf6,#6c3bff)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <IconCloud size={12} color="#fff" />
                   </div>
-                  <span style={{ fontSize: "0.95em", fontWeight: 500, color: "#111" }}>Clivik</span>
+                  <span style={{ fontSize: "0.9em", fontWeight: 500, color: "#111" }}>Clivik</span>
                 </div>
-                <div style={{ width: "15%", minWidth: "140px", background: "#4e28cc", borderRadius: 8, padding: "14px 20px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontSize: "0.95em", fontWeight: 700, color: "#fff", whiteSpace: "nowrap" }}>Rs. 3999</span>
+                {/* bar is ~8% of Agency's price, so proportionally much shorter */}
+                <div style={{ width: "8%", minWidth: 90, background: "#4e28cc", borderRadius: 8, padding: "12px 16px", display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                  <span style={{ fontSize: "0.9em", fontWeight: 700, color: "#fff", whiteSpace: "nowrap" }}>Rs. 3999</span>
                 </div>
               </div>
             </div>

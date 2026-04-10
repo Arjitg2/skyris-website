@@ -123,7 +123,7 @@ export default function Hero() {
           </div>
 
           {/* CTAs */}
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "var(--hero-chips-justify)" }}>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "var(--hero-chips-justify)" }} className="hero-cta-row">
             <Link href="/contact" style={{
               display: "inline-flex", alignItems: "center", padding: "15px 30px",
               borderRadius: 12, background: "#fff", color: "#3730a3", textDecoration: "none",
@@ -131,6 +131,7 @@ export default function Hero() {
               boxShadow: "0 4px 24px rgba(255,255,255,0.4)",
               flex: "var(--hero-btn-flex)",
               justifyContent: "center",
+              whiteSpace: "nowrap",
             }}
               onMouseEnter={e => { e.currentTarget.style.background = "#f0f0f0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = "translateY(0)"; }}
@@ -142,6 +143,7 @@ export default function Hero() {
               border: "1px solid rgba(255,255,255,0.2)", transition: "all 0.25s ease",
               flex: "var(--hero-btn-flex)",
               justifyContent: "center",
+              whiteSpace: "nowrap",
             }}
               onMouseEnter={e => { e.currentTarget.style.background = "#261565"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#1a1040"; e.currentTarget.style.transform = "translateY(0)"; }}
