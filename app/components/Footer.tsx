@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { IconCloud, IconInstagram, IconX, IconYoutube, IconDribbble, IconBehance, IconSend, IconPhone, IconWhatsApp, IconMapPin, IconClock } from "./icons";
+import { IconCloud, IconInstagram, IconX, IconYoutube, IconDribbble, IconBehance, IconSend, IconPhone, IconFacebook, IconWhatsApp, IconMail, IconMapPin, IconClock2 } from "./icons";
 
 const BUSINESS_DOMAINS = [
   "E-commerce & Retail",
@@ -143,7 +143,19 @@ export default function Footer() {
       {/* Contact / CTA section */}
       <section id="get-in-touch" style={{ background: "#f2f2f7", padding: "var(--pricing-outer-py) var(--pricing-outer-px) 0" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", ...{ borderTopLeftRadius: 40, borderTopRightRadius: 40, overflow: "hidden", background: "#0d0e1a", padding: "var(--pricing-inner-py) var(--pricing-inner-px) calc(var(--pricing-inner-py) / 2)" } }}>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "var(--footer-grid-1)", gap: "clamp(20px, 5vw, 80px)", alignItems: "center" }}>
+            <div>
+              <h2 style={{
+                fontSize: "var(--title-size)", fontWeight: 600, color: "#fff",
+                lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 24, maxWidth: "var(--title-max-width)",
+                fontFamily: "'FullerSansDT', 'Inter', sans-serif"
+              }}>
+                Ready to See What<br />Your Business Looks<br />Like Online?
+              </h2>
+              <p style={{ fontSize: "1em", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, maxWidth: 400 }}>
+                Tell us about your business and we will send you a free custom website mockup within 24 hours. See it first, pay only if you love it. Zero risk involved.
+              </p>
+            </div>
             <ContactForm />
           </div>
         </div>
@@ -164,11 +176,11 @@ export default function Footer() {
               <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1em", lineHeight: 1.7, maxWidth: 320, marginBottom: 28 }}>
                 Clivik helps local businesses across M.P. get found online — with a professional website, Google profile and social media. All in 5 days.
               </p>
-              <div style={{ display: "flex", gap: 16 }}>
+              <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                 {[
-                  { label: <><IconInstagram size={16} /> Instagram</>, href: "https://instagram.com" },
-                  { label: <><IconPhone size={16} /> Facebook</>, href: "https://facebook.com" },
-                  { label: <><IconWhatsApp size={16} /> WhatsApp</>, href: "https://wa.me/916265022474" },
+                  { icon: <IconInstagram size={16} color="rgba(255,255,255,0.6)" />, text: "Instagram", href: "https://instagram.com" },
+                  { icon: <IconFacebook size={16} color="rgba(255,255,255,0.6)" />, text: "Facebook", href: "https://facebook.com" },
+                  { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.6)" />, text: "WhatsApp", href: "https://wa.me/916265022474" },
                 ].map((s, i) => (
                   <a key={i} href={s.href} style={{
                     color: "rgba(255,255,255,0.5)", textDecoration: "none", fontSize: "0.9em",
@@ -176,7 +188,10 @@ export default function Footer() {
                   }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#fff"}
                     onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.5)"}
-                  >{s.label}</a>
+                  >
+                    {s.icon}
+                    {s.text}
+                  </a>
                 ))}
               </div>
             </div>
@@ -206,18 +221,18 @@ export default function Footer() {
             <div>
               <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "1em", marginBottom: 20 }}>Contact Us</h4>
               {[
-                { key: "1", label: <><IconWhatsApp size={16} /> WhatsApp: +91 6265022474</>, href: "https://wa.me/916265022474" },
-                { key: "2", label: <><IconSend size={16} /> helloclivik@gmail.com</>, href: "mailto:helloclivik@gmail.com" },
-                { key: "3", label: <><IconMapPin size={16} /> Bhopal, Madhya Pradesh</>, href: "https://maps.google.com/?q=Bhopal,Madhya+Pradesh" },
-                { key: "4", label: <><IconClock size={16} /> Response: Same Day</>, href: "#" },
+                { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.5)" />, text: "WhatsApp: +91 6265022474", href: "https://wa.me/916265022474" },
+                { icon: <IconMail size={16} color="rgba(255,255,255,0.5)" />, text: "helloclivik@gmail.com", href: "mailto:helloclivik@gmail.com" },
+                { icon: <IconMapPin size={16} color="rgba(255,255,255,0.5)" />, text: "Bhopal, Madhya Pradesh", href: "https://maps.google.com/?q=Bhopal,Madhya+Pradesh" },
+                { icon: <IconClock2 size={16} color="rgba(255,255,255,0.5)" />, text: "Response: Same Day", href: "#" },
               ].map(link => (
-                <a key={link.key} href={link.href} style={{
+                <a key={link.text} href={link.href} style={{
                   display: "flex", alignItems: "center", gap: 8, color: "rgba(255,255,255,0.5)", textDecoration: "none",
                   fontSize: "1em", marginBottom: 14, transition: "color 0.2s",
                 }}
                   onMouseEnter={e => e.currentTarget.style.color = "#fff"}
                   onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
-                >{link.label}</a>
+                >{link.icon}{link.text}</a>
               ))}
             </div>
           </div>

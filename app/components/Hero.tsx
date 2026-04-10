@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { IconGlobe, IconStar, IconInstagram, IconGift } from "./icons";
+import { IconGlobe, IconStar, IconInstagram, IconGift, IconMapPin } from "./icons";
 
 // Floating mock website image card
 function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, width = 280, imageSrc, themeMode }: {
@@ -32,7 +32,7 @@ function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, wi
           <div style={{ fontSize: 12, fontWeight: 800, color: themeMode === 'dark' ? "#fff" : "#111", letterSpacing: 0.5, marginBottom: 2 }}>{title}</div>
           <div style={{ fontSize: 10, color: themeMode === 'dark' ? "rgba(255,255,255,0.8)" : "#555", marginBottom: 6 }}>{subtitle}</div>
           <div style={{ fontSize: 9, color: themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888", display: "flex", alignItems: "center", gap: 4 }}>
-             📍 [{location}]
+             <IconMapPin size={9} color={themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888"} /> [{location}]
           </div>
         </div>
       </div>
