@@ -71,15 +71,17 @@ export default function Pricing() {
             <div key={plan.name} style={{
               background: plan.featured ? "#fff" : "rgba(255,255,255,0.04)",
               border: plan.featured ? "none" : "1px solid rgba(255,255,255,0.08)",
-              borderRadius: 24, padding: "40px 32px",
+              borderRadius: 24, padding: "clamp(24px, 5vw, 40px) clamp(20px, 4vw, 32px)",
               color: plan.featured ? "#0d0e1a" : "#fff",
-              transform: plan.featured ? "scale(1.04)" : "scale(1)",
               boxShadow: plan.featured ? "0 28px 80px rgba(108,59,255,0.28)" : "none",
+              boxSizing: "border-box",
+              width: "100%",
             }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-                <h3 style={{ fontSize: "1.4em", fontWeight: 800 }}>{plan.name}</h3>
+              {/* Plan name + badge: wrap badge to next line on mobile if needed */}
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
+                <h3 style={{ fontSize: "1.4em", fontWeight: 800, whiteSpace: "nowrap" }}>{plan.name}</h3>
                 {plan.badge && (
-                  <span style={{ padding: "3px 12px", borderRadius: 999, background: "#6c3bff", color: "#fff", fontSize: "0.9em", fontWeight: 600 }}>{plan.badge}</span>
+                  <span style={{ padding: "4px 14px", borderRadius: 999, background: "#6c3bff", color: "#fff", fontSize: "0.85em", fontWeight: 600, whiteSpace: "nowrap", alignSelf: "center" }}>{plan.badge}</span>
                 )}
               </div>
               
@@ -87,9 +89,14 @@ export default function Pricing() {
                 {plan.desc}
               </p>
 
-              <div style={{ marginBottom: 32, display: "flex", alignItems: "baseline", gap: 6, flexWrap: "nowrap" }}>
-                <span style={{ fontSize: "clamp(1.7em, 6.5vw, 3em)", fontWeight: 900, letterSpacing: "-0.03em", whiteSpace: "nowrap" }}>{plan.price}</span>
-                <span style={{ fontSize: "1em", fontWeight: 500, color: plan.featured ? "#666" : "rgba(255,255,255,0.6)", whiteSpace: "nowrap" }}>{plan.type}</span>
+              {/* Price: price on one line, One-time label on line below */}
+              <div style={{ marginBottom: 28 }}>
+                <div style={{ fontSize: "clamp(1.8em, 6.5vw, 3em)", fontWeight: 900, letterSpacing: "-0.03em", whiteSpace: "nowrap", lineHeight: 1.1 }}>
+                  {plan.price}
+                </div>
+                <div style={{ fontSize: "0.95em", fontWeight: 500, color: plan.featured ? "#666" : "rgba(255,255,255,0.6)", marginTop: 6 }}>
+                  {plan.type}
+                </div>
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 36 }}>
@@ -125,11 +132,11 @@ export default function Pricing() {
         </div>
 
         {/* Stats row */}
-        <div style={{ display: "grid", gridTemplateColumns: "var(--stats-grid)", gap: "var(--stats-container-gap)", borderTop: "1px solid rgba(255,255,255,0.08)", borderBottom: "1px solid rgba(255,255,255,0.08)", padding: "56px 0", marginBottom: 56 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "var(--stats-grid)", gap: "var(--stats-container-gap)", borderTop: "1px solid rgba(255,255,255,0.08)", borderBottom: "1px solid rgba(255,255,255,0.08)", padding: "48px 0", marginBottom: 48 }}>
           {stats.map(s => (
-            <div key={s.label1} style={{ display: "flex", flexDirection: "var(--stats-item-flex)" as any, alignItems: "var(--stats-item-align)" as any, textAlign: "var(--stats-item-text)" as any, gap: "var(--stats-item-gap)" }}>
-              <div style={{ fontSize: "var(--stats-number)", fontWeight: 700, letterSpacing: "-0.04em", color: "#fff", lineHeight: 1, minWidth: "max-content" }}>{s.n}</div>
-              <div style={{ fontSize: "var(--stats-label)", color: "rgba(255,255,255,0.85)", marginTop: "var(--stats-text-mt)", lineHeight: 1.25, textAlign: "left" }}>
+            <div key={s.label1} style={{ display: "flex", alignItems: "center", gap: 20 }}>
+              <div style={{ fontSize: "clamp(1.8em, 6vw, 4.2em)", fontWeight: 700, letterSpacing: "-0.04em", color: "#fff", lineHeight: 1, whiteSpace: "nowrap", flexShrink: 0 }}>{s.n}</div>
+              <div style={{ fontSize: "var(--stats-label)", color: "rgba(255,255,255,0.85)", lineHeight: 1.3 }}>
                 {s.label1}<br/>{s.label2}
               </div>
             </div>
@@ -147,11 +154,11 @@ export default function Pricing() {
           <a
             href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20need%20help%20choosing%20the%20right%20plan%20for%20my%20business."
             target="_blank" rel="noopener noreferrer"
-            style={{ display: "inline-flex", background: "#25D366", color: "#fff", padding: "14px 32px", borderRadius: 12, fontSize: "1.05em", fontWeight: 600, cursor: "pointer", alignItems: "center", gap: 8, textDecoration: "none", transition: "opacity 0.2s" }}
+            style={{ display: "inline-flex", background: "#25D366", color: "#fff", padding: "14px 28px", borderRadius: 12, fontSize: "1.05em", fontWeight: 600, cursor: "pointer", alignItems: "center", gap: 8, textDecoration: "none", transition: "opacity 0.2s", whiteSpace: "nowrap" }}
             onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.9"}
             onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}
           >
-            Chat on WhatsApp →
+            Chat on WhatsApp &rarr;
           </a>
         </div>
       </div>
