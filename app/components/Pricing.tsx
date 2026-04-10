@@ -87,9 +87,9 @@ export default function Pricing() {
                 {plan.desc}
               </p>
 
-              <div style={{ marginBottom: 32 }}>
-                <span style={{ fontSize: "3em", fontWeight: 900, letterSpacing: "-0.03em" }}>{plan.price}</span>
-                <span style={{ fontSize: "1.1em", fontWeight: 500, color: plan.featured ? "#666" : "rgba(255,255,255,0.6)", marginLeft: 6 }}>{plan.type}</span>
+              <div style={{ marginBottom: 32, display: "flex", alignItems: "baseline", gap: 6, flexWrap: "nowrap" }}>
+                <span style={{ fontSize: "clamp(1.7em, 6.5vw, 3em)", fontWeight: 900, letterSpacing: "-0.03em", whiteSpace: "nowrap" }}>{plan.price}</span>
+                <span style={{ fontSize: "1em", fontWeight: 500, color: plan.featured ? "#666" : "rgba(255,255,255,0.6)", whiteSpace: "nowrap" }}>{plan.type}</span>
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 36 }}>
