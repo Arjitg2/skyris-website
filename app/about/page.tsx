@@ -13,12 +13,6 @@ const values = [
   { icon: <IconEye size={28} color="#0ea5e9" />, title: "You See First, Pay Later", desc: "We build your mockup for free. You only pay once you love it.", accent: "#0ea5e9" },
 ];
 
-const milestones = [
-  { year: "2023", event: "Clivik founded in Bhopal with a single mission — local businesses deserve great websites." },
-  { year: "2024", event: "Delivered 25+ websites for restaurants, clinics, gyms and retail shops across M.P." },
-  { year: "2025", event: "Launched AI WhatsApp Automation — helping businesses capture leads 24/7 automatically." },
-  { year: "2026", event: "Serving 50+ businesses with full digital presence packages across Madhya Pradesh." },
-];
 
 export default function AboutPage() {
   return (
@@ -91,25 +85,29 @@ export default function AboutPage() {
 
           {/* Story */}
           <div style={{ display: "flex", flexDirection: "column", gap: 20, fontSize: "1.05em", color: "#444", lineHeight: 1.8 }}>
-            <p style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "1.3em" }}>Hi, I'm Arjit Gupta — founder of Clivik.</p>
-            <p>I started Clivik because I kept seeing local businesses lose customers to competitors who were simply more visible online.</p>
-            <p>Their competitors were not better. They were just easier to find on Google.</p>
-            <p>That is the problem Clivik exists to solve — helping every local shop, clinic, restaurant, and gym in M.P. get the online presence they deserve, at a price they can actually afford.</p>
-            <p>I personally handle every project — because the person who understands your problem should be the same person solving it.</p>
+            <p style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "1.3em" }}>Hi, I&apos;m Arjit Gupta — founder of Clivik.</p>
+            <p>I have been building websites for <strong style={{ color: "#6c3bff" }}>over 3 years</strong> — and through that journey I noticed one big problem: local businesses were losing customers to competitors who were simply more visible online.</p>
+            <p>I am a professional developer who specialises in creating <strong style={{ color: "#0d0e1a" }}>conversion-focused websites</strong> — not just pretty pages, but digital assets that bring real enquiries, real calls, and real customers.</p>
+            <p>Every project I take on is handled <strong style={{ color: "#0d0e1a" }}>personally by me</strong> — because the person who understands your problem should be the same person solving it. No freelancers, no middlemen.</p>
+            <p>Whether you are a clinic, restaurant, gym, or retail shop — I know exactly what your customers search for and how to make your business the first thing they find.</p>
             <div style={{ background: "#fff", padding: "24px", borderRadius: 16, borderLeft: "4px solid #6c3bff", fontWeight: 500, color: "#0d0e1a" }}>
-              Based in Bhopal.<br />Built for M.P. businesses.
+              3+ years building websites that convert.<br />Based in Bhopal. Built for M.P. businesses.
             </div>
-            <Link href="/contact" style={{
-              display: "inline-block", padding: "15px 32px", borderRadius: 12,
-              background: "#6c3bff", color: "#fff", textDecoration: "none",
-              fontSize: "1em", fontWeight: 700, width: "fit-content",
-              transition: "transform 0.2s, background 0.2s",
-            }}
-              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#5a2fe0"; (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.04)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#6c3bff"; (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)"; }}
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))}
+              style={{
+                display: "inline-block", padding: "15px 32px", borderRadius: 12,
+                background: "#6c3bff", color: "#fff",
+                border: "none", cursor: "pointer",
+                fontSize: "1em", fontWeight: 700, width: "fit-content",
+                fontFamily: "inherit",
+                transition: "transform 0.2s, background 0.2s",
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#5a2fe0"; (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "#6c3bff"; (e.currentTarget as HTMLButtonElement).style.transform = "scale(1)"; }}
             >
-              Meet The Founder →
-            </Link>
+              Meet The Founder &rarr;
+            </button>
           </div>
         </div>
       </section>
@@ -135,24 +133,6 @@ export default function AboutPage() {
                 </div>
                 <h3 style={{ fontWeight: 800, color: "#fff", fontSize: "1.35em", marginBottom: 12 }}>{v.title}</h3>
                 <p style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.6, fontSize: "0.95em" }}>{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section style={{ background: "#0d0e1a", padding: "80px clamp(20px,6vw,120px)" }}>
-        <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(1.8em,3.5vw,2.8em)", fontWeight: 700, color: "#fff", marginBottom: 52, textAlign: "center" }}>Our Journey</h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {milestones.map((m, i) => (
-              <div key={m.year} style={{ display: "grid", gridTemplateColumns: "80px 1fr", gap: 24, alignItems: "start" }}>
-                <div style={{ color: "#6c3bff", fontWeight: 800, fontSize: "1.1em", paddingTop: 4 }}>{m.year}</div>
-                <div style={{ paddingBottom: i < milestones.length - 1 ? 32 : 0, borderLeft: i < milestones.length - 1 ? "1px solid rgba(255,255,255,0.08)" : "none", paddingLeft: 28, position: "relative" }}>
-                  {i < milestones.length - 1 && <div style={{ position: "absolute", left: -5, top: 8, width: 10, height: 10, borderRadius: "50%", background: "#6c3bff" }} />}
-                  <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.7 }}>{m.event}</p>
-                </div>
               </div>
             ))}
           </div>

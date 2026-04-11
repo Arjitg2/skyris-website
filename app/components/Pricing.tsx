@@ -144,7 +144,7 @@ export default function Pricing() {
         </div>
 
         {/* Bottom Not Sure Prompt */}
-        <div style={{ textAlign: "center", background: "rgba(255,255,255,0.04)", padding: "32px 40px", borderRadius: 24, border: "1px solid rgba(255,255,255,0.08)", width: "100%" }}>
+        <div style={{ textAlign: "center", background: "rgba(255,255,255,0.04)", padding: "clamp(24px, 5vw, 32px) clamp(20px, 4vw, 40px)", borderRadius: 24, border: "1px solid rgba(255,255,255,0.08)", width: "100%", boxSizing: "border-box" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: "1.3em", fontWeight: 700, color: "#fff", marginBottom: 12 }}>
             <IconShield size={22} color="#6ea8fe" /> Not sure which plan is right for you?
           </div>
