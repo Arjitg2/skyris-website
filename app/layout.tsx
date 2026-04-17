@@ -3,7 +3,7 @@ import "./globals.css";
 import ClientWrapper from "./ClientWrapper";
 
 export const metadata: Metadata = {
-  title: "British English Institute",
+  title: "Skyris · Design Agency — Smarter Way to Build Your Website",
   description: "Skyris is a creative design agency offering premium custom websites at a fraction of the cost. Fast turnaround, seamless process, unlimited revisions.",
 };
 
