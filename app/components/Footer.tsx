@@ -207,6 +207,7 @@ export default function Footer() {
                   { label: "Pricing", href: "/pricing" },
                   { label: "About", href: "/about" },
                   { label: "Contact", href: "/contact" },
+                  { label: "Privacy Policy", href: "/privacy-policy" },
                 ].map(link => (
                   <a key={link.label} href={link.href} style={{
                     display: "block", color: "rgba(255,255,255,0.5)", textDecoration: "none",
@@ -259,10 +260,21 @@ export default function Footer() {
               &quot;Your Business. Online. In 5 Days.&quot;
             </p>
 
-            {/* Row 3: copyright */}
-            <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "0.88em", margin: 0 }}>
-              &copy; 2026 Clivik. All rights reserved.
-            </p>
+            {/* Row 3: copyright + privacy */}
+            <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+              <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "0.88em", margin: 0 }}>
+                &copy; 2026 Clivik. All rights reserved.
+              </p>
+              <a href="/privacy-policy" style={{
+                color: "rgba(255,255,255,0.3)", fontSize: "0.88em", textDecoration: "none",
+                transition: "color 0.2s",
+              }}
+                onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
+              >
+                Privacy Policy
+              </a>
+            </div>
           </div>
         </div>
       </footer>
