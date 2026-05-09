@@ -208,6 +208,7 @@ export default function Footer() {
                   { label: "About", href: "/about" },
                   { label: "Contact", href: "/contact" },
                   { label: "Privacy Policy", href: "/privacy-policy" },
+                  { label: "Terms of Service", href: "/terms-of-service" },
                 ].map(link => (
                   <a key={link.label} href={link.href} style={{
                     display: "block", color: "rgba(255,255,255,0.5)", textDecoration: "none",
@@ -260,20 +261,31 @@ export default function Footer() {
               &quot;Your Business. Online. In 5 Days.&quot;
             </p>
 
-            {/* Row 3: copyright + privacy */}
+            {/* Row 3: copyright + privacy/terms */}
             <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
               <p style={{ color: "rgba(255,255,255,0.3)", fontSize: "0.88em", margin: 0 }}>
                 &copy; 2026 Clivik. All rights reserved.
               </p>
-              <a href="/privacy-policy" style={{
-                color: "rgba(255,255,255,0.3)", fontSize: "0.88em", textDecoration: "none",
-                transition: "color 0.2s",
-              }}
-                onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
-              >
-                Privacy Policy
-              </a>
+              <div style={{ display: "flex", gap: 16 }}>
+                <a href="/privacy-policy" style={{
+                  color: "rgba(255,255,255,0.3)", fontSize: "0.88em", textDecoration: "none",
+                  transition: "color 0.2s",
+                }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
+                >
+                  Privacy Policy
+                </a>
+                <a href="/terms-of-service" style={{
+                  color: "rgba(255,255,255,0.3)", fontSize: "0.88em", textDecoration: "none",
+                  transition: "color 0.2s",
+                }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
+                >
+                  Terms of Service
+                </a>
+              </div>
             </div>
           </div>
         </div>
