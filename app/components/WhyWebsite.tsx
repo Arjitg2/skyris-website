@@ -95,14 +95,14 @@ export default function WhyWebsite() {
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>What We Do</div>
           <h2 style={{
-            fontSize: "var(--title-size)", fontWeight: 600, color: "#fff",
-            lineHeight: 1.1, letterSpacing: "-0.04em",
-            maxWidth: "90%", margin: "0 auto",
+            fontSize: "clamp(2em, 9vw, var(--title-size))", fontWeight: 600, color: "#fff",
+            lineHeight: 1.15, letterSpacing: "-0.04em",
+            margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif",
-            paddingLeft: 24, paddingRight: 24,
-            boxSizing: "border-box",
           }}>
-            Five Services, <br className="mobile-br" />One Goal <br className="desktop-br" /><br className="mobile-br" /><span>More Customers<span className="desktop-only"> For You.</span></span>
+            Five Services,<br className="mobile-br" /><span className="desktop-only"> </span>
+            One Goal,<br className="mobile-br" /><span className="desktop-only"> </span>
+            More Customers<span className="desktop-only"> For You.</span>
           </h2>
         </div>
 

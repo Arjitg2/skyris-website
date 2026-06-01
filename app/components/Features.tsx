@@ -34,7 +34,7 @@ export default function Features() {
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
             lineHeight: 1.15, letterSpacing: "-0.04em", maxWidth: "100%",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif",
-            wordBreak: "break-word", overflowWrap: "break-word",
+            wordBreak: "normal", overflowWrap: "normal",
           }}>
             Everything Your Business Needs<br/>
             to Grow Online

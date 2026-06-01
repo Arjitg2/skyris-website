@@ -188,8 +188,14 @@ body {
     --sec-py: 128px; /* Increased padding between sections */
     --title-size: 3.3em;
     --title-max-width: 100%;
-    --subpage-hero-pt: 154px;
+    --subpage-hero-pt: 116px;
     --about-text-max-width: 100%;
+    --about-hero-pb: 32px;
+    --about-founder-pt: 30px;
+    --about-founder-gap: 15px;
+    --about-founder-story-gap: 10px;
+    --contact-h2-mb: 10px;
+    --about-para-gap: 14px;
     
     --grid-2: 1fr;
     --grid-3: 1fr;

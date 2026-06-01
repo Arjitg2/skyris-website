@@ -55,7 +55,7 @@ export default function About() {
           </div>
 
           {/* Right/Bottom Text Content */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 24, fontSize: "1.15em", color: "#444", lineHeight: 1.8, flex: "1 1 50%", maxWidth: "var(--about-text-max-width, 100%)" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--about-para-gap, 24px)", fontSize: "1.15em", color: "#444", lineHeight: 1.8, flex: "1 1 50%", maxWidth: "var(--about-text-max-width, 100%)" }}>
             <p style={{ fontWeight: 600, color: "#0d0e1a", fontSize: "1.25em" }}>
               Hi, I am Arjit Gupta — founder of Clivik.
             </p>

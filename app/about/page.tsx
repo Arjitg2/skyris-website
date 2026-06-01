@@ -22,7 +22,7 @@ export default function AboutPage() {
       {/* Hero — matches home page gradient */}
       <section style={{
         background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: "var(--subpage-hero-pt, 205px)", paddingBottom: 64,
+        paddingTop: "var(--subpage-hero-pt, 205px)", paddingBottom: "var(--about-hero-pb, 64px)",
         paddingLeft: "clamp(20px,6vw,120px)", paddingRight: "clamp(20px,6vw,120px)",
         textAlign: "center",
         position: "relative",
@@ -62,8 +62,8 @@ export default function AboutPage() {
       </section>
 
       {/* Founder Section */}
-      <section style={{ background: "#f2f2f7", padding: "60px clamp(20px,6vw,120px) 120px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 30, alignItems: "center" }}>
+      <section style={{ background: "#f2f2f7", padding: "var(--about-founder-pt, 60px) clamp(20px,6vw,120px) 120px" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "var(--about-founder-gap, 30px)", alignItems: "center" }}>
           {/* Photo */}
           <div style={{ background: "#fff", borderRadius: 24, padding: 16, boxShadow: "0 12px 40px rgba(0,0,0,0.08)", position: "relative" }}>
             <div style={{ position: "relative", width: "100%", aspectRatio: "3/4", borderRadius: 16, overflow: "hidden", background: "#e0e0e0", minHeight: 320 }}>
@@ -83,7 +83,7 @@ export default function AboutPage() {
           </div>
 
           {/* Story */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 20, fontSize: "1.05em", color: "#444", lineHeight: 1.8 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--about-founder-story-gap, 20px)", fontSize: "1.05em", color: "#444", lineHeight: 1.8 }}>
             <p style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "1.3em" }}>Hi, I&apos;m Arjit Gupta.</p>
             <p>I started Clivik because I saw local Indian businesses losing money to big agencies that overcharge and under-deliver.</p>
             <p>We don&apos;t do fancy pitches. We just build digital systems (websites, WhatsApp automation) that actually get you more customers — at a price that makes sense for local businesses.</p>
