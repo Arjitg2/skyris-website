@@ -97,10 +97,12 @@ export default function WhyWebsite() {
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#fff",
             lineHeight: 1.1, letterSpacing: "-0.04em",
-            maxWidth: "100%", margin: "0 auto",
-            fontFamily: "'FullerSansDT', 'Inter', sans-serif"
+            maxWidth: "90%", margin: "0 auto",
+            fontFamily: "'FullerSansDT', 'Inter', sans-serif",
+            paddingLeft: 24, paddingRight: 24,
+            boxSizing: "border-box",
           }}>
-            Five Services, <br className="mobile-br" />One Goal <br className="desktop-br" /><br className="mobile-br" /><span style={{ whiteSpace: "nowrap" }}>More Customers<span className="desktop-only"> For You.</span></span>
+            Five Services, <br className="mobile-br" />One Goal <br className="desktop-br" /><br className="mobile-br" /><span>More Customers<span className="desktop-only"> For You.</span></span>
           </h2>
         </div>
 

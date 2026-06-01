@@ -69,7 +69,7 @@ export default function ContactPage() {
       {/* Hero — matches home page gradient */}
       <section style={{
         background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: 205, paddingBottom: 160,
+        paddingTop: "var(--subpage-hero-pt, 205px)", paddingBottom: 80,
         paddingLeft: "clamp(20px,6vw,120px)", paddingRight: "clamp(20px,6vw,120px)",
         textAlign: "center",
         position: "relative",
@@ -93,11 +93,11 @@ export default function ContactPage() {
         </div>
 
         {/* Bottom fade */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to bottom, transparent 0%, #f2f2f7 100%)", pointerEvents: "none", zIndex: 0 }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 90, background: "linear-gradient(to bottom, transparent 0%, #f2f2f7 100%)", pointerEvents: "none", zIndex: 0 }} />
       </section>
 
       {/* Contact Section */}
-      <section style={{ background: "#f2f2f7", padding: "72px clamp(20px,6vw,120px)" }}>
+      <section style={{ background: "#f2f2f7", padding: "36px clamp(20px,6vw,120px)" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 48, alignItems: "start" }}>
 
           {/* Left: Info */}

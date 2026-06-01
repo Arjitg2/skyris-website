@@ -105,7 +105,7 @@ Location: Bhopal, Madhya Pradesh, India`,
       {/* Hero Banner */}
       <section style={{
         background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: 205,
+        paddingTop: "var(--subpage-hero-pt, 205px)",
         paddingBottom: 64,
         paddingLeft: "var(--sec-px)",
         paddingRight: "var(--sec-px)",

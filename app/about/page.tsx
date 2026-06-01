@@ -22,7 +22,7 @@ export default function AboutPage() {
       {/* Hero — matches home page gradient */}
       <section style={{
         background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: 205, paddingBottom: 128,
+        paddingTop: "var(--subpage-hero-pt, 205px)", paddingBottom: 64,
         paddingLeft: "clamp(20px,6vw,120px)", paddingRight: "clamp(20px,6vw,120px)",
         textAlign: "center",
         position: "relative",
@@ -44,7 +44,7 @@ export default function AboutPage() {
             Clivik exists because local businesses deserve to be found online — not just the big brands with big budgets.
           </p>
           <Link href="/contact" style={{
-            display: "inline-block", marginTop: 64, padding: "14px 32px", borderRadius: 12,
+            display: "inline-block", marginTop: 32, padding: "14px 32px", borderRadius: 12,
             background: "#fff", color: "#3730a3", textDecoration: "none",
             fontSize: "1em", fontWeight: 700, position: "relative", zIndex: 10,
             boxShadow: "0 4px 24px rgba(255,255,255,0.3)",
@@ -58,12 +58,12 @@ export default function AboutPage() {
         </div>
 
         {/* Bottom fade */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to bottom, transparent 0%, #f2f2f7 100%)", pointerEvents: "none", zIndex: 0 }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 90, background: "linear-gradient(to bottom, transparent 0%, #f2f2f7 100%)", pointerEvents: "none", zIndex: 0 }} />
       </section>
 
       {/* Founder Section */}
-      <section style={{ background: "#f2f2f7", padding: "120px clamp(20px,6vw,120px) 240px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 60, alignItems: "center" }}>
+      <section style={{ background: "#f2f2f7", padding: "60px clamp(20px,6vw,120px) 120px" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 30, alignItems: "center" }}>
           {/* Photo */}
           <div style={{ background: "#fff", borderRadius: 24, padding: 16, boxShadow: "0 12px 40px rgba(0,0,0,0.08)", position: "relative" }}>
             <div style={{ position: "relative", width: "100%", aspectRatio: "3/4", borderRadius: 16, overflow: "hidden", background: "#e0e0e0", minHeight: 320 }}>
