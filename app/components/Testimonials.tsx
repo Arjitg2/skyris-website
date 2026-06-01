@@ -1,13 +1,13 @@
-"use client";
+﻿"use client";
 import { IconStar, IconUser } from "./icons";
 
 const testimonials = [
   { name: "Ramesh Sharma", role: "Sharma Electronics, Kolar Road", text: "My shop was invisible on Google. Within a week Clivik had my website live and my Google profile set up. Customers started calling." },
   { name: "Priya Verma", role: "Priya Beauty Parlour, Bhopal", text: "I had zero technical knowledge but they handled everything. My parlour now shows up when people search near me. Bilkul tension nahi hua." },
-  { name: "Dr. Anil Mehta", role: "Mehta Clinic, Saliya Bhopal", text: "Professional website at a price I could actually afford. The free mockup made the decision very easy for me. Highly recommended." },
-  { name: "Suresh Patel", role: "Patel Hardware, Hosangabad Rd", text: "5 din mein website live ho gayi. I was shocked by how fast and smooth the whole process was. Worth every single rupee." },
-  { name: "Neha Gupta", role: "Neha Boutique, MP Nagar", text: "Other agencies quoted me ₹30,000. Clivik delivered the same quality at ₹3,999. Same day WhatsApp support is a game changer." },
-  { name: "Vikram Joshi", role: "Joshi Coaching Centre, Bhopal", text: "They provide support 24/7 after delivery. Every change I asked for was done same day on WhatsApp. Feels like having my own tech team." },
+  { name: "Arun Singh", role: "Singh Fitness Gym, Awadhpuri", text: "Their WhatsApp automation is magic. The AI bot replies instantly and books free trials while I am training clients. Lead conversion went up without extra work." },
+  { name: "Suresh Patel", role: "Patel Hardware, Hoshangabad Rd", text: "5 din mein website live ho gayi. I was shocked by how fast and smooth the whole process was. Worth every single rupee." },
+  { name: "Neha Gupta", role: "Neha Boutique, MP Nagar", text: "Other agencies quoted me ₹30,000. Clivik delivered the same quality at ₹4,999. Same day WhatsApp support is a game changer." },
+  { name: "Deepak Chawla", role: "Chawla Sweets, Bairagarh", text: "The WhatsApp broadcast feature is amazing. We sent our Diwali offers directly to customers and got so many repeat orders instantly." },
 ];
 
 export default function Testimonials() {
@@ -25,10 +25,10 @@ export default function Testimonials() {
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
             lineHeight: 1.1, letterSpacing: "-0.04em",
-            maxWidth: "var(--title-max-width)", margin: "0 auto",
+            maxWidth: "100%", margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
-            Local Business Owners<br />Who Took the First Step.
+            Local Business Owners <br className="desktop-br" />Who Took the First Step.
           </h2>
         </div>
 

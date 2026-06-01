@@ -73,7 +73,7 @@ export default function Navbar() {
           <span style={{ fontWeight: 700, fontSize: "1em", color: isMobile ? "#0d0e1a" : "#fff" }}>Clivik</span>
           {!isMobile && <>
             <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "1em" }}>·</span>
-            <span style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.9em" }}>Digital Presence Agency</span>
+            <span style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.9em" }}>Digital Solutions</span>
           </>}
         </Link>
 

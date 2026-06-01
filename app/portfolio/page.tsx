@@ -11,27 +11,27 @@ const works = [
     category: "Dental Clinic",
     desc: "A clean, professional dental clinic website with appointment booking, Google Maps integration and a trust-building design.",
     link: "https://dentifybhopal.framer.website/",
-    imageSrc: "/Home-Dentify-free-template (1).png",
+    imageSrc: "https://res.cloudinary.com/dxvsqh2jw/image/upload/v1780293818/Home-Dentify-free-template_1_rgr7k7.png",
     tags: ["Website", "Google Profile", "WhatsApp Button"],
-    accent: "#0ea5e9",
+    accent: "#6c3bff",
   },
   {
     title: "Sofra Restaurant",
     category: "Restaurant & Dining",
     desc: "A premium restaurant website with a full menu, online table reservation flow, and an immersive visual design.",
     link: "https://sofrabhopal.framer.website/",
-    imageSrc: "/Sofra-Restaurant-Template (1).png",
+    imageSrc: "https://res.cloudinary.com/dxvsqh2jw/image/upload/v1780293817/Sofra-Restaurant-Template_1_tlo7cs.png",
     tags: ["Website", "Social Media", "Google Profile"],
-    accent: "#f59e0b",
+    accent: "#6c3bff",
   },
   {
     title: "S-Three Fitness",
     category: "Gym & Fitness",
     desc: "High-energy gym website showcasing classes, trainers, membership plans and a strong call-to-action for sign-ups.",
     link: "https://s-three-fitness.netlify.app/",
-    imageSrc: "/My-Google-AI-Studio-App (1).png",
+    imageSrc: "https://res.cloudinary.com/dxvsqh2jw/image/upload/v1780293818/My-Google-AI-Studio-App_1_atjomq.png",
     tags: ["Website", "WhatsApp Automation", "SEO"],
-    accent: "#10b981",
+    accent: "#6c3bff",
   },
   {
     title: "Shree Mangalam Properties",
@@ -40,7 +40,7 @@ const works = [
     link: "https://shri-mangalam.netlify.app/",
     imageSrc: "/Shree-Mangalam-Properties (1).png",
     tags: ["Website", "Property Listings", "SEO"],
-    accent: "#f59e0b",
+    accent: "#6c3bff",
   },
 ];
 
@@ -56,8 +56,8 @@ export default function PortfolioPage() {
       {/* Hero — matches home page gradient */}
       <section style={{
         background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: 100,
-        paddingBottom: 64,
+        paddingTop: 205,
+        paddingBottom: 16,
         paddingLeft: "clamp(20px, 6vw, 120px)",
         paddingRight: "clamp(20px, 6vw, 120px)",
         textAlign: "center",
@@ -70,11 +70,10 @@ export default function PortfolioPage() {
         <div style={{ position: "absolute", top: "10%", left: "10%", width: 420, height: 420, border: "1px solid rgba(255,255,255,0.07)", borderRadius: "50%", pointerEvents: "none" }} />
 
         <div style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#e0d9ff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
-            <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#c4b5fd", boxShadow: "0 0 6px #c4b5fd" }} />
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
             Our Work
           </div>
-          <h1 style={{ fontSize: "clamp(2.8em, 6.5vw, 4.6em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
             Real Websites.<br />Real Businesses.
           </h1>
           <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 500, margin: "0 auto 32px" }}>
@@ -93,20 +92,19 @@ export default function PortfolioPage() {
             Get Your Website →
           </Link>
 
-          <div style={{ marginTop: 48, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, position: "relative", zIndex: 10 }}>
+          <div style={{ marginTop: 96, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, position: "relative", zIndex: 10 }}>
             {categories.map(cat => (
               <button key={cat} onClick={() => setFilter(cat)} style={{
-                padding: "8px 24px", borderRadius: 999, fontSize: "0.95em", fontWeight: 700, cursor: "pointer",
-                border: filter === cat ? "1px solid #6c3bff" : "1px solid rgba(0,0,0,0.5)",
-                background: filter === cat ? "#6c3bff" : "rgba(0,0,0,0.4)",
-                color: filter === cat ? "#fff" : "rgba(255,255,255,0.85)",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                backdropFilter: "blur(8px)",
+                padding: "15px 30px", borderRadius: 12, fontSize: "0.9em", fontWeight: 700, cursor: "pointer",
+                border: filter === cat ? "1px solid #6c3bff" : "1px solid rgba(108,59,255,0.2)",
+                background: filter === cat ? "#6c3bff" : "#fff",
+                color: filter === cat ? "#fff" : "#6c3bff",
+                boxShadow: "0 12px 30px rgba(0,0,0,0.15)",
                 transition: "all 0.2s",
                 transform: "translateY(0)"
               }}
-                onMouseEnter={e => { if (filter !== cat) e.currentTarget.style.background = "rgba(0,0,0,0.6)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                onMouseLeave={e => { if (filter !== cat) e.currentTarget.style.background = "rgba(0,0,0,0.4)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                onMouseEnter={e => { if (filter !== cat) e.currentTarget.style.background = "#f4f0ff"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={e => { if (filter !== cat) e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 {cat}
               </button>
@@ -115,7 +113,7 @@ export default function PortfolioPage() {
         </div>
 
         {/* Bottom fade */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(to bottom, transparent, #f2f2f7)", pointerEvents: "none", zIndex: 0 }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to bottom, transparent 0%, #f2f2f7 100%)", pointerEvents: "none", zIndex: 0 }} />
       </section>
 
       {/* Portfolio Grid */}
@@ -143,22 +141,12 @@ export default function PortfolioPage() {
                   alt={work.title}
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                 />
-                <div style={{
-                  position: "absolute", top: 0, left: 0, right: 0,
-                  display: "flex", gap: 6, padding: "14px 16px",
-                  background: "rgba(0,0,0,0.6)", backdropFilter: "blur(8px)",
-                }}>
-                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f57" }} />
-                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#febc2e" }} />
-                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#28c840" }} />
-                  <span style={{ color: "rgba(255,255,255,0.5)", fontSize: 11, marginLeft: "auto" }}>{work.title}</span>
-                </div>
               </div>
 
               {/* Text */}
               <div style={{ order: i % 2 === 1 ? 1 : 2, padding: "0 8px" }}>
                 <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 999, background: `${work.accent}18`, color: work.accent, fontSize: "0.85em", fontWeight: 600, marginBottom: 16 }}>{work.category}</div>
-                <h2 style={{ fontSize: "clamp(1.8em,3vw,2.4em)", fontWeight: 800, color: "#0d0e1a", marginBottom: 16, letterSpacing: "-0.03em" }}>{work.title}</h2>
+                <h2 style={{ fontSize: "clamp(2em, 3.3vw, 2.6em)", fontWeight: 800, color: "#0d0e1a", marginBottom: 16, letterSpacing: "-0.03em" }}>{work.title}</h2>
                 <p style={{ color: "#555", fontSize: "1.05em", lineHeight: 1.75, marginBottom: 28 }}>{work.desc}</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 36 }}>
                   {work.tags.map(tag => (
@@ -185,9 +173,9 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "#f2f2f7", padding: "20px clamp(20px,6vw,120px) 60px", textAlign: "center" }}>
+      <section style={{ background: "#f2f2f7", padding: "60px clamp(20px,6vw,120px) 60px", textAlign: "center" }}>
         <div style={{ background: "linear-gradient(135deg, #0d0e1a, #131525)", borderRadius: 32, padding: "60px 40px", maxWidth: 800, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(1.8em,3.5vw,2.8em)", fontWeight: 700, color: "#fff", marginBottom: 16 }}>Want a website like these?</h2>
+          <h2 style={{ fontSize: "clamp(2em, 3.8vw, 3.1em)", fontWeight: 700, color: "#fff", marginBottom: 16 }}>Want a website like these?</h2>
           <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1.1em", marginBottom: 36 }}>We'll build you a free mockup first. See it before you pay for it.</p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" style={{ 
@@ -208,6 +196,12 @@ export default function PortfolioPage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section style={{ background: "#f2f2f7", padding: "0 clamp(20px,6vw,120px) 40px", textAlign: "center" }}>
+        <p style={{ color: "#777", fontSize: "0.9em", maxWidth: 800, margin: "0 auto", lineHeight: 1.6 }}>
+          Disclaimer: Since Clivik is newly launching, the portfolio section currently features our agency's past work and internal showcase projects to demonstrate our design and automation capabilities.
+        </p>
       </section>
 
       <Footer />

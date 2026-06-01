@@ -1,15 +1,16 @@
 "use client";
+import ScrollReveal from "./ScrollReveal";
 import { useState } from "react";
 
 const faqs = [
-  { n: "01/", q: "How long does it take to build my website?", a: "Just 5 days from the moment you approve the mockup. While other agencies take 30–45 days, we deliver fast without compromising on quality. Guaranteed." },
-  { n: "02/", q: "Do I need any technical knowledge?", a: "Zero. You just tell us about your business on WhatsApp. We handle everything — design, development, Google profile setup, social media. You focus on your business, we handle the tech." },
-  { n: "03/", q: "What if I don't like the design?", a: "No problem at all. We create your custom mockup completely free before you pay a single rupee. Don't love it? We part ways as friends — zero charge, zero drama." },
-  { n: "04/", q: "How much does it cost?", a: "Our packages start at just ₹3,999 — one time payment, no hidden charges. Jo price bataya wahi final price hai. No surprises after delivery. Ever." },
-  { n: "05/", q: "Will my website work on mobile?", a: "100%. Every website we build is fully mobile-friendly and tested on all screen sizes. Most of your customers will visit from their phone — we make sure it looks perfect for them." },
-  { n: "06/", q: "What is included in every package?", a: "Every package includes a mobile-friendly website, free Google Business Profile setup, WhatsApp button integration, free deployment and basic local SEO. No hidden add-ons. No surprise charges." },
-  { n: "07/", q: "How do I reach you after delivery?", a: "Just WhatsApp us. We provide 30 to 60 days of free support after your website goes live — changes, fixes, questions, all covered. Same day response. Always." },
-  { n: "08/", q: "Do you only work in Bhopal?", a: "We are based in Bhopal but serve businesses across all of M.P. Everything is handled remotely over WhatsApp — so location is never a problem for you." },
+  { n: "01/", q: "What services does Clivik offer?", a: "We offer 5 services: WhatsApp Automation, WhatsApp Marketing, Website Development, AI Agent Solutions, and Google Business Profile Optimization. Basically everything a local business needs to get more customers and run on autopilot." },
+  { n: "02/", q: "How long does the setup take?", a: "Website delivery: 7–10 days. WhatsApp automation setup: 3–5 days. AI agent setup: 5–7 days. Full Growth or Pro package: up to 10 days. We move fast without cutting corners." },
+  { n: "03/", q: "Do I need any technical knowledge?", a: "Zero. You just tell us about your business on WhatsApp. We handle everything — design, development, automation setup, deployment. You just review and approve." },
+  { n: "04/", q: "Can I buy just one service, not the full package?", a: "Absolutely. WhatsApp automation starts at ₹4,999 one-time. Google Business Profile setup is available as a standalone service. WhatsApp us and we'll set up exactly what you need." },
+  { n: "05/", q: "Will WhatsApp automation actually work for my type of business?", a: "Yes — we've designed our automation for clinics, restaurants, salons, gyms, real estate agents, and most local service businesses. Book a free consultation and we'll tell you exactly how it applies to your business." },
+  { n: "06/", q: "What is included in post-launch support?", a: "Every plan includes free post-launch support — 15 days on Starter, 30 days on Growth, 60 days on Pro. This covers changes, fixes, questions, and WhatsApp-based assistance. No extra charge." },
+  { n: "07/", q: "Are there any hidden charges?", a: "No. Jo quote hoga, wahi final price. Domain, hosting, deployment — sab included hai apne apne plans mein. Koi surprise bill nahi aayega." },
+  { n: "08/", q: "Do you only serve Bhopal businesses?", a: "We're based in Bhopal but work with businesses across all of Madhya Pradesh. Everything is handled over WhatsApp and email, so location is never a problem." },
 ];
 
 function FAQItem({ faq }: { faq: typeof faqs[0] }) {
@@ -81,7 +82,8 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
+    <section id="faq" style={{ background: "#f2f2f7", padding: "calc(var(--sec-py) * 0.75) var(--sec-px) calc(var(--pricing-outer-py) * 0.3)" }}>
+      <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div style={{ marginBottom: "var(--sec-mb)" as any }}>
           <div style={{
@@ -95,7 +97,7 @@ export default function FAQ() {
             lineHeight: 1.1, letterSpacing: "-0.04em", maxWidth: "var(--title-max-width)",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
-            Questions You&apos;re Probably<br/>Thinking Right Now.
+            Got Questions?<br/>We&apos;ve Got Answers.
           </h2>
         </div>
 
@@ -103,6 +105,7 @@ export default function FAQ() {
           {faqs.map((faq, i) => <FAQItem key={i} faq={faq} />)}
         </div>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

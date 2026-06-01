@@ -43,10 +43,10 @@ export default function ContactPage() {
       color: "#25D366",
     },
     {
-      icon: <IconMail size={20} color="#6c3bff" />,
+      icon: <IconMail size={20} color="#a78bfa" />,
       label: "Email", value: "helloclivik@gmail.com",
       href: "mailto:helloclivik@gmail.com",
-      color: "#6c3bff",
+      color: "#a78bfa",
     },
     {
       icon: <IconMapPin size={20} color="#f59e0b" />,
@@ -55,10 +55,10 @@ export default function ContactPage() {
       color: "#f59e0b",
     },
     {
-      icon: <IconClock2 size={20} color="#0ea5e9" />,
+      icon: <IconClock2 size={20} color="#a78bfa" />,
       label: "Response Time", value: "Same Day — Always",
       href: "#",
-      color: "#0ea5e9",
+      color: "#a78bfa",
     },
   ];
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
       {/* Hero — matches home page gradient */}
       <section style={{
         background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: 100, paddingBottom: 64,
+        paddingTop: 205, paddingBottom: 160,
         paddingLeft: "clamp(20px,6vw,120px)", paddingRight: "clamp(20px,6vw,120px)",
         textAlign: "center",
         position: "relative",
@@ -81,11 +81,10 @@ export default function ContactPage() {
         <div style={{ position: "absolute", top: "10%", left: "10%", width: 420, height: 420, border: "1px solid rgba(255,255,255,0.07)", borderRadius: "50%", pointerEvents: "none" }} />
 
         <div style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#e0d9ff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
-            <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#c4b5fd", boxShadow: "0 0 6px #c4b5fd" }} />
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
             Get In Touch
           </div>
-          <h1 style={{ fontSize: "clamp(2.8em, 6.5vw, 4.6em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
             Ready to See Your<br />Business Online?
           </h1>
           <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 480, margin: "0 auto" }}>
@@ -94,7 +93,7 @@ export default function ContactPage() {
         </div>
 
         {/* Bottom fade */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(to bottom, transparent, #f2f2f7)", pointerEvents: "none", zIndex: 0 }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to bottom, transparent 0%, #f2f2f7 100%)", pointerEvents: "none", zIndex: 0 }} />
       </section>
 
       {/* Contact Section */}
@@ -103,7 +102,7 @@ export default function ContactPage() {
 
           {/* Left: Info */}
           <div>
-            <h2 style={{ fontSize: "clamp(1.8em,3vw,2.4em)", fontWeight: 700, color: "#0d0e1a", marginBottom: 20 }}>
+            <h2 style={{ fontSize: "clamp(2em, 3.3vw, 2.6em)", fontWeight: 700, color: "#0d0e1a", marginBottom: 20 }}>
               Let&apos;s Build Something Great
             </h2>
             <p style={{ color: "#555", lineHeight: 1.75, fontSize: "1.05em", marginBottom: 36 }}>
@@ -111,12 +110,20 @@ export default function ContactPage() {
             </p>
 
             {/* Contact methods */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 40 }}>
-              {contactItems.map(item => (
+            <div style={{ 
+              display: "flex", flexDirection: "column", marginBottom: 40,
+              background: "#0d0e1a", borderRadius: 24, padding: "16px 24px",
+              border: "1px solid rgba(255,255,255,0.08)", boxShadow: "0 8px 30px rgba(0,0,0,0.12)"
+            }}>
+              {contactItems.map((item, index) => (
                 <a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer"
-                  style={{ display: "flex", alignItems: "center", gap: 16, padding: "18px 20px", borderRadius: 16, background: "#0d0e1a", boxShadow: "0 2px 20px rgba(0,0,0,0.15)", textDecoration: "none", transition: "transform 0.2s, box-shadow 0.2s", border: "1px solid rgba(255,255,255,0.05)" }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 28px rgba(0,0,0,0.3)"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 20px rgba(0,0,0,0.15)"; }}
+                  style={{ 
+                    display: "flex", alignItems: "center", gap: 16, padding: "20px 0", 
+                    textDecoration: "none", transition: "transform 0.2s",
+                    borderBottom: index < contactItems.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none" 
+                  }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateX(6px)"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateX(0)"; }}
                 >
                   <div style={{ width: 44, height: 44, borderRadius: 12, background: `${item.color}20`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     {item.icon}

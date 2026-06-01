@@ -2,99 +2,83 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import FAQ from "../components/FAQ";
 import Link from "next/link";
 import { IconGlobe, IconMapPin, IconSmartphone, IconBot, IconZap, IconShield, IconCheck, IconWhatsApp } from "../components/icons";
 
 const services = [
   {
-    icon: <IconGlobe size={28} color="#6c3bff" />,
-    title: "Website Development",
-    price: "Starting ₹3,999",
-    desc: "A fast, mobile-ready, premium-looking website your customers will trust — live in just 5 days.",
+    icon: <IconWhatsApp size={28} color="#a78bfa" />,
+    title: "WhatsApp Automation",
+    price: "",
+    desc: "Auto-replies, lead capture & bookings — on complete autopilot",
     bullets: [
-      "Up to 10 custom pages",
-      "Mobile & desktop responsive",
-      "WhatsApp chat button",
-      "Contact & booking forms",
-      "Google Maps embed",
+      "Instant auto-replies",
+      "Lead capture 24/7",
+      "Appointment booking automation",
+      "FAQ automation",
+      "CRM & Google Sheets integration",
+      "Follow-up automation",
+    ],
+    accent: "#a78bfa",
+  },
+  {
+    icon: <IconZap size={28} color="#a78bfa" />,
+    title: "WhatsApp Marketing",
+    price: "",
+    desc: "Broadcast campaigns that drive repeat business & re-engagement",
+    bullets: [
+      "Promotional & festival campaigns",
+      "Customer re-engagement workflows",
+      "Lead nurturing campaigns",
+      "Broadcast to your contact list",
+      "Customer retention automation",
+    ],
+    accent: "#a78bfa",
+  },
+  {
+    icon: <IconGlobe size={28} color="#a78bfa" />,
+    title: "Website Development",
+    price: "",
+    desc: "Fast, mobile-ready websites built to generate leads",
+    bullets: [
+      "Modern custom design",
+      "Mobile-first responsive layout",
+      "WhatsApp click-to-chat button",
+      "Contact & lead capture forms",
+      "5–7 day delivery",
       "Free deployment & hosting setup",
     ],
-    accent: "#6c3bff",
+    accent: "#a78bfa",
   },
   {
-    icon: <IconMapPin size={28} color="#0ea5e9" />,
-    title: "Google Business Profile",
-    price: "Free with every plan",
-    desc: "Show up when people search 'near me' — we handle the full setup, photos, and optimization.",
+    icon: <IconBot size={28} color="#a78bfa" />,
+    title: "AI Agent Solutions",
+    price: "",
+    desc: "24/7 AI assistant that sells, supports & qualifies leads automatically",
     bullets: [
-      "Full profile creation & verification",
-      "Keyword-rich business description",
-      "Photo & service catalog upload",
-      "Map pin placement",
-      "Review management guidance",
-      "100% free with any package",
+      "AI sales agent",
+      "AI customer support agent",
+      "Lead qualification automation",
+      "Booking automation",
+      "Works directly on WhatsApp",
+      "Connects to your CRM",
     ],
-    accent: "#0ea5e9",
+    accent: "#a78bfa",
   },
   {
-    icon: <IconSmartphone size={28} color="#ec4899" />,
-    title: "Social Media Setup",
-    price: "Included in Growth & Pro",
-    desc: "Instagram, Facebook & WhatsApp Business — all setup professionally so you look credible from day 1.",
+    icon: <IconMapPin size={28} color="#a78bfa" />,
+    title: "Google Business Profile Optimization",
+    price: "",
+    desc: "Show up when local customers search your category",
     bullets: [
-      "Instagram & Facebook page branding",
-      "Profile bio & link setup",
-      "WhatsApp Business account",
-      "First 5 posts designed & posted",
-      "Story highlights created",
-      "Content calendar guidance",
+      "Full profile setup & optimization",
+      "Google Maps visibility improvement",
+      "Business info & images optimization",
+      "Local SEO improvements",
+      "More calls & direction requests",
     ],
-    accent: "#ec4899",
-  },
-  {
-    icon: <IconBot size={28} color="#10b981" />,
-    title: "AI WhatsApp Automation",
-    price: "Included in Growth & Pro",
-    desc: "Auto-replies, appointment booking and lead capture — working 24/7 even when you're asleep.",
-    bullets: [
-      "Instant auto-reply to all messages",
-      "Appointment booking flow",
-      "Lead capture with contact save",
-      "FAQ auto-response setup",
-      "Zero manual work required",
-      "Works 24 hours a day",
-    ],
-    accent: "#10b981",
-  },
-  {
-    icon: <IconZap size={28} color="#f59e0b" />,
-    title: "Speed & SEO Optimization",
-    price: "Included in all plans",
-    desc: "Every website we build is lightning fast and SEO-ready so you rank higher on Google locally.",
-    bullets: [
-      "Compressed images & fast loads",
-      "Mobile-first design",
-      "Local SEO keywords built-in",
-      "Proper meta tags & descriptions",
-      "Google Search Console setup",
-      "Sitemap submission",
-    ],
-    accent: "#f59e0b",
-  },
-  {
-    icon: <IconShield size={28} color="#8b5cf6" />,
-    title: "Post-Delivery Support",
-    price: "15–60 days depending on plan",
-    desc: "We don't disappear after delivery. WhatsApp us anytime — we'll fix, tweak, and guide you.",
-    bullets: [
-      "Quick bug fixes",
-      "Minor content changes",
-      "Guidance & how-to help",
-      "No extra charges for support",
-      "Same-day WhatsApp response",
-      "Up to 60 days on Pro plan",
-    ],
-    accent: "#8b5cf6",
+    accent: "#a78bfa",
   },
 ];
 
@@ -106,8 +90,8 @@ export default function ServicesPage() {
       {/* Hero — matches home page gradient exactly */}
       <section style={{
         background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: 100,
-        paddingBottom: 64,
+        paddingTop: 205,
+        paddingBottom: 16,
         paddingLeft: "clamp(20px, 6vw, 120px)",
         paddingRight: "clamp(20px, 6vw, 120px)",
         textAlign: "center",
@@ -121,12 +105,11 @@ export default function ServicesPage() {
         <div style={{ position: "absolute", top: "10%", left: "10%", width: 420, height: 420, border: "1px solid rgba(255,255,255,0.07)", borderRadius: "50%", pointerEvents: "none" }} />
 
         <div style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#e0d9ff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
-            <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#c4b5fd", boxShadow: "0 0 6px #c4b5fd" }} />
-            What We Offer
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
+            What We Do
           </div>
-          <h1 style={{ fontSize: "clamp(2.8em, 6.5vw, 4.6em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
-            Six Services,<br />One Goal: More Customers
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
+            Five Services.<br />One Goal — More Customers, Less Manual Work.
           </h1>
           <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 500, margin: "0 auto 32px" }}>
             Everything a local business needs to get found online — delivered in 5 days, at a price that makes sense.
@@ -145,40 +128,43 @@ export default function ServicesPage() {
           </Link>
 
           <div style={{ 
-            marginTop: 48, 
+            marginTop: 96, 
             display: "inline-flex", 
             flexWrap: "wrap", 
             justifyContent: "center", 
             alignItems: "center",
             gap: 16,
-            background: "rgba(0,0,0,0.3)", 
-            padding: "12px 24px", 
+            background: "#0d0e1a", 
+            padding: "16px 28px", 
             borderRadius: 16, 
-            border: "1px solid rgba(255,255,255,0.1)", 
-            backdropFilter: "blur(10px)",
-            fontSize: "0.9em",
-            color: "rgba(255,255,255,0.85)"
+            border: "1px solid rgba(255,255,255,0.15)", 
+            boxShadow: "0 12px 30px rgba(0,0,0,0.15)",
+            backdropFilter: "none",
+            fontSize: "0.95em",
+            color: "#fff"
           }}>
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}><span style={{ color: "#c4b5fd", fontWeight: 700 }}>150+</span> Websites Built</span>
-            <span style={{ color: "rgba(255,255,255,0.2)" }}>•</span>
+            <span style={{ color: "rgba(255,255,255,0.4)" }}>•</span>
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}><span style={{ color: "#c4b5fd", fontWeight: 700 }}>5 Day</span> Delivery</span>
-            <span style={{ color: "rgba(255,255,255,0.2)" }}>•</span>
+            <span style={{ color: "rgba(255,255,255,0.4)" }}>•</span>
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}>Free Mockup First</span>
-            <span style={{ color: "rgba(255,255,255,0.2)" }}>•</span>
+            <span style={{ color: "rgba(255,255,255,0.4)" }}>•</span>
             <span style={{ display: "flex", alignItems: "center", gap: 6 }}>Same-Day WhatsApp Reply</span>
           </div>
         </div>
 
         {/* Bottom fade */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(to bottom, transparent, #f2f2f7)", pointerEvents: "none", zIndex: 0 }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to bottom, transparent 0%, #f2f2f7 100%)", pointerEvents: "none", zIndex: 0 }} />
       </section>
 
       {/* Services Grid */}
       <section style={{ background: "#f2f2f7", padding: "72px clamp(20px,6vw,120px)" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 24 }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 40 }}>
           {services.map((s) => (
             <div key={s.title} style={{
-              background: "#161726", borderRadius: 20, padding: "32px",
+              flex: "1 1 300px",
+              maxWidth: 400,
+              background: "#161726", borderRadius: 24, padding: "32px",
               boxShadow: "0 8px 30px rgba(0,0,0,0.15)",
               border: "1px solid rgba(255,255,255,0.06)",
               display: "flex", flexDirection: "column",
@@ -200,7 +186,7 @@ export default function ServicesPage() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, marginTop: "auto", display: "flex", flexDirection: "column", gap: 12 }}>
                 {s.bullets.map(b => (
                   <li key={b} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.9em", color: "rgba(255,255,255,0.8)" }}>
-                    <span style={{ color: s.accent, fontSize: "1.2em", lineHeight: 1 }}>→</span>
+                    <IconCheck size={16} color={s.accent} />
                     {b}
                   </li>
                 ))}
@@ -213,7 +199,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section style={{ background: "#f2f2f7", paddingBottom: 80, paddingLeft: "clamp(20px,6vw,120px)", paddingRight: "clamp(20px,6vw,120px)", textAlign: "center" }}>
         <div style={{ background: "#0d0e1a", borderRadius: 32, padding: "60px 40px", maxWidth: 800, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(1.8em,3.5vw,2.8em)", fontWeight: 700, color: "#fff", marginBottom: 16 }}>Not sure which service you need?</h2>
+          <h2 style={{ fontSize: "clamp(2em, 3.8vw, 3.1em)", fontWeight: 700, color: "#fff", marginBottom: 16 }}>Not sure which service you need?</h2>
           <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1.1em", marginBottom: 36 }}>WhatsApp us — we'll guide you to the right solution. Free advice, zero pressure.</p>
           <a
             href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20to%20know%20more%20about%20your%20services."
@@ -228,6 +214,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <FAQ />
       <Footer />
       <WhatsAppButton />
     </main>

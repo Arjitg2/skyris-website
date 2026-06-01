@@ -1,42 +1,80 @@
 "use client";
-import { IconGlobe, IconBot, IconShield, IconZap, IconMapPin, IconSmartphone } from "./icons";
+import ScrollReveal from "./ScrollReveal";
+import { IconWhatsApp, IconGlobe, IconBot, IconShield, IconZap, IconMapPin, IconSmartphone, IconCheck } from "./icons";
 
 const services = [
   {
-    icon: <IconGlobe size={24} color="#6c3bff" />,
+    icon: <IconWhatsApp size={28} color="#a78bfa" />,
+    title: "WhatsApp Automation",
+    price: "",
+    desc: "Auto-replies, lead capture & bookings — on complete autopilot",
+    bullets: [
+      "Instant auto-replies",
+      "Lead capture 24/7",
+      "Appointment booking automation",
+      "FAQ automation",
+      "CRM & Google Sheets integration",
+      "Follow-up automation",
+    ],
+    accent: "#a78bfa",
+  },
+  {
+    icon: <IconZap size={28} color="#a78bfa" />,
+    title: "WhatsApp Marketing",
+    price: "",
+    desc: "Broadcast campaigns that drive repeat business & re-engagement",
+    bullets: [
+      "Promotional & festival campaigns",
+      "Customer re-engagement workflows",
+      "Lead nurturing campaigns",
+      "Broadcast to your contact list",
+      "Customer retention automation",
+    ],
+    accent: "#a78bfa",
+  },
+  {
+    icon: <IconGlobe size={28} color="#a78bfa" />,
     title: "Website Development",
-    desc: "Fast, premium, mobile-ready website live in 5 days",
-    bullets: ["Custom pages", "WhatsApp btn", "Contact forms", "Maps embed"]
+    price: "",
+    desc: "Fast, mobile-ready websites built to generate leads",
+    bullets: [
+      "Modern custom design",
+      "Mobile-first responsive layout",
+      "WhatsApp click-to-chat button",
+      "Contact & lead capture forms",
+      "5–7 day delivery",
+      "Free deployment & hosting setup",
+    ],
+    accent: "#a78bfa",
   },
   {
-    icon: <IconMapPin size={24} color="#6c3bff" />,
-    title: "Google Business Profile",
-    desc: "Show up when locals search your business near me",
-    bullets: ["Full setup", "Map placement", "Photos done", "Free always"]
+    icon: <IconBot size={28} color="#a78bfa" />,
+    title: "AI Agent Solutions",
+    price: "",
+    desc: "24/7 AI assistant that sells, supports & qualifies leads automatically",
+    bullets: [
+      "AI sales agent",
+      "AI customer support agent",
+      "Lead qualification automation",
+      "Booking automation",
+      "Works directly on WhatsApp",
+      "Connects to your CRM",
+    ],
+    accent: "#a78bfa",
   },
   {
-    icon: <IconSmartphone size={24} color="#6c3bff" />,
-    title: "Social Media Setup",
-    desc: "Instagram + Facebook + WhatsApp Biz all setup professionally",
-    bullets: ["Bio & brand", "First 5 posts", "Ready day 1"]
-  },
-  {
-    icon: <IconBot size={24} color="#6c3bff" />,
-    title: "AI WhatsApp Automation",
-    desc: "Auto-replies, booking & lead capture on complete autopilot",
-    bullets: ["Works 24/7", "Instant replies", "Lead capture auto", "No missed leads"]
-  },
-  {
-    icon: <IconZap size={24} color="#6c3bff" />,
-    title: "Speed & SEO Optimization",
-    desc: "Lightning fast loading + local SEO built into every website",
-    bullets: ["Faster load time", "Mobile optimized", "SEO ready pages", "Rank higher"]
-  },
-  {
-    icon: <IconShield size={24} color="#6c3bff" />,
-    title: "30-Day Free Support",
-    desc: "We don't disappear after delivery. WhatsApp us anytime for 30 days — free",
-    bullets: ["Quick fixes", "Minor changes", "Guidance support", "No extra charges"]
+    icon: <IconMapPin size={28} color="#a78bfa" />,
+    title: "Google Business Profile Optimization",
+    price: "",
+    desc: "Show up when local customers search your category",
+    bullets: [
+      "Full profile setup & optimization",
+      "Google Maps visibility improvement",
+      "Business info & images optimization",
+      "Local SEO improvements",
+      "More calls & direction requests",
+    ],
+    accent: "#a78bfa",
   },
 ];
 
@@ -46,9 +84,10 @@ export default function WhyWebsite() {
       background: "#f2f2f7", /* Outer light background */
       padding: "var(--pricing-outer-py) var(--pricing-outer-px) 0",
     }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", borderRadius: 40, overflow: "hidden", background: "linear-gradient(160deg, #0d0e1a 0%, #131525 100%)", padding: "calc(var(--pricing-inner-py) / 2) var(--pricing-inner-px) var(--pricing-inner-py)" }}>
+      <ScrollReveal>
+      <div style={{ maxWidth: 1280, margin: "0 auto", borderRadius: 40, overflow: "hidden", background: "linear-gradient(160deg, #0d0e1a 0%, #131525 100%)", padding: "var(--pricing-inner-py) var(--pricing-inner-px)" }}>
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
+        <div style={{ textAlign: "center", marginBottom: "calc(var(--sec-mb) * 1.3)" }}>
           <div style={{
             display: "inline-block", padding: "5px 14px", borderRadius: 999,
             background: "rgba(255,255,255,0.07)", fontSize: "1em", fontWeight: 500, /* Subheading size 1em */
@@ -58,19 +97,21 @@ export default function WhyWebsite() {
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#fff",
             lineHeight: 1.1, letterSpacing: "-0.04em",
-            maxWidth: "var(--title-max-width)", margin: "0 auto",
+            maxWidth: "100%", margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
-            Six Services, One Goal<br />More Customers For You.
+            Five Services, <br className="mobile-br" />One Goal <br className="desktop-br" /><br className="mobile-br" /><span style={{ whiteSpace: "nowrap" }}>More Customers<span className="desktop-only"> For You.</span></span>
           </h2>
         </div>
 
         {/* 3x2 card grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 20 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 20 }}>
           {services.map((s, i) => (
             <div
               key={i}
               style={{
+                flex: "1 1 300px",
+                maxWidth: 400,
                 background: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: 20,
@@ -108,7 +149,9 @@ export default function WhyWebsite() {
               <div style={{ marginTop: "auto" }}>
                 {s.bullets.map((b, bi) => (
                   <div key={bi} style={{ display: "flex", alignItems: "flex-start", marginBottom: 8 }}>
-                    <span style={{ color: "#6c3bff", marginRight: 10, fontSize: "1.1em", lineHeight: "1.3" }}>→</span>
+                    <span style={{ display: "inline-flex", marginRight: 10, marginTop: 4, flexShrink: 0 }}>
+                      <IconCheck size={16} color="#a78bfa" />
+                    </span>
                     <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95em", lineHeight: "1.4" }}>{b}</span>
                   </div>
                 ))}
@@ -117,6 +160,7 @@ export default function WhyWebsite() {
           ))}
         </div>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 "use client";
+import ScrollReveal from "./ScrollReveal";
 import { IconCheck, IconShield } from "./icons";
 
 const plans = [
@@ -40,6 +41,7 @@ export default function Pricing() {
       background: "#f2f2f7",
       padding: "var(--pricing-outer-py) var(--pricing-outer-px) 0",
     }}>
+      <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto", borderRadius: 40, overflow: "hidden", background: "linear-gradient(160deg, #0d0e1a 0%, #131525 100%)", padding: "var(--pricing-inner-py) var(--pricing-inner-px) calc(var(--pricing-inner-py) / 2)" }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
@@ -169,6 +171,7 @@ export default function Pricing() {
           </a>
         </div>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

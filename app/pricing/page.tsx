@@ -7,33 +7,56 @@ import { IconCheck, IconShield, IconWhatsApp } from "../components/icons";
 
 const plans = [
   {
-    name: "Starter",
-    desc: "Perfect for shops & small businesses\njust getting online",
-    price: "₹3,999", featured: false, type: "One-time",
-    features: ["5 Page Website", "Mobile Responsive", "Google Profile Setup", "WhatsApp Button", "Basic Local SEO", "Contact Form", "Social Links", "Free Deployment", "7 Day Delivery", "15 Day Support"],
+    name: "Starter Plan",
+    desc: "Great for businesses starting out",
+    price: "₹4,999", featured: false, type: "One-time",
+    features: [
+      "Free Custom Website Mockup",
+      "5-Page Premium Website",
+      "Basic WhatsApp Auto-Replies",
+      "Google Business Profile Setup",
+      "WhatsApp Click-to-Chat Button",
+      "15 Days Free Support"
+    ],
     btnText: "Get Started →",
-    waMsg: "Hi Clivik! I am interested in the Starter plan (₹3,999). Please guide me.",
+    waMsg: "Hi Clivik! I am interested in the Starter plan (₹4,999). Please guide me.",
   },
   {
-    name: "Growth",
-    desc: "For businesses ready to\ngrow faster online",
-    price: "₹6,999", featured: true, badge: "Most Popular", type: "One-time",
-    features: ["7 Page Website", "Premium Design", "WhatsApp Auto Reply", "Appointment Booking", "Lead Capture Form", "Google Maps Integration", "Fast Loading Speed", "5 Day Delivery", "30 Day Support", "Custom Domain Setup"],
+    name: "Growth Plan",
+    desc: "For businesses serious about leads",
+    price: "₹14,999", featured: true, badge: "Most Popular", type: "One-time",
+    features: [
+      "Free Custom Website Mockup",
+      "10-Page Premium Website",
+      "Advanced WhatsApp Automation (Appointments, FAQs)",
+      "Full Google Profile Optimization",
+      "Lead Capture Integration (Google Sheets)",
+      "Social Media Accounts Setup",
+      "30 Days Free Support"
+    ],
     btnText: "Get Started →",
-    waMsg: "Hi Clivik! I am interested in the Growth plan (₹6,999). Please guide me.",
+    waMsg: "Hi Clivik! I am interested in the Growth plan (₹14,999). Please guide me.",
   },
   {
-    name: "Pro",
-    desc: "For serious businesses wanting\ncomplete digital dominance",
-    price: "₹11,999", featured: false, type: "One-time",
-    features: ["10 Page Website", "Custom Premium Design", "Instagram DM Automation", "Monthly Report", "Priority Support", "Blog Section", "Advanced SEO", "Multiple Forms", "Email Notifications", "60 Day Support"],
+    name: "Pro AI Plan",
+    desc: "Full business automation & AI",
+    price: "₹29,999", featured: false, type: "One-time",
+    features: [
+      "Free Custom Website Mockup",
+      "E-commerce or Booking Website",
+      "Dedicated AI Sales Agent on WhatsApp",
+      "CRM Integration",
+      "Advanced Follow-up Workflows",
+      "Priority Same-Day Support",
+      "60 Days Free Support"
+    ],
     btnText: "Get Started →",
-    waMsg: "Hi Clivik! I am interested in the Pro plan (₹11,999). Please guide me.",
+    waMsg: "Hi Clivik! I am interested in the Pro AI plan (₹29,999). Please guide me.",
   },
 ];
 
 const stats = [
-  { n: "₹3,999", label1: "Starting", label2: "Price" },
+  { n: "₹4,999", label1: "Starting", label2: "Price" },
   { n: "5 Days", label1: "Live", label2: "Delivery" },
   { n: "100%", label1: "Free", label2: "Mockup First" },
 ];
@@ -54,8 +77,8 @@ export default function PricingPage() {
       {/* Hero — matches home page gradient */}
       <section style={{
         background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: 100,
-        paddingBottom: 64,
+        paddingTop: 205,
+        paddingBottom: 32,
         paddingLeft: "clamp(20px,6vw,120px)",
         paddingRight: "clamp(20px,6vw,120px)",
         textAlign: "center",
@@ -68,11 +91,10 @@ export default function PricingPage() {
         <div style={{ position: "absolute", top: "10%", left: "10%", width: 420, height: 420, border: "1px solid rgba(255,255,255,0.07)", borderRadius: "50%", pointerEvents: "none" }} />
 
         <div style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#e0d9ff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
-            <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#c4b5fd", boxShadow: "0 0 6px #c4b5fd" }} />
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
             Pricing
           </div>
-          <h1 style={{ fontSize: "clamp(2.8em, 6.5vw, 4.6em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
             Smart Pricing for<br />Serious Businesses
           </h1>
           <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 480, margin: "0 auto" }}>
@@ -92,7 +114,7 @@ export default function PricingPage() {
           </div>
 
           <Link href="/contact" style={{
-            display: "inline-block", marginTop: 32, padding: "14px 32px", borderRadius: 12,
+            display: "inline-block", marginTop: 64, padding: "14px 32px", borderRadius: 12,
             background: "#fff", color: "#3730a3", textDecoration: "none",
             fontSize: "1em", fontWeight: 700, position: "relative", zIndex: 10,
             boxShadow: "0 4px 24px rgba(255,255,255,0.3)",
@@ -106,7 +128,7 @@ export default function PricingPage() {
         </div>
 
         {/* Bottom fade */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(to bottom, transparent, #f2f2f7)", pointerEvents: "none", zIndex: 0 }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to bottom, transparent 0%, #f2f2f7 100%)", pointerEvents: "none", zIndex: 0 }} />
       </section>
 
       <section style={{ background: "#f2f2f7", padding: "0 clamp(20px,6vw,120px) 60px" }}>
@@ -139,7 +161,7 @@ export default function PricingPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36, flexGrow: 1 }}>
                   {plan.features.map(f => (
                     <div key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: "0.95em" }}>
-                      <div style={{ width: 20, height: 20, borderRadius: "50%", background: plan.featured ? "#6c3bff" : "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <div style={{ width: 20, height: 20, borderRadius: "50%", background: plan.featured ? "#a78bfa" : "rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                         <IconCheck size={10} color="#fff" />
                       </div>
                       <span style={{ color: plan.featured ? "#333" : "rgba(255,255,255,0.8)" }}>{f}</span>
@@ -178,9 +200,9 @@ export default function PricingPage() {
           </div>
 
           {/* Not sure */}
-          <div style={{ background: "#fff", borderRadius: 24, padding: "36px", textAlign: "center", border: "1px solid rgba(0,0,0,0.07)", marginBottom: 40 }}>
+          <div style={{ background: "#fff", borderRadius: 24, padding: "36px", textAlign: "center", border: "1px solid rgba(0,0,0,0.07)", marginBottom: 200 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: "1.3em", fontWeight: 700, color: "#0d0e1a", marginBottom: 12 }}>
-              <IconShield size={22} color="#6c3bff" /> Not sure which plan is right for you?
+              <IconShield size={22} color="#a78bfa" /> Not sure which plan is right for you?
             </div>
             <p style={{ color: "#666", lineHeight: 1.7, marginBottom: 28 }}>
               WhatsApp us — we'll suggest the best package for YOUR business. Free advice. Zero pressure.
@@ -198,7 +220,7 @@ export default function PricingPage() {
           </div>
 
           {/* FAQ */}
-          <h2 style={{ fontSize: "clamp(1.6em, 3vw, 2.4em)", fontWeight: 700, color: "#0d0e1a", marginBottom: 32, textAlign: "center" }}>Frequently Asked Questions</h2>
+          <h2 style={{ fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a", marginBottom: 32, textAlign: "center", fontFamily: "'FullerSansDT', 'Inter', sans-serif" }}>Frequently Asked Questions</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760, margin: "0 auto" }}>
             {faqs.map(faq => (
               <div key={faq.q} style={{ background: "#fff", borderRadius: 16, padding: "24px 28px", border: "1px solid rgba(0,0,0,0.07)" }}>

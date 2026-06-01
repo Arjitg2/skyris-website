@@ -1,8 +1,10 @@
+import ScrollReveal from "./ScrollReveal";
 import Image from "next/image";
 
 export default function About() {
   return (
     <section id="about" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px)" }}>
+      <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         
         {/* Header */}
@@ -17,7 +19,7 @@ export default function About() {
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
             lineHeight: 1.1, letterSpacing: "-0.04em",
             maxWidth: "100%", fontFamily: "'FullerSansDT', 'Inter', sans-serif"
-          }}>Built by Someone Who<br />Understands Your Business.</h2>
+          }}>Built by Someone Who <br className="desktop-br" />Understands Your Business.</h2>
         </div>
 
         {/* Content Grid */}
@@ -80,6 +82,7 @@ export default function About() {
 
         </div>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

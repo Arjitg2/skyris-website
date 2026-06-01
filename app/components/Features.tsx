@@ -1,32 +1,35 @@
 "use client";
+import ScrollReveal from "./ScrollReveal";
 import { IconLightning, IconSparkle, IconRefreshCw, IconCheck, IconCloud, IconBot, IconClock, IconTarget, IconGlobe, IconBarChart } from "./icons";
 
 const rightSteps = [
-  { text: "Auto WhatsApp Replies", icon: <IconCheck size={14} color="#fff" /> },
-  { text: "Appointment Booking", icon: <IconCheck size={14} color="#fff" /> },
-  { text: "Lead Capture 24/7", icon: <IconCheck size={14} color="#fff" /> },
-  { text: "Zero Manual Work", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "Instant WhatsApp auto-replies", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "24/7 AI-powered customer support", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "Automated appointment booking", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "Lead capture — no missed inquiry", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "CRM & Google Sheets integration", icon: <IconCheck size={14} color="#fff" /> },
 ];
 
 const bottomDarkFeatures = [
-  { text: "Mobile-Friendly Website", icon: <IconCheck size={13} color="#fff" /> },
-  { text: "Free Google Business Profile", icon: <IconCheck size={13} color="#fff" /> },
-  { text: "WhatsApp Button on Website", icon: <IconCheck size={13} color="#fff" /> },
-  { text: "Basic SEO — Get Found Locally", icon: <IconCheck size={13} color="#fff" /> },
+  { text: "WhatsApp-first support", icon: <IconCheck size={13} color="#fff" /> },
+  { text: "Same-day response", icon: <IconCheck size={13} color="#fff" /> },
+  { text: "No hidden charges, ever", icon: <IconCheck size={13} color="#fff" /> },
+  { text: "15–60 day post-launch support", icon: <IconCheck size={13} color="#fff" /> },
 ];
 
 export default function Features() {
   return (
     <section id="features" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
+      <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         {/* Section header */}
-        <div style={{ marginBottom: "var(--sec-mb)" as any, textAlign: "var(--sec-text-align)" as any }}>
+        <div style={{ marginBottom: "var(--sec-mb)", textAlign: "var(--sec-text-align)" as any }}>
           <div style={{
             display: "inline-block", padding: "5px 14px", borderRadius: 999,
-            background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111", /* Subheading size 1em */
+            background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111",
             border: "1px solid rgba(0,0,0,0.08)", marginBottom: 20,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
-          }}>Why Choose Clivik</div>
+          }}>Why Clivik</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
             lineHeight: 1.15, letterSpacing: "-0.04em", maxWidth: "100%",
@@ -34,7 +37,7 @@ export default function Features() {
             wordBreak: "break-word", overflowWrap: "break-word",
           }}>
             Everything Your Business Needs<br/>
-            to Get Found Online
+            to Grow Online
           </h2>
         </div>
 
@@ -83,12 +86,9 @@ export default function Features() {
             </div>
           </div>
 
-          {/* Right: Seamless Process */}
+          {/* Card 2: Top Right */}
           <div style={{ background: "#fff", borderRadius: 20, padding: "40px 36px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column", gap: 0 }}>
-            <h3 style={{ fontSize: "1.3em", fontWeight: 800, color: "#0d0e1a", marginBottom: 8 }}>&quot;Your Website Works Even While You Sleep.&quot;</h3>
-            <p style={{ fontSize: "1em", color: "#666", lineHeight: 1.6, marginBottom: 28 }}>
-              AI-powered automation built into every website.
-            </p>
+            <h3 style={{ fontSize: "1.3em", fontWeight: 800, color: "#0d0e1a", marginBottom: 16 }}>&quot;Your Business Replies Even While You Sleep.&quot;</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 32 }}>
               {rightSteps.map((s, i) => (
                 <div key={i} style={{ fontSize: "1em", color: "#444", display: "flex", alignItems: "center", gap: 10 }}>
@@ -101,15 +101,10 @@ export default function Features() {
             </div>
             <div style={{
               flex: 1, background: "#0d0e1a", borderRadius: 16, padding: "24px 20px",
-              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, minHeight: 140,
+              display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, minHeight: 120,
             }}>
-              <div style={{ display: "flex", gap: 6 }}>
-                {[1,2,3,4,5].map(i => <div key={i} style={{ width: 8, height: 8, borderRadius: "50%", background: "#6c3bff", opacity: i <= 4 ? 1 : 0.3 }} />)}
-              </div>
-              <div style={{ color: "#fff", fontWeight: 700, fontSize: "1em" }}>Your Website</div>
-              <a href="/contact" style={{ padding: "10px 28px", borderRadius: 10, background: "#6c3bff", color: "#fff", fontSize: "1em", fontWeight: 600, textDecoration: "none", display: "inline-block" }}>
-                Get in touch
-              </a>
+              <div style={{ color: "#fff", fontWeight: 700, fontSize: "1.2em" }}>₹14,999</div>
+              <div style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.95em" }}>Growth Plan — Most Popular</div>
             </div>
           </div>
         </div>
@@ -153,6 +148,7 @@ export default function Features() {
           </div>
         </div>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

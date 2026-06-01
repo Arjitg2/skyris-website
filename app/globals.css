@@ -113,8 +113,8 @@ body {
 /* Responsive Variables for Mobile Optimization */
 :root {
   --sec-px: 80px;
-  --sec-py: 120px;
-  --title-size: 4.2em;
+  --sec-py: 192px;
+  --title-size: 4.6em;
   --title-max-width: 70%;
   
   --grid-2: 1fr 1fr;
@@ -139,7 +139,7 @@ body {
 
   /* Global Section Layout */
   --sec-text-align: left;
-  --sec-mb: 48px;
+  --sec-mb: 67px;
   --about-flex: row;
   --works-flex: row;
   --works-align: flex-end;
@@ -183,8 +183,8 @@ body {
 @media (max-width: 768px) {
   :root {
     --sec-px: 20px;
-    --sec-py: 80px; /* Increased padding between sections */
-    --title-size: 3em;
+    --sec-py: 128px; /* Increased padding between sections */
+    --title-size: 3.3em;
     --title-max-width: 100%;
     
     --grid-2: 1fr;
@@ -210,7 +210,7 @@ body {
 
     /* Global Section Layout */
     --sec-text-align: center;
-    --sec-mb: 24px; /* Less space between headline and content */
+    --sec-mb: 34px; /* Less space between headline and content */
     --about-flex: column;
     --works-flex: column;
     --works-align: center;
@@ -230,7 +230,7 @@ body {
     --hero-gap: 40px;
     --hero-min-height: auto;
     --hero-cards-height: 420px;
-    --hero-title-size: 2.8em;
+    --hero-title-size: 3.1em;
     --hero-sub-size: 1em;
     --hero-sub-max: 340px;
     --hero-sub-wrap: normal;
@@ -483,7 +483,7 @@ img, video, iframe { max-width: 100%; height: auto; }
    ============================================================ */
 @media (max-width: 480px) {
   :root {
-    --title-size: 2.2em;
+    --title-size: 2.4em;
   }
 
   /* Catch h1 inner page headings using clamp */
@@ -511,19 +511,9 @@ img, video, iframe { max-width: 100%; height: auto; }
     text-align: left !important;
   }
 
-  /* All h2s inside sections: left-align (like FAQ) */
-  section h2 {
-    text-align: left !important;
-  }
-
   /* Pricing section text-align: center for internal elements only */
   section[id="pricing"] h2 {
     text-align: center !important;
-  }
-
-  /* Section badge pills: left align */
-  section > div > div[style*="inline-block"] {
-    text-align: left !important;
   }
 }
 
@@ -595,4 +585,56 @@ img, video, iframe { max-width: 100%; height: auto; }
     white-space: nowrap !important;
     display: inline-block !important;
   }
+}
+
+/* Responsive Utilities */
+.desktop-only { display: inline; }
+.desktop-br { display: block; }
+.mobile-br { display: none; }
+@media (max-width: 768px) {
+  .desktop-only, .desktop-br { display: none !important; }
+  .mobile-br { display: block !important; }
+}
+
+
+/* Infinite Marquee for Mobile */
+.slider-wrapper {
+  overflow: hidden;
+  margin: 0 calc(var(--sec-px) * -1); /* Full bleed on mobile */
+  padding: 0 var(--sec-px) 24px;
+}
+.slider-mobile {
+  display: grid;
+  grid-template-columns: var(--grid-3);
+  gap: 24px;
+}
+.mobile-only-card {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    width: 100vw;
+  }
+  .slider-mobile {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 10s linear infinite;
+  }
+  .slider-mobile:hover {
+    animation-play-state: paused;
+  }
+  .mobile-only-card {
+    display: block;
+  }
+  /* Force cards to a specific width on mobile */
+  .slider-mobile > * {
+    width: 300px;
+    flex-shrink: 0;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 12px)); /* -50% of content minus half gap */ }
 }

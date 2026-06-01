@@ -1,21 +1,22 @@
 "use client";
+import ScrollReveal from "./ScrollReveal";
 import Link from "next/link";
 
 const works = [
   {
     title: "Dentify Bhopal Template",
     link: "https://dentifybhopal.framer.website/",
-    imageSrc: "/My-Google-AI-Studio-App (1).png"
+    imageSrc: "https://res.cloudinary.com/dxvsqh2jw/image/upload/v1780293818/My-Google-AI-Studio-App_1_atjomq.png"
   },
   {
     title: "Sofra Restaurant Template",
     link: "https://sofrabhopal.framer.website/",
-    imageSrc: "/Sofra-Restaurant-Template (1).png"
+    imageSrc: "https://res.cloudinary.com/dxvsqh2jw/image/upload/v1780293817/Sofra-Restaurant-Template_1_tlo7cs.png"
   },
   {
     title: "S-Three Fitness Template",
     link: "https://s-three-fitness.netlify.app/",
-    imageSrc: "/Home-Dentify-free-template (1).png"
+    imageSrc: "https://res.cloudinary.com/dxvsqh2jw/image/upload/v1780293818/Home-Dentify-free-template_1_rgr7k7.png"
   },
 ];
 
@@ -80,6 +81,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
 export default function Works() {
   return (
     <section id="projects" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
+      <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div style={{ display: "flex", flexDirection: "var(--works-flex)" as any, justifyContent: "space-between", alignItems: "var(--works-align)" as any, marginBottom: "var(--sec-mb)" as any, gap: "24px", textAlign: "var(--sec-text-align)" as any }}>
           <div style={{ flex: "1 1 100%" }}>
@@ -105,10 +107,19 @@ export default function Works() {
           >View All Works</Link>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 24 }}>
-          {works.map(work => <WorkCard key={work.title} work={work} />)}
+        <div className="slider-wrapper">
+          <div className="slider-mobile">
+            {works.map((work, i) => (
+              <div key={work.title + i}><WorkCard work={work} /></div>
+            ))}
+            {/* Duplicated items for infinite marquee on mobile */}
+            {works.map((work, i) => (
+              <div key={'dup' + i} className="mobile-only-card"><WorkCard work={work} /></div>
+            ))}
+          </div>
         </div>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

@@ -104,23 +104,28 @@ Location: Bhopal, Madhya Pradesh, India`,
     <main style={{ background: "var(--bg-dark)", minHeight: "100vh", paddingTop: 100 }}>
       {/* Hero Banner */}
       <section style={{
-        background: "linear-gradient(135deg, #12131f 0%, #1a1b2e 50%, #0d0e1a 100%)",
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
-        padding: "80px var(--sec-px) 60px",
+        background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
+        paddingTop: 205,
+        paddingBottom: 64,
+        paddingLeft: "var(--sec-px)",
+        paddingRight: "var(--sec-px)",
+        textAlign: "center",
+        position: "relative",
+        overflow: "hidden",
       }}>
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
+        {/* Orbs */}
+        <div style={{ position: "absolute", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.28) 0%, transparent 70%)", top: "-80px", left: "-80px", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(196,181,253,0.2) 0%, transparent 70%)", bottom: "0px", right: "10%", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", top: "10%", left: "10%", width: 420, height: 420, border: "1px solid rgba(255,255,255,0.07)", borderRadius: "50%", pointerEvents: "none" }} />
+
+        <div style={{ maxWidth: 860, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "rgba(108,59,255,0.15)", border: "1px solid rgba(108,59,255,0.3)",
-            borderRadius: 999, padding: "6px 16px", marginBottom: 24,
+            display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20
           }}>
-            <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#6c3bff", display: "inline-block" }} />
-            <span style={{ color: "#a78bfa", fontSize: "0.85em", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>
-              Legal Document
-            </span>
+            Legal Document
           </div>
           <h1 style={{
-            fontSize: "clamp(2.2em, 5vw, 3.4em)", fontWeight: 800,
+            fontSize: "clamp(2.4em, 5.5vw, 3.7em)", fontWeight: 800,
             color: "#fff", letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: 20,
           }}>
             Terms and Conditions
@@ -129,7 +134,7 @@ Location: Bhopal, Madhya Pradesh, India`,
             These terms govern your use of Clivik's services and website. Please read them carefully before engaging with us.
           </p>
           <div style={{
-            display: "flex", gap: 24, marginTop: 28, flexWrap: "wrap",
+            display: "flex", gap: 24, marginTop: 28, flexWrap: "wrap", justifyContent: "center"
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <span style={{ color: "#6c3bff", fontSize: "1.1em" }}>📅</span>
@@ -145,6 +150,9 @@ Location: Bhopal, Madhya Pradesh, India`,
             </div>
           </div>
         </div>
+
+        {/* Bottom fade */}
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 180, background: "linear-gradient(to bottom, transparent 0%, var(--bg-dark) 100%)", pointerEvents: "none", zIndex: 0 }} />
       </section>
 
       {/* Table of Contents + Content */}

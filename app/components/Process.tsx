@@ -1,4 +1,5 @@
 "use client";
+import ScrollReveal from "./ScrollReveal";
 import { IconWhatsApp, IconMonitor, IconZap, IconShield } from "./icons";
 
 const IconSettings = ({ size = 20, color = "currentColor" }: { size?: number; color?: string }) => (
@@ -12,38 +13,33 @@ const steps = [
   {
     num: "01",
     title: "Quick WhatsApp Chat",
-    desc: "Drop us a message on WhatsApp. We understand your business and goals in one simple chat.",
+    desc: "Tell us your needs and budget in a 2-minute chat. No long forms.",
     icon: <IconWhatsApp size={24} color="#6c3bff" />
   },
   {
     num: "02",
-    title: "Free Custom Mockup",
-    desc: "We design your site for free before you pay a single rupee. Love it? We proceed. Don’t? Zero charge.",
+    title: "Free Strategy Call",
+    desc: "Get honest advice and the right service recommendations without any upselling or pressure.",
     icon: <IconMonitor size={24} color="#6c3bff" />
   },
   {
     num: "03",
     title: "Build & Automate",
-    desc: "We build everything once you approve — website, WhatsApp, Google profile and AI auto-replies.",
+    desc: "We set up your website, WhatsApp, and Google profile. You just review and approve.",
     icon: <IconSettings size={24} color="#6c3bff" />
   },
   {
     num: "04",
-    title: "Go Live on Day 5",
-    desc: "Your website goes live on Day 5 — fast, mobile-ready and optimized to bring in customers.",
+    title: "Go Live in 5–10 Days",
+    desc: "Go live, capture leads 24/7, and enjoy 15–60 days of free post-launch support.",
     icon: <IconZap size={24} color="#6c3bff" />
-  },
-  {
-    num: "05",
-    title: "Support & Growth",
-    desc: "We stay with you for 30–60 days after delivery. Changes, fixes and questions. All free.",
-    icon: <IconShield size={24} color="#6c3bff" />
   }
 ];
 
 export default function Process() {
   return (
     <section id="process" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
+      <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         
         <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
@@ -52,20 +48,21 @@ export default function Process() {
             background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111",
             border: "1px solid rgba(0,0,0,0.08)", marginBottom: 20,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
-          }}>How We Work</div>
+          }}>The Process</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
-            lineHeight: 1.1, letterSpacing: "-0.04em",
+            lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 12,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
-            From WhatsApp Message to<br/>Live Website in 5 Days.
+            From WhatsApp Chat to Full Automation.
           </h2>
+          <p style={{ color: "#666", fontSize: "1.05em" }}>Simple. Fast. Zero technical stress for you.</p>
         </div>
 
         <div style={{ 
           display: "grid", 
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", 
-          gap: 20 
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", 
+          gap: 40 
         }}>
           {steps.map((s, i) => (
             <div key={i} style={{
@@ -102,6 +99,7 @@ export default function Process() {
         </div>
 
       </div>
+      </ScrollReveal>
     </section>
   );
 }

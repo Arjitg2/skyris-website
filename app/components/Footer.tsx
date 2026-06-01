@@ -174,7 +174,7 @@ export default function Footer() {
                 <span style={{ fontWeight: 700, color: "#fff", fontSize: "1.4em" }}>Clivik</span>
               </div>
               <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1em", lineHeight: 1.7, maxWidth: 320, marginBottom: 28 }}>
-                Clivik helps local businesses across M.P. get found online — with a professional website, Google profile and social media. All in 5 days.
+                Clivik helps Indian businesses automate customer communication, generate more leads, and grow faster using modern digital solutions.
               </p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                 {[
@@ -224,8 +224,8 @@ export default function Footer() {
               <div>
                 <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "1em", marginBottom: 20 }}>Contact Us</h4>
                 {[
-                  { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.5)" />, text: "+91 6265022474", href: "https://wa.me/916265022474" },
-                  { icon: <IconMail size={16} color="rgba(255,255,255,0.5)" />, text: "helloclivik@gmail.com", href: "mailto:helloclivik@gmail.com" },
+                  { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.5)" />, text: "+91 62650 22474", href: "https://wa.me/916265022474" },
+                  { icon: <IconMail size={16} color="rgba(255,255,255,0.5)" />, text: "hello@clivik.com", href: "mailto:hello@clivik.com" },
                   { icon: <IconMapPin size={16} color="rgba(255,255,255,0.5)" />, text: "Bhopal, M.P.", href: "https://maps.google.com/?q=Bhopal,Madhya+Pradesh" },
                   { icon: <IconClock2 size={16} color="rgba(255,255,255,0.5)" />, text: "Same Day Response", href: "#" },
                 ].map(link => (
@@ -253,12 +253,12 @@ export default function Footer() {
               </div>
               <span style={{ fontWeight: 700, color: "#fff", fontSize: "1em", whiteSpace: "nowrap" }}>Clivik</span>
               <span style={{ color: "rgba(255,255,255,0.3)", flexShrink: 0 }}>·</span>
-              <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.9em" }}>Digital Presence Agency</span>
+              <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.9em" }}>Digital Solutions</span>
             </div>
 
             {/* Row 2: motto */}
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95em", fontWeight: 500, margin: 0 }}>
-              &quot;Your Business. Online. In 5 Days.&quot;
+              &quot;From Clicks to Customers — On Autopilot.&quot;
             </p>
 
             {/* Row 3: copyright + privacy/terms */}

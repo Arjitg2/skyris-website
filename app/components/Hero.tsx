@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { IconGlobe, IconStar, IconInstagram, IconGift, IconMapPin } from "./icons";
+import { IconGlobe, IconStar, IconBot, IconInstagram, IconGift, IconMapPin, IconZap } from "./icons";
 
 // Floating mock website image card
 function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, width = 280, imageSrc, themeMode }: {
@@ -62,7 +62,7 @@ export default function Hero() {
         We use a wrapper div that switches layout via CSS custom vars + media query pattern
       */}
       <div style={{
-        maxWidth: 1400, margin: "0 auto", padding: "var(--hero-py) var(--hero-px)",
+        maxWidth: 1400, margin: "0 auto", padding: "calc(var(--hero-py) * 1.3) var(--hero-px) var(--hero-py)",
         width: "100%", position: "relative", zIndex: 1,
         display: "grid",
         gridTemplateColumns: "var(--hero-grid)",
@@ -74,38 +74,34 @@ export default function Hero() {
         <div style={{ textAlign: "var(--hero-text-align)" as React.CSSProperties["textAlign"] }}>
           {/* Eyebrow Badge */}
           <div style={{
-            display: "inline-flex", alignItems: "center", gap: 10,
-            padding: "8px 16px", borderRadius: 999,
-            background: "rgba(255,255,255,0.05)", border: "1px solid rgba(139,92,246,0.5)",
-            boxShadow: "0 0 15px rgba(139,92,246,0.3)", marginBottom: 24,
+            display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20
           }}>
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#fff", boxShadow: "0 0 8px #fff" }} />
-            <span style={{ color: "#fff", fontSize: "0.9em", fontWeight: 500 }}>Helping Local Businesses Get Found Online</span>
+            <IconZap size={16} color="#a78bfa" /> From Clicks to Customers — On Autopilot
           </div>
 
           <h1 style={{
-            fontSize: "var(--hero-title-size)", fontWeight: 700, lineHeight: 1.1,
+            fontSize: "calc(var(--hero-title-size) * 1.1)", fontWeight: 700, lineHeight: 1.1,
             color: "#fff", letterSpacing: "-0.04em", marginBottom: 24,
             maxWidth: "100%", fontFamily: "'FullerSansDT', 'Inter', sans-serif",
           }}>
-            Your Business<br />Deserves to<br />Be Found Online
+            Stop Losing Leads.<br />Start Running on<br />Autopilot.
           </h1>
 
           <p style={{
-            color: "rgba(255,255,255,0.75)", fontSize: "var(--hero-sub-size)",
+            color: "rgba(255,255,255,0.75)", fontSize: "0.9em",
             marginBottom: 32, fontWeight: 300, lineHeight: 1.6,
             maxWidth: "var(--hero-sub-max)", margin: "0 auto 32px",
             whiteSpace: "var(--hero-sub-wrap)",
           }}>
-            Website + Google Profile + Social Media — sab kuch ek jagah, affordable price mein
+            WhatsApp automation, AI agents, aur modern websites — sab ek jagah.<br/>Local businesses ke liye, unke budget mein.
           </p>
 
           {/* Service Chips */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 24, justifyContent: "var(--hero-chips-justify)" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 36, justifyContent: "var(--hero-chips-justify)" }}>
             {[
-              { icon: <IconGlobe size={16} color="#36309d" />, text: "Website" },
-              { icon: <IconStar size={16} color="#36309d" />, text: "Google Profile" },
-              { icon: <IconInstagram size={16} color="#36309d" />, text: "Social Media" },
+              { icon: <IconBot size={16} color="#36309d" />, text: "WhatsApp Automation" },
+              { icon: <IconGlobe size={16} color="#36309d" />, text: "Website Development" },
+              { icon: <IconStar size={16} color="#36309d" />, text: "Google Business" },
             ].map((chip, i) => (
               <div key={i} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.2)", background: "#fff" }}>
                 {chip.icon}
@@ -114,18 +110,11 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* Free offer line */}
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "10px 0", marginBottom: 40, justifyContent: "var(--hero-chips-justify)" }}>
-            <IconGift size={20} color="#fef08a" />
-            <span style={{ color: "#fef08a", fontSize: "0.95em", fontWeight: 500, textShadow: "0 0 10px rgba(254,240,138,0.4)" }}>
-              Free Google Business Profile with Every Package
-            </span>
-          </div>
 
           {/* CTAs */}
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "var(--hero-chips-justify)" }} className="hero-cta-row">
-            <Link href="/contact" style={{
-              display: "inline-flex", alignItems: "center", padding: "15px 30px",
+            <Link href="https://wa.me/916265022474" target="_blank" rel="noopener noreferrer" style={{
+              display: "inline-flex", alignItems: "center", padding: "18px 48px",
               borderRadius: 12, background: "#fff", color: "#3730a3", textDecoration: "none",
               fontSize: "1em", fontWeight: 700, transition: "all 0.25s ease",
               boxShadow: "0 4px 24px rgba(255,255,255,0.4)",
@@ -135,19 +124,19 @@ export default function Hero() {
             }}
               onMouseEnter={e => { e.currentTarget.style.background = "#f0f0f0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = "translateY(0)"; }}
-            >Get Free Consultation &rarr;</Link>
+            >Open WhatsApp &rarr;</Link>
             <Link href="/portfolio" style={{
-              display: "inline-flex", alignItems: "center", padding: "15px 30px",
-              borderRadius: 12, background: "#1a1040", color: "#fff",
+              display: "inline-flex", alignItems: "center", padding: "18px 48px",
+              borderRadius: 12, background: "#6c3bff", color: "#fff",
               textDecoration: "none", fontSize: "1em", fontWeight: 500,
-              border: "1px solid rgba(255,255,255,0.2)", transition: "all 0.25s ease",
+              border: "none", transition: "all 0.25s ease",
               flex: "var(--hero-btn-flex)",
               justifyContent: "center",
               whiteSpace: "nowrap",
             }}
-              onMouseEnter={e => { e.currentTarget.style.background = "#261565"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "#1a1040"; e.currentTarget.style.transform = "translateY(0)"; }}
-            >View Sample Work</Link>
+              onMouseEnter={e => { e.currentTarget.style.background = "#5a2fe0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "#6c3bff"; e.currentTarget.style.transform = "translateY(0)"; }}
+            >View Our Work</Link>
           </div>
         </div>
 
