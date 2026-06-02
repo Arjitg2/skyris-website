@@ -58,7 +58,7 @@ function ContactForm() {
       border: "1px solid rgba(255,255,255,0.1)",
       borderRadius: 24, padding: "clamp(20px, 5vw, 40px)",
       backdropFilter: "blur(16px)",
-      minWidth: "min(100%, 440px)", width: "100%",
+      minWidth: "min(100%, 380px)", width: "100%",
     }}>
       {submitted ? (
         <div style={{ textAlign: "center", padding: "40px 0" }}>
@@ -165,8 +165,8 @@ export default function Footer() {
           <div style={{ display: "grid", gridTemplateColumns: "var(--footer-grid-1)", gap: "clamp(20px, 5vw, 80px)", alignItems: "center" }}>
             <div>
               <h2 style={{
-                fontSize: "var(--title-size)", fontWeight: 600, color: "#fff",
-                lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 24, maxWidth: "var(--title-max-width)",
+                fontSize: "var(--title-size)", fontWeight: 700, color: "#fff",
+                lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 24,
                 fontFamily: "'FullerSansDT', 'Inter', sans-serif"
               }}>
                 Ready to See<br />What<br />Your Business<br />Looks<br />Like Online?
