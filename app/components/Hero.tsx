@@ -46,8 +46,8 @@ export default function Hero() {
       background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
       display: "flex", flexDirection: "column",
       position: "relative", overflow: "hidden",
-      paddingTop: 68, /* navbar height */
-      paddingBottom: 80, /* space for overlapping ticker */
+      paddingTop: 85, /* slightly lower than original 68 */
+      paddingBottom: 115, /* increased from 80 but less than 170 to keep ticker visible */
     }}>
       {/* Orbs */}
       <div style={{ position: "absolute", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.28) 0%, transparent 70%)", top: "-100px", left: "-100px", pointerEvents: "none" }} />
