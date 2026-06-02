@@ -169,7 +169,7 @@ export default function Footer() {
                 lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 24, maxWidth: "var(--title-max-width)",
                 fontFamily: "'FullerSansDT', 'Inter', sans-serif"
               }}>
-                Ready to See What<br />Your Business Looks<br />Like Online?
+                Ready to See<br />What<br />Your Business<br />Looks<br />Like Online?
               </h2>
               <p style={{ fontSize: "1em", color: "rgba(255,255,255,0.5)", lineHeight: 1.7, maxWidth: 400 }}>
                 Tell us about your business and we will send you a free custom website mockup within 24 hours. See it first, pay only if you love it. Zero risk involved.
