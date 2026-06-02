@@ -24,6 +24,7 @@ export default function ContactModal() {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", business: "", phone: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   /* Listen for custom event from any CTA button */
   useEffect(() => {
@@ -48,11 +49,28 @@ export default function ContactModal() {
 
   if (!open) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = buildWAMessage(form);
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank");
-    setSubmitted(true);
+    setIsSubmitting(true);
+    
+    try {
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+      if (scriptUrl && scriptUrl !== "") {
+        await fetch(scriptUrl, {
+          method: "POST",
+          body: JSON.stringify({ ...form, domain: form.business }),
+          mode: "no-cors",
+        });
+      }
+      const msg = buildWAMessage(form);
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank");
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -232,19 +250,21 @@ export default function ContactModal() {
             {/* Submit */}
             <button
               type="submit"
+              disabled={isSubmitting}
               style={{
                 padding: "14px", borderRadius: 12,
-                background: "linear-gradient(135deg,#8b5cf6,#6c3bff)",
+                background: isSubmitting ? "#8b5cf6" : "linear-gradient(135deg,#8b5cf6,#6c3bff)",
                 color: "#fff", border: "none", fontSize: "1em",
-                fontWeight: 700, cursor: "pointer",
+                fontWeight: 700, cursor: isSubmitting ? "not-allowed" : "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 transition: "all 0.2s",
                 boxShadow: "0 4px 20px rgba(108,59,255,0.35)",
+                opacity: isSubmitting ? 0.8 : 1,
               }}
-              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 32px rgba(108,59,255,0.45)"; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(108,59,255,0.35)"; }}
+              onMouseEnter={e => { if(!isSubmitting){ e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 32px rgba(108,59,255,0.45)"; } }}
+              onMouseLeave={e => { if(!isSubmitting){ e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(108,59,255,0.35)"; } }}
             >
-              Submit &rarr;
+              {isSubmitting ? "Sending..." : "Submit \u2192"}
             </button>
 
             <p style={{ fontSize: "0.8em", color: "#aaa", textAlign: "center", marginTop: -6 }}>

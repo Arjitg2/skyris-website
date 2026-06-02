@@ -16,10 +16,28 @@ const BUSINESS_DOMAINS = [
 function ContactForm() {
   const [form, setForm] = useState({ name: "", domain: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    
+    try {
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+      if (scriptUrl && scriptUrl !== "") {
+        await fetch(scriptUrl, {
+          method: "POST",
+          body: JSON.stringify(form),
+          mode: "no-cors",
+        });
+      }
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message. Please try again or message us on WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -112,16 +130,17 @@ function ContactForm() {
             />
           </div>
 
-          <button suppressHydrationWarning type="submit" style={{
-            padding: "15px", borderRadius: 12, background: "#6c3bff", color: "#fff",
-            border: "none", fontSize: "1em", fontWeight: 600, cursor: "pointer",
+          <button suppressHydrationWarning type="submit" disabled={isSubmitting} style={{
+            padding: "15px", borderRadius: 12, background: isSubmitting ? "#8b5cf6" : "#6c3bff", color: "#fff",
+            border: "none", fontSize: "1em", fontWeight: 600, cursor: isSubmitting ? "not-allowed" : "pointer",
             display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
             transition: "all 0.2s", boxShadow: "0 4px 20px rgba(108,59,255,0.35)",
+            opacity: isSubmitting ? 0.8 : 1,
           }}
-            onMouseEnter={e => { e.currentTarget.style.background = "#5a2fe0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-            onMouseLeave={e => { e.currentTarget.style.background = "#6c3bff"; e.currentTarget.style.transform = "translateY(0)"; }}
+            onMouseEnter={e => { if(!isSubmitting){ e.currentTarget.style.background = "#5a2fe0"; e.currentTarget.style.transform = "translateY(-2px)"; } }}
+            onMouseLeave={e => { if(!isSubmitting){ e.currentTarget.style.background = "#6c3bff"; e.currentTarget.style.transform = "translateY(0)"; } }}
           >
-            Get My Mockup &rarr;
+            {isSubmitting ? "Sending..." : "Get My Mockup \u2192"}
           </button>
         </form>
       )}

@@ -18,10 +18,28 @@ const BUSINESS_DOMAINS = [
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", domain: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    
+    try {
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+      if (scriptUrl && scriptUrl !== "") {
+        await fetch(scriptUrl, {
+          method: "POST",
+          body: JSON.stringify(form),
+          mode: "no-cors",
+        });
+      }
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send message. Please try again or message us on WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -234,16 +252,17 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button type="submit" style={{
-                  padding: "15px", borderRadius: 12, background: "#6c3bff", color: "#fff",
-                  border: "none", fontSize: "1em", fontWeight: 700, cursor: "pointer",
+                <button type="submit" disabled={isSubmitting} style={{
+                  padding: "15px", borderRadius: 12, background: isSubmitting ? "#8b5cf6" : "#6c3bff", color: "#fff",
+                  border: "none", fontSize: "1em", fontWeight: 700, cursor: isSubmitting ? "not-allowed" : "pointer",
                   display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                   transition: "all 0.2s", boxShadow: "0 4px 20px rgba(108,59,255,0.35)",
+                  opacity: isSubmitting ? 0.8 : 1,
                 }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "#5a2fe0"; (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "#6c3bff"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
+                  onMouseEnter={e => { if(!isSubmitting){ (e.currentTarget as HTMLElement).style.background = "#5a2fe0"; (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; } }}
+                  onMouseLeave={e => { if(!isSubmitting){ (e.currentTarget as HTMLElement).style.background = "#6c3bff"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; } }}
                 >
-                  Get My Free Mockup →
+                  {isSubmitting ? "Sending..." : "Get My Free Mockup \u2192"}
                 </button>
               </form>
             )}
