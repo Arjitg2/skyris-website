@@ -196,7 +196,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="footer-links-pair">
+            <div className="footer-links-pair" style={{ display: "flex", gap: "min(8vw, 100px)", flexWrap: "wrap" }}>
               {/* Pages */}
               <div>
                 <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "1em", marginBottom: 20 }}>Pages</h4>
