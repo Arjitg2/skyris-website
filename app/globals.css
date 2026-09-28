@@ -16,24 +16,16 @@
   --accent-hover: #5a2fe0;
   --accent-light: rgba(108, 59, 255, 0.15);
   --text-white: #ffffff;
-  --text-light: #cbd5e1;
+  --text-light: #a0a0b8;
   --text-dark: #0d0e1a;
-  --text-muted: #4b5563; /* WCAG AA 4.5:1+ contrast on light backgrounds */
+  --text-muted: #6b6b80;
   --border-dark: rgba(255,255,255,0.08);
   --border-light: rgba(0,0,0,0.08);
-  
-  /* Inner Radius Formula: Inner radius = Outer radius - Padding (Nested corners follow outer curve) */
-  --radius-xs: 8px;
   --radius-sm: 12px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
-  
+  --radius-md: 20px;
+  --radius-lg: 28px;
   --shadow-card: 0 4px 40px rgba(0,0,0,0.08);
   --shadow-dark: 0 8px 60px rgba(0,0,0,0.4);
-  
-  /* Touch target standard (Apple 44px / Google 48dp) */
-  --min-touch-target: 44px;
 }
 
 html {
@@ -44,20 +36,9 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-dark);
   color: var(--text-white);
-  line-height: 1.6; /* Line Height Formula: 1.4 to 1.6 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
-
-/* Line Height Formula: Font size * 1.4 to 1.6 for comfortable, intentional rhythm */
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.4 !important;
-  letter-spacing: -0.03em;
-}
-
-p, li, label, dd, dt {
-  line-height: 1.6;
 }
 
 /* Scrollbar */
@@ -102,54 +83,21 @@ p, li, label, dd, dt {
 .badge-pill {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px 16px;
+  gap: 6px;
+  padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.9);
   color: #0d0e1a;
-  font-size: 14px;
-  font-weight: 600;
-  border: 1px solid rgba(0,0,0,0.08);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(0,0,0,0.1);
   backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .badge-pill-dark {
-  background: rgba(255,255,255,0.1);
-  color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.16);
-}
-
-/* Touch Target Minimum (Rule 3) */
-button,
-a,
-input,
-select,
-textarea {
-  touch-action: manipulation;
-}
-
-.btn-touch {
-  min-height: var(--min-touch-target);
-  min-width: var(--min-touch-target);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Optical Alignment (Rule 1) */
-.optical-center {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.optical-arrow {
-  display: inline-block;
-  transform: translateY(0.5px);
-  transition: transform 0.2s ease;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
 /* Process Arrows responsive */
@@ -162,13 +110,13 @@ textarea {
   }
 }
 
-/* Responsive Variables for Mobile Optimization — Multiples of 4/8 (Rule 4) */
+/* Responsive Variables for Mobile Optimization */
 :root {
   --sec-px: 80px;
   --sec-py: 192px;
   --title-size: 4.6em;
   --title-max-width: 70%;
-  --subpage-hero-pt: 208px;
+  --subpage-hero-pt: 205px;
   --about-text-max-width: 60%;
   
   --grid-2: 1fr 1fr;
@@ -193,13 +141,13 @@ textarea {
 
   /* Global Section Layout */
   --sec-text-align: left;
-  --sec-mb: 64px;
+  --sec-mb: 67px;
   --about-flex: row;
   --works-flex: row;
   --works-align: flex-end;
   
   --stats-grid: repeat(3, 1fr);
-  --stats-container-gap: 24px;
+  --stats-container-gap: 20px;
   --stats-item-flex: column;
   --stats-item-align: center;
   --stats-item-text: center;
@@ -210,9 +158,9 @@ textarea {
 
   /* Hero layout */
   --hero-grid: 1.2fr 0.8fr;
-  --hero-gap: 64px;
+  --hero-gap: 60px;
   --hero-min-height: calc(100vh - 160px);
-  --hero-cards-height: 544px;
+  --hero-cards-height: 540px;
   --hero-title-size: var(--title-size);
   --hero-sub-size: 1.1em;
   --hero-sub-max: 100%;
@@ -220,7 +168,7 @@ textarea {
   --hero-text-align: left;
   --hero-chips-justify: flex-start;
   --hero-btn-flex: 0 0 auto;
-  --hero-py: 24px;
+  --hero-py: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -237,17 +185,17 @@ textarea {
 @media (max-width: 768px) {
   :root {
     --sec-px: 20px;
-    --sec-py: 128px;
-    --title-size: 3.2em;
+    --sec-py: 128px; /* Increased padding between sections */
+    --title-size: 3.3em;
     --title-max-width: 100%;
-    --subpage-hero-pt: 120px;
+    --subpage-hero-pt: 116px;
     --about-text-max-width: 100%;
     --about-hero-pb: 32px;
-    --about-founder-pt: 32px;
-    --about-founder-gap: 16px;
-    --about-founder-story-gap: 12px;
-    --contact-h2-mb: 12px;
-    --about-para-gap: 16px;
+    --about-founder-pt: 30px;
+    --about-founder-gap: 15px;
+    --about-founder-story-gap: 10px;
+    --contact-h2-mb: 10px;
+    --about-para-gap: 14px;
     
     --grid-2: 1fr;
     --grid-3: 1fr;
@@ -272,7 +220,7 @@ textarea {
 
     /* Global Section Layout */
     --sec-text-align: center;
-    --sec-mb: 32px;
+    --sec-mb: 34px; /* Less space between headline and content */
     --about-flex: column;
     --works-flex: column;
     --works-align: center;
@@ -291,7 +239,7 @@ textarea {
     --hero-grid: 1fr;
     --hero-gap: 40px;
     --hero-min-height: auto;
-    --hero-cards-height: 424px;
+    --hero-cards-height: 420px;
     --hero-title-size: 3.1em;
     --hero-sub-size: 1em;
     --hero-sub-max: 340px;

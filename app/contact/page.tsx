@@ -62,8 +62,8 @@ export default function ContactPage() {
     },
     {
       icon: <IconMail size={20} color="#a78bfa" />,
-      label: "Email", value: "hello@clivik.dpdns.org",
-      href: "mailto:hello@clivik.dpdns.org",
+      label: "Email", value: "helloclivik@gmail.com",
+      href: "mailto:helloclivik@gmail.com",
       color: "#a78bfa",
     },
     {
@@ -102,10 +102,10 @@ export default function ContactPage() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
             Get In Touch
           </div>
-          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.4, marginBottom: 16 }}>
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
             Ready to See Your<br />Business Online?
           </h1>
-          <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 480, margin: "0 auto", lineHeight: 1.6 }}>
+          <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 480, margin: "0 auto" }}>
             Fill the form below or WhatsApp us directly. We respond same day — always.
           </p>
         </div>
@@ -120,10 +120,10 @@ export default function ContactPage() {
 
           {/* Left: Info */}
           <div>
-            <h2 style={{ fontSize: "clamp(2em, 3.3vw, 2.6em)", fontWeight: 700, color: "#0d0e1a", marginBottom: "var(--contact-h2-mb, 20px)", lineHeight: 1.4 }}>
+            <h2 style={{ fontSize: "clamp(2em, 3.3vw, 2.6em)", fontWeight: 700, color: "#0d0e1a", marginBottom: "var(--contact-h2-mb, 20px)" }}>
               Let&apos;s Build Something Great
             </h2>
-            <p style={{ color: "#555", lineHeight: 1.6, fontSize: "1.05em", marginBottom: 36 }}>
+            <p style={{ color: "#555", lineHeight: 1.75, fontSize: "1.05em", marginBottom: 36 }}>
               Tell us about your business and we will send you a free custom website mockup within 24 hours. See it first, pay only if you love it. Zero risk.
             </p>
 
@@ -185,7 +185,7 @@ export default function ContactPage() {
                 <h3 style={{ fontSize: "1.6em", fontWeight: 800, color: "#fff", marginBottom: 12 }}>
                   Message Sent!
                 </h3>
-                <p style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>
+                <p style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}>
                   We&apos;ll reach out to you within 24 hours on your WhatsApp number.
                 </p>
                 <button

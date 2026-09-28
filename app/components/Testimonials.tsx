@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { IconStar, IconUser } from "./icons";
 
 const testimonials = [
@@ -17,16 +17,14 @@ export default function Testimonials() {
         {/* Testimonials header */}
         <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
           <div style={{
-            display: "inline-flex", alignItems: "center", justifyContent: "center",
-            padding: "8px 16px", borderRadius: 999,
-            background: "#fff", fontSize: "14px", fontWeight: 600, color: "#0d0e1a",
-            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 24,
-            boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+            display: "inline-block", padding: "5px 14px", borderRadius: 999,
+            background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111", /* Subheading size 1em */
+            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 20,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>Testimonials</div>
           <h2 style={{
-            fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
-            lineHeight: 1.4, letterSpacing: "-0.04em",
+            fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
+            lineHeight: 1.1, letterSpacing: "-0.04em",
             maxWidth: "100%", margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
@@ -35,20 +33,20 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 20 }}>
           {testimonials.map((t, i) => (
             <div key={i} style={{
-              background: "#fff", borderRadius: 24, padding: "32px",
+              background: "#fff", borderRadius: 20, padding: "28px",
               boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
               transition: "transform 0.2s, box-shadow 0.2s", cursor: "default",
             }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 14px 44px rgba(0,0,0,0.1)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 16px rgba(0,0,0,0.05)"; }}
             >
-              <div style={{ display: "flex", gap: 4, marginBottom: 16 }}>
-                {Array.from({ length: 5 }).map((_, si) => <IconStar key={si} size={15} color="#f59e0b" />)}
+              <div style={{ display: "flex", gap: 3, marginBottom: 14 }}>
+                {Array.from({ length: 5 }).map((_, si) => <IconStar key={si} size={14} color="#f59e0b" />)}
               </div>
-              <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.6, marginBottom: 24 }}>
+              <p style={{ fontSize: "1em", color: "#444", lineHeight: 1.7, marginBottom: 20 }}>
                 &ldquo;{t.text}&rdquo;
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: 12, borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 16 }}>
@@ -60,8 +58,8 @@ export default function Testimonials() {
                   <IconUser size={18} color="#fff" />
                 </div>
                 <div>
-                  <div style={{ fontSize: "15px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.4 }}>{t.name}</div>
-                  <div style={{ fontSize: "13px", fontWeight: 500, color: "#4b5563", marginTop: 2, lineHeight: 1.4 }}>{t.role}</div>
+                  <div style={{ fontSize: "1em", fontWeight: 700, color: "#0d0e1a" }}>{t.name}</div>
+                  <div style={{ fontSize: "0.9em", color: "#888" }}>{t.role}</div>
                 </div>
               </div>
             </div>

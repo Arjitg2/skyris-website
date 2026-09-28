@@ -73,7 +73,7 @@ export default function PortfolioPage() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
             Our Work
           </div>
-          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.4, marginBottom: 16 }}>
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
             Real Websites.<br />Real Businesses.
           </h1>
           <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 500, margin: "0 auto 32px" }}>
@@ -127,10 +127,10 @@ export default function PortfolioPage() {
               alignItems: "center",
             } as React.CSSProperties}>
 
-              {/* Image with Inner Radius Formula: Outer 24px - Padding 8px = Inner 16px */}
+              {/* Image */}
               <div style={{
                 order: i % 2 === 1 ? 2 : 1,
-                background: "#0d0e1a", borderRadius: 24, padding: 8, overflow: "hidden",
+                background: "#0d0e1a", borderRadius: 24, overflow: "hidden",
                 boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
                 aspectRatio: "16/10",
                 position: "relative",
@@ -139,15 +139,15 @@ export default function PortfolioPage() {
                 <img
                   src={work.imageSrc}
                   alt={work.title}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", borderRadius: 16 }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
                 />
               </div>
 
               {/* Text */}
               <div style={{ order: i % 2 === 1 ? 1 : 2, padding: "0 8px" }}>
                 <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 999, background: `${work.accent}18`, color: work.accent, fontSize: "0.85em", fontWeight: 600, marginBottom: 16 }}>{work.category}</div>
-                <h2 style={{ fontSize: "clamp(2em, 3.3vw, 2.6em)", fontWeight: 800, color: "#0d0e1a", marginBottom: 16, letterSpacing: "-0.03em", lineHeight: 1.4 }}>{work.title}</h2>
-                <p style={{ color: "#555", fontSize: "1.05em", lineHeight: 1.6, marginBottom: 28 }}>{work.desc}</p>
+                <h2 style={{ fontSize: "clamp(2em, 3.3vw, 2.6em)", fontWeight: 800, color: "#0d0e1a", marginBottom: 16, letterSpacing: "-0.03em" }}>{work.title}</h2>
+                <p style={{ color: "#555", fontSize: "1.05em", lineHeight: 1.75, marginBottom: 28 }}>{work.desc}</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 36 }}>
                   {work.tags.map(tag => (
                     <span key={tag} style={{ padding: "6px 14px", borderRadius: 999, background: "#fff", border: "1px solid rgba(0,0,0,0.1)", fontSize: "0.85em", color: "#333", fontWeight: 500 }}>{tag}</span>

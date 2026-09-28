@@ -115,23 +115,20 @@ export default function ContactModal() {
           boxSizing: "border-box",
         }}
       >
-        {/* Close button - 44x44px touch target (Rule 3) */}
+        {/* Close button */}
         <button
           onClick={() => setOpen(false)}
           style={{
             position: "absolute", top: 16, right: 16,
-            width: 44, height: 44, minWidth: 44, minHeight: 44, borderRadius: "50%",
+            width: 34, height: 34, borderRadius: "50%",
             background: "#f0eeff", border: "none", cursor: "pointer",
             display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: "22px", color: "#6c3bff", fontWeight: 700,
+            fontSize: "1.2em", color: "#6c3bff", fontWeight: 700,
             lineHeight: 1,
-            transition: "background 0.2s ease, transform 0.2s ease",
           }}
           aria-label="Close modal"
-          onMouseEnter={e => (e.currentTarget.style.background = "#e4deff")}
-          onMouseLeave={e => (e.currentTarget.style.background = "#f0eeff")}
         >
-          <span style={{ transform: "translateY(-1px)" }}>&times;</span>
+          ×
         </button>
 
         {submitted ? (
@@ -145,19 +142,18 @@ export default function ContactModal() {
             }}>
               <IconSend size={28} color="#fff" />
             </div>
-            <h3 style={{ fontSize: "24px", fontWeight: 800, color: "#0d0e1a", marginBottom: 12 }}>
+            <h3 style={{ fontSize: "1.5em", fontWeight: 800, color: "#0d0e1a", marginBottom: 10 }}>
               Opening WhatsApp…
             </h3>
-            <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6 }}>
+            <p style={{ fontSize: "1em", color: "#666", lineHeight: 1.6 }}>
               Your message is ready. Send it on WhatsApp and we will respond same day!
             </p>
             <button
               onClick={() => setOpen(false)}
               style={{
-                marginTop: 24, padding: "14px 32px", minHeight: 48, borderRadius: 12,
+                marginTop: 24, padding: "12px 32px", borderRadius: 12,
                 background: "#6c3bff", color: "#fff", border: "none",
-                fontSize: "16px", fontWeight: 600, cursor: "pointer",
-                boxShadow: "0 4px 16px rgba(108,59,255,0.25)"
+                fontSize: "1em", fontWeight: 600, cursor: "pointer",
               }}
             >
               Done
@@ -180,7 +176,7 @@ export default function ContactModal() {
               </div>
               <h2 style={{
                 fontSize: "clamp(1.3em, 4vw, 1.65em)", fontWeight: 800,
-                color: "#0d0e1a", lineHeight: 1.4, marginBottom: 6,
+                color: "#0d0e1a", lineHeight: 1.2, marginBottom: 6,
               }}>
                 Let&apos;s Build Something Great
               </h2>

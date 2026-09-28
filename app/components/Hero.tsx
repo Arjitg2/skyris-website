@@ -10,8 +10,7 @@ function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, wi
   return (
     <div style={{
       position: "absolute", top, left, width,
-      background: themeMode === 'dark' ? "var(--bg-dark-card, #1a1b2e)" : "#fff",
-      borderRadius: 24, padding: 8, overflow: "hidden",
+      background: themeMode === 'dark' ? "var(--bg-dark-card, #1a1b2e)" : "#fff", borderRadius: 16, overflow: "hidden",
       boxShadow: "0 24px 64px rgba(0,0,0,0.4)",
       border: themeMode === 'dark' ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.05)",
       transform: `rotate(${rotate}deg)`,
@@ -19,24 +18,21 @@ function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, wi
       animation: `floatY 5s ease-in-out ${delay}s infinite`,
       ["--rot" as string]: `${rotate}deg`, zIndex: 2,
     }}>
-      {/* Inner Radius Formula: Inner radius = Outer radius (24px) - Padding (8px) = 16px */}
-      <div style={{ borderRadius: 16, overflow: "hidden", background: themeMode === 'dark' ? "#12131f" : "#f9f9fb" }}>
-        {/* Browser Bar */}
-        <div style={{ display: "flex", gap: 5, padding: "10px 12px 6px", background: themeMode === 'dark' ? "rgba(255,255,255,0.03)" : "#f5f5f5", borderBottom: themeMode === 'dark' ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
-          <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#ff5f57" }} />
-          <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#febc2e" }} />
-          <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#28c840" }} />
-        </div>
-        <div style={{ position: "relative", width: "100%", aspectRatio: "9/16" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={imageSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} />
-          <div style={{ position: "absolute", inset: 0, background: themeMode === 'dark' ? "linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.1))" : "linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.1))" }} />
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "16px 16px 12px" }}>
-            <div style={{ fontSize: 12, fontWeight: 800, color: themeMode === 'dark' ? "#fff" : "#111", letterSpacing: 0.5, marginBottom: 2 }}>{title}</div>
-            <div style={{ fontSize: 10, color: themeMode === 'dark' ? "rgba(255,255,255,0.8)" : "#555", marginBottom: 6 }}>{subtitle}</div>
-            <div style={{ fontSize: 9, color: themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888", display: "flex", alignItems: "center", gap: 4 }}>
-               <IconMapPin size={9} color={themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888"} /> [{location}]
-            </div>
+      {/* Browser Bar */}
+      <div style={{ display: "flex", gap: 5, padding: "10px 12px 6px", background: themeMode === 'dark' ? "rgba(255,255,255,0.03)" : "#f5f5f5", borderBottom: themeMode === 'dark' ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
+        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#ff5f57" }} />
+        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#febc2e" }} />
+        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#28c840" }} />
+      </div>
+      <div style={{ position: "relative", width: "100%", aspectRatio: "9/16" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={imageSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} />
+        <div style={{ position: "absolute", inset: 0, background: themeMode === 'dark' ? "linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.1))" : "linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.1))" }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "16px 16px 12px" }}>
+          <div style={{ fontSize: 12, fontWeight: 800, color: themeMode === 'dark' ? "#fff" : "#111", letterSpacing: 0.5, marginBottom: 2 }}>{title}</div>
+          <div style={{ fontSize: 10, color: themeMode === 'dark' ? "rgba(255,255,255,0.8)" : "#555", marginBottom: 6 }}>{subtitle}</div>
+          <div style={{ fontSize: 9, color: themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888", display: "flex", alignItems: "center", gap: 4 }}>
+             <IconMapPin size={9} color={themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888"} /> [{location}]
           </div>
         </div>
       </div>
@@ -57,9 +53,14 @@ export default function Hero() {
       <div style={{ position: "absolute", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.28) 0%, transparent 70%)", top: "-100px", left: "-100px", pointerEvents: "none" }} />
       <div style={{ position: "absolute", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(196,181,253,0.22) 0%, transparent 70%)", bottom: "0px", left: "30%", pointerEvents: "none" }} />
       {/* Circles */}
-      <div style={{ position: "absolute", top: "20%", left: "15%", width: 500, height: 500, border: "1px solid rgba(255,255,255,0.08)", borderRadius: "50%", pointerEvents: "none" }} />
-      <div style={{ position: "absolute", top: "28%", left: "8%", width: 680, height: 680, border: "1px solid rgba(255,255,255,0.05)", borderRadius: "50%", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", top: "20%", left: "15%", width: 500, height: 500, border: "1px solid rgba(255,255,255,0.07)", borderRadius: "50%", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", top: "28%", left: "8%", width: 680, height: 680, border: "1px solid rgba(255,255,255,0.04)", borderRadius: "50%", pointerEvents: "none" }} />
 
+      {/* 
+        Desktop: two-column grid (text left, cards right), min-height: calc(100vh - 68px)
+        Mobile: single column, text centered, cards below
+        We use a wrapper div that switches layout via CSS custom vars + media query pattern
+      */}
       <div style={{
         maxWidth: 1400, margin: "0 auto", padding: "calc(var(--hero-py) * 1.3) var(--hero-px) var(--hero-py)",
         width: "100%", position: "relative", zIndex: 1,
@@ -73,15 +74,13 @@ export default function Hero() {
         <div style={{ textAlign: "var(--hero-text-align)" as React.CSSProperties["textAlign"] }}>
           {/* Eyebrow Badge */}
           <div style={{
-            display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(139,92,246,0.5)", color: "#fff", fontSize: "14px", fontWeight: 600, marginBottom: 24,
-            backdropFilter: "blur(8px)", boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
+            display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20
           }}>
-            <IconZap size={16} color="#c4b5fd" />
-            <span>From Clicks to Customers — On Autopilot</span>
+            <IconZap size={16} color="#a78bfa" /> From Clicks to Customers — On Autopilot
           </div>
 
           <h1 style={{
-            fontSize: "calc(var(--hero-title-size) * 1.1)", fontWeight: 700, lineHeight: 1.4,
+            fontSize: "calc(var(--hero-title-size) * 1.1)", fontWeight: 700, lineHeight: 1.1,
             color: "#fff", letterSpacing: "-0.04em", marginBottom: 24,
             maxWidth: "100%", fontFamily: "'FullerSansDT', 'Inter', sans-serif",
           }}>
@@ -89,8 +88,8 @@ export default function Hero() {
           </h1>
 
           <p style={{
-            color: "rgba(255,255,255,0.9)", fontSize: "16px",
-            marginBottom: 32, fontWeight: 400, lineHeight: 1.6,
+            color: "rgba(255,255,255,0.75)", fontSize: "0.9em",
+            marginBottom: 32, fontWeight: 300, lineHeight: 1.6,
             maxWidth: "var(--hero-sub-max)", margin: "0 auto 32px",
             whiteSpace: "var(--hero-sub-wrap)",
           }}>
@@ -98,43 +97,42 @@ export default function Hero() {
           </p>
 
           {/* Service Chips */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 40, justifyContent: "var(--hero-chips-justify)" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 36, justifyContent: "var(--hero-chips-justify)" }}>
             {[
-              { icon: <IconBot size={16} color="#312e81" />, text: "WhatsApp Automation" },
-              { icon: <IconGlobe size={16} color="#312e81" />, text: "Website Development" },
-              { icon: <IconStar size={16} color="#312e81" />, text: "Google Business" },
+              { icon: <IconBot size={16} color="#36309d" />, text: "WhatsApp Automation" },
+              { icon: <IconGlobe size={16} color="#36309d" />, text: "Website Development" },
+              { icon: <IconStar size={16} color="#36309d" />, text: "Google Business" },
             ].map((chip, i) => (
-              <div key={i} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "8px 16px", minHeight: 36, borderRadius: 999, border: "1px solid rgba(255,255,255,0.2)", background: "#fff", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
+              <div key={i} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.2)", background: "#fff" }}>
                 {chip.icon}
-                <span style={{ color: "#312e81", fontSize: "14px", fontWeight: 600 }}>{chip.text}</span>
+                <span style={{ color: "#36309d", fontSize: "0.9em", fontWeight: 600 }}>{chip.text}</span>
               </div>
             ))}
           </div>
 
+
           {/* CTAs */}
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "var(--hero-chips-justify)" }} className="hero-cta-row">
             <Link href="https://wa.me/916265022474" target="_blank" rel="noopener noreferrer" style={{
-              display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "16px 40px",
-              minHeight: 52, borderRadius: 12, background: "#fff", color: "#3730a3", textDecoration: "none",
-              fontSize: "16px", fontWeight: 700, transition: "all 0.25s ease",
+              display: "inline-flex", alignItems: "center", padding: "18px 48px",
+              borderRadius: 12, background: "#fff", color: "#3730a3", textDecoration: "none",
+              fontSize: "1em", fontWeight: 700, transition: "all 0.25s ease",
               boxShadow: "0 4px 24px rgba(255,255,255,0.4)",
               flex: "var(--hero-btn-flex)",
-              whiteSpace: "nowrap", gap: 8,
+              justifyContent: "center",
+              whiteSpace: "nowrap",
             }}
               onMouseEnter={e => { e.currentTarget.style.background = "#f0f0f0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = "translateY(0)"; }}
-            >
-              <span>Open WhatsApp</span>
-              <span style={{ transform: "translateY(0.5px)" }}>&rarr;</span>
-            </Link>
+            >Open WhatsApp &rarr;</Link>
             <Link href="/portfolio" style={{
-              display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "16px 40px",
-              minHeight: 52, borderRadius: 12, background: "#6c3bff", color: "#fff",
-              textDecoration: "none", fontSize: "16px", fontWeight: 600,
+              display: "inline-flex", alignItems: "center", padding: "18px 48px",
+              borderRadius: 12, background: "#6c3bff", color: "#fff",
+              textDecoration: "none", fontSize: "1em", fontWeight: 500,
               border: "none", transition: "all 0.25s ease",
               flex: "var(--hero-btn-flex)",
+              justifyContent: "center",
               whiteSpace: "nowrap",
-              boxShadow: "0 4px 20px rgba(108,59,255,0.3)",
             }}
               onMouseEnter={e => { e.currentTarget.style.background = "#5a2fe0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#6c3bff"; e.currentTarget.style.transform = "translateY(0)"; }}

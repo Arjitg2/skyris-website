@@ -44,33 +44,31 @@ export default function Process() {
         
         <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
           <div style={{
-            display: "inline-flex", alignItems: "center", justifyContent: "center",
-            padding: "8px 16px", borderRadius: 999,
-            background: "#fff", fontSize: "14px", fontWeight: 600, color: "#0d0e1a",
-            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 24,
-            boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+            display: "inline-block", padding: "5px 14px", borderRadius: 999,
+            background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111",
+            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 20,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>The Process</div>
           <h2 style={{
-            fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
-            lineHeight: 1.4, letterSpacing: "-0.04em", marginBottom: 16,
+            fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
+            lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 12,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
             From WhatsApp Chat to Full Automation.
           </h2>
-          <p style={{ color: "#4b5563", fontSize: "16px", lineHeight: 1.6 }}>Simple. Fast. Zero technical stress for you.</p>
+          <p style={{ color: "#666", fontSize: "1.05em" }}>Simple. Fast. Zero technical stress for you.</p>
         </div>
 
         <div style={{ 
           display: "grid", 
           gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", 
-          gap: 32 
+          gap: 40 
         }}>
           {steps.map((s, i) => (
             <div key={i} style={{
               background: "#ffffff",
-              borderRadius: 24,
-              padding: "32px",
+              borderRadius: 20,
+              padding: "32px 24px",
               boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
               position: "relative",
               display: "flex",
@@ -86,7 +84,7 @@ export default function Process() {
               (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 16px rgba(0,0,0,0.05)";
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
-                <div style={{ fontSize: "24px", fontWeight: 800, color: "rgba(108,59,255,0.4)", fontVariantNumeric: "tabular-nums" }}>{s.num}</div>
+                <div style={{ fontSize: "1.4em", fontWeight: 800, color: "rgba(0,0,0,0.1)" }}>{s.num}</div>
                 <div style={{
                   width: 44, height: 44, borderRadius: 12, background: "rgba(108,59,255,0.1)",
                   display: "flex", alignItems: "center", justifyContent: "center"
@@ -94,8 +92,8 @@ export default function Process() {
                   {s.icon}
                 </div>
               </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.4 }}>{s.title}</h3>
-              <p style={{ fontSize: "15px", color: "#4b5563", lineHeight: 1.6 }}>{s.desc}</p>
+              <h3 style={{ fontSize: "1.25em", fontWeight: 800, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.3 }}>{s.title}</h3>
+              <p style={{ fontSize: "0.95em", color: "#666", lineHeight: 1.6 }}>{s.desc}</p>
             </div>
           ))}
         </div>

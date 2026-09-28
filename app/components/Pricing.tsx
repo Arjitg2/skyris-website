@@ -46,31 +46,29 @@ export default function Pricing() {
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
           <div style={{
-            display: "inline-flex", alignItems: "center", justifyContent: "center",
-            padding: "8px 16px", borderRadius: 999,
-            background: "rgba(255,255,255,0.1)", fontSize: "14px", fontWeight: 600,
-            color: "#ffffff", border: "1px solid rgba(255,255,255,0.16)", marginBottom: 24,
-            boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+            display: "inline-block", padding: "5px 14px", borderRadius: 999,
+            background: "rgba(255,255,255,0.07)", fontSize: "1em", fontWeight: 500,
+            color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.1)", marginBottom: 20,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>Pricing</div>
           <h2 style={{
-            fontSize: "var(--title-size)", fontWeight: 700, color: "#fff",
-            lineHeight: 1.4, letterSpacing: "-0.04em",
+            fontSize: "var(--title-size)", fontWeight: 600, color: "#fff",
+            lineHeight: 1.1, letterSpacing: "-0.04em",
             maxWidth: "var(--title-max-width)", margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
             Smart Pricing for Serious Businesses
           </h2>
           <p style={{
-            fontSize: "18px", color: "rgba(255,255,255,0.85)", marginTop: 16,
-            maxWidth: 600, margin: "16px auto 0", lineHeight: 1.6
+            fontSize: "1.25em", color: "rgba(255,255,255,0.6)", marginTop: 20,
+            maxWidth: 600, margin: "20px auto 0"
           }}>
             Everything you need to get customers online — without overpaying.
           </p>
         </div>
 
         {/* Cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 24, alignItems: "start", marginBottom: 80 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 20, alignItems: "start", marginBottom: 80 }}>
           {plans.map(plan => (
             <div key={plan.name} style={{
               background: plan.featured ? "#fff" : "rgba(255,255,255,0.04)",
@@ -82,14 +80,14 @@ export default function Pricing() {
               width: "100%",
             }}>
               {/* Plan name + badge: wrap badge to next line on mobile if needed */}
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
-                <h3 style={{ fontSize: "22px", fontWeight: 800, whiteSpace: "nowrap" }}>{plan.name}</h3>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
+                <h3 style={{ fontSize: "1.4em", fontWeight: 800, whiteSpace: "nowrap" }}>{plan.name}</h3>
                 {plan.badge && (
-                  <span style={{ padding: "4px 12px", borderRadius: 999, background: "#6c3bff", color: "#fff", fontSize: "13px", fontWeight: 700, whiteSpace: "nowrap", alignSelf: "center", boxShadow: "0 2px 8px rgba(108,59,255,0.4)" }}>{plan.badge}</span>
+                  <span style={{ padding: "4px 14px", borderRadius: 999, background: "#6c3bff", color: "#fff", fontSize: "0.85em", fontWeight: 600, whiteSpace: "nowrap", alignSelf: "center" }}>{plan.badge}</span>
                 )}
               </div>
               
-              <p style={{ fontSize: "15px", color: plan.featured ? "#4b5563" : "rgba(255,255,255,0.8)", marginBottom: 24, lineHeight: 1.5, whiteSpace: "pre-line" }}>
+              <p style={{ fontSize: "1em", color: plan.featured ? "#444" : "rgba(255,255,255,0.6)", marginBottom: 28, lineHeight: 1.5, whiteSpace: "pre-line" }}>
                 {plan.desc}
               </p>
 
@@ -98,22 +96,22 @@ export default function Pricing() {
                 <div style={{ fontSize: "clamp(1.8em, 6.5vw, 3em)", fontWeight: 900, letterSpacing: "-0.03em", whiteSpace: "nowrap", lineHeight: 1.1 }}>
                   {plan.price}
                 </div>
-                <div style={{ fontSize: "14px", fontWeight: 600, color: plan.featured ? "#4b5563" : "rgba(255,255,255,0.75)", marginTop: 6 }}>
+                <div style={{ fontSize: "0.95em", fontWeight: 500, color: plan.featured ? "#666" : "rgba(255,255,255,0.6)", marginTop: 6 }}>
                   {plan.type}
                 </div>
               </div>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 32 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 36 }}>
                 {plan.features.map(f => (
-                  <div key={f} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "15px" }}>
+                  <div key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: "1em" }}>
                     <div style={{
-                      width: 22, height: 22, borderRadius: "50%",
+                      width: 20, height: 20, borderRadius: "50%",
                       background: plan.featured ? "#0d0e1a" : "#fff",
                       display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
                     }}>
-                      <IconCheck size={11} color={plan.featured ? "#fff" : "#131525"} />
+                      <IconCheck size={10} color={plan.featured ? "#fff" : "#131525"} />
                     </div>
-                    <span style={{ color: plan.featured ? "#1f2937" : "rgba(255,255,255,0.9)", fontWeight: 500 }}>{f}</span>
+                    <span style={{ color: plan.featured ? "#333" : "rgba(255,255,255,0.85)" }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -122,18 +120,15 @@ export default function Pricing() {
                 href={`https://wa.me/916265022474?text=${encodeURIComponent(plan.waMsg)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
-                  display: "inline-flex", alignItems: "center", justifyContent: "center", width: "100%", padding: "16px 24px", minHeight: 48, borderRadius: 12, border: "none",
+                  display: "block", width: "100%", padding: "15px", borderRadius: 12, border: "none",
                   background: plan.featured ? "#6c3bff" : "#fff",
                   color: plan.featured ? "#fff" : "#0d0e1a",
-                  fontSize: "16px", fontWeight: 700, cursor: "pointer", transition: "all 0.2s ease",
-                  textDecoration: "none", textAlign: "center", boxSizing: "border-box", gap: 8,
-                  boxShadow: plan.featured ? "0 4px 16px rgba(108,59,255,0.3)" : "0 2px 8px rgba(0,0,0,0.1)",
+                  fontSize: "1em", fontWeight: 700, cursor: "pointer", transition: "all 0.2s",
+                  textDecoration: "none", textAlign: "center", boxSizing: "border-box",
                 }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = "0.9"; (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
-              >
-                <span>{plan.btnText}</span>
-              </a>
+              >{plan.btnText}</a>
             </div>
           ))}
         </div>
@@ -143,7 +138,7 @@ export default function Pricing() {
           {stats.map(s => (
             <div key={s.label1} style={{ display: "flex", alignItems: "center", gap: 20 }}>
               <div style={{ fontSize: "clamp(1.8em, 6vw, 4.2em)", fontWeight: 700, letterSpacing: "-0.04em", color: "#fff", lineHeight: 1, whiteSpace: "nowrap", flexShrink: 0 }}>{s.n}</div>
-              <div style={{ fontSize: "var(--stats-label)", color: "rgba(255,255,255,0.85)", lineHeight: 1.4 }}>
+              <div style={{ fontSize: "var(--stats-label)", color: "rgba(255,255,255,0.85)", lineHeight: 1.3 }}>
                 {s.label1}<br/>{s.label2}
               </div>
             </div>
@@ -151,30 +146,28 @@ export default function Pricing() {
         </div>
 
         {/* Bottom Not Sure Prompt */}
-        <div style={{ textAlign: "center", background: "rgba(255,255,255,0.04)", padding: "32px 24px", borderRadius: 24, border: "1px solid rgba(255,255,255,0.08)", width: "100%", boxSizing: "border-box" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10, fontSize: "20px", fontWeight: 700, color: "#fff", marginBottom: 12 }}>
-            <IconShield size={22} color="#6ea8fe" /> <span>Not sure which plan is right for you?</span>
+        <div style={{ textAlign: "center", background: "rgba(255,255,255,0.04)", padding: "clamp(24px, 5vw, 32px) clamp(20px, 4vw, 40px)", borderRadius: 24, border: "1px solid rgba(255,255,255,0.08)", width: "100%", boxSizing: "border-box" }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: "1.3em", fontWeight: 700, color: "#fff", marginBottom: 12 }}>
+            <IconShield size={22} color="#6ea8fe" /> Not sure which plan is right for you?
           </div>
-          <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.85)", marginBottom: 24, lineHeight: 1.6 }}>
+          <p style={{ fontSize: "1em", color: "rgba(255,255,255,0.6)", marginBottom: 24, lineHeight: 1.6 }}>
             WhatsApp us — we'll suggest the best<br/>package for YOUR business. Free advice.<br/>Zero pressure.
           </p>
           <a
             href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20need%20help%20choosing%20the%20right%20plan%20for%20my%20business."
             target="_blank" rel="noopener noreferrer"
             style={{
-              display: "inline-flex", alignItems: "center", justifyContent: "center", width: "100%", textAlign: "center",
+              display: "block", width: "100%", textAlign: "center",
               background: "#25D366", color: "#fff",
-              padding: "16px 24px", minHeight: 48, borderRadius: 12,
-              fontSize: "16px", fontWeight: 700, cursor: "pointer",
+              padding: "15px 20px", borderRadius: 12,
+              fontSize: "1.05em", fontWeight: 700, cursor: "pointer",
               textDecoration: "none", transition: "opacity 0.2s",
-              whiteSpace: "nowrap", boxSizing: "border-box", gap: 8,
-              boxShadow: "0 4px 16px rgba(37,211,102,0.3)",
+              whiteSpace: "nowrap", boxSizing: "border-box",
             }}
             onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.9"}
             onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}
           >
-            <span>Chat on WhatsApp</span>
-            <span style={{ transform: "translateY(0.5px)" }}>&rarr;</span>
+            Chat on WhatsApp &rarr;
           </a>
         </div>
       </div>

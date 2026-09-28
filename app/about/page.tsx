@@ -37,10 +37,10 @@ export default function AboutPage() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
             About Clivik
           </div>
-          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.03em", lineHeight: 1.4, marginBottom: 16 }}>
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
             Built by Someone Who<br />Understands Your Business
           </h1>
-          <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.85)", maxWidth: 520, margin: "0 auto", lineHeight: 1.6 }}>
+          <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 520, margin: "0 auto" }}>
             Clivik exists because local businesses deserve to be found online — not just the big brands with big budgets.
           </p>
           <Link href="/contact" style={{
@@ -62,13 +62,13 @@ export default function AboutPage() {
       </section>
 
       {/* Founder Section */}
-      <section style={{ background: "#f2f2f7", padding: "var(--about-founder-pt, 64px) clamp(20px,6vw,120px) 120px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "var(--about-founder-gap, 32px)", alignItems: "center" }}>
-          {/* Photo — Inner radius (16px) = Outer radius (24px) - Padding (8px) */}
-          <div style={{ background: "#fff", borderRadius: 24, padding: 8, boxShadow: "0 12px 40px rgba(0,0,0,0.08)", position: "relative" }}>
+      <section style={{ background: "#f2f2f7", padding: "var(--about-founder-pt, 60px) clamp(20px,6vw,120px) 120px" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "var(--about-founder-gap, 30px)", alignItems: "center" }}>
+          {/* Photo */}
+          <div style={{ background: "#fff", borderRadius: 24, padding: 16, boxShadow: "0 12px 40px rgba(0,0,0,0.08)", position: "relative" }}>
             <div style={{ position: "relative", width: "100%", aspectRatio: "3/4", borderRadius: 16, overflow: "hidden", background: "#e0e0e0", minHeight: 320 }}>
               <Image
-                src="https://res.cloudinary.com/dxvsqh2jw/image/upload/v1790584426/ChatGPT_Image_Sep_28_2026_02_02_51_PM_n7nhui.png"
+                src="/arjit-photo.png"
                 alt="Arjit Gupta — Founder of Clivik"
                 fill
                 style={{ objectFit: "cover" }}
@@ -76,32 +76,30 @@ export default function AboutPage() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <div style={{ position: "absolute", bottom: -12, right: 24, background: "#fff", padding: "16px 24px", borderRadius: 16, boxShadow: "0 8px 32px rgba(0,0,0,0.12)", border: "1px solid rgba(0,0,0,0.04)" }}>
-              <div style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "16px", lineHeight: 1.4 }}>Arjit Gupta</div>
-              <div style={{ color: "#6c3bff", fontWeight: 600, fontSize: "14px", lineHeight: 1.4, marginTop: 4 }}>Founder, Clivik</div>
+            <div style={{ position: "absolute", bottom: -10, right: 24, background: "#fff", padding: "14px 20px", borderRadius: 14, boxShadow: "0 8px 30px rgba(0,0,0,0.12)" }}>
+              <div style={{ fontWeight: 700, color: "#0d0e1a" }}>Arjit Gupta</div>
+              <div style={{ color: "#6c3bff", fontWeight: 500, fontSize: "0.9em" }}>Founder, Clivik</div>
             </div>
           </div>
 
           {/* Story */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "var(--about-founder-story-gap, 24px)", fontSize: "16px", color: "#374151", lineHeight: 1.6 }}>
-            <p style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "24px", lineHeight: 1.4 }}>Hi, I&apos;m Arjit Gupta.</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--about-founder-story-gap, 20px)", fontSize: "1.05em", color: "#444", lineHeight: 1.8 }}>
+            <p style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "1.3em" }}>Hi, I&apos;m Arjit Gupta.</p>
             <p>I started Clivik because I saw local Indian businesses losing money to big agencies that overcharge and under-deliver.</p>
             <p>We don&apos;t do fancy pitches. We just build digital systems (websites, WhatsApp automation) that actually get you more customers — at a price that makes sense for local businesses.</p>
             <p>Let&apos;s work together.</p>
-            <div style={{ background: "#fff", padding: "24px", borderRadius: 16, borderLeft: "4px solid #6c3bff", fontWeight: 600, color: "#0d0e1a", lineHeight: 1.5, boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
+            <div style={{ background: "#fff", padding: "24px", borderRadius: 16, borderLeft: "4px solid #6c3bff", fontWeight: 500, color: "#0d0e1a" }}>
               Based in Bhopal. Built for Indian SMBs.
             </div>
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))}
               style={{
-                display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
-                padding: "16px 32px", minHeight: "48px", borderRadius: 12,
+                display: "inline-block", padding: "15px 32px", borderRadius: 12,
                 background: "#6c3bff", color: "#fff",
                 border: "none", cursor: "pointer",
-                fontSize: "16px", fontWeight: 700, width: "fit-content",
+                fontSize: "1em", fontWeight: 700, width: "fit-content",
                 fontFamily: "inherit",
                 transition: "transform 0.2s, background 0.2s",
-                boxShadow: "0 4px 16px rgba(108,59,255,0.25)"
               }}
               onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.background = "#5a2fe0"; (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.04)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.background = "#6c3bff"; (e.currentTarget as HTMLButtonElement).style.transform = "scale(1)"; }}

@@ -25,16 +25,14 @@ export default function Features() {
         {/* Section header */}
         <div style={{ marginBottom: "var(--sec-mb)", textAlign: "var(--sec-text-align)" as any }}>
           <div style={{
-            display: "inline-flex", alignItems: "center", justifyContent: "center",
-            padding: "8px 16px", borderRadius: 999,
-            background: "#fff", fontSize: "14px", fontWeight: 600, color: "#0d0e1a",
-            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 24,
-            boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+            display: "inline-block", padding: "5px 14px", borderRadius: 999,
+            background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111",
+            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 20,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>Why Clivik</div>
           <h2 style={{
-            fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
-            lineHeight: 1.4, letterSpacing: "-0.04em", maxWidth: "100%",
+            fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
+            lineHeight: 1.15, letterSpacing: "-0.04em", maxWidth: "100%",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif",
             wordBreak: "normal", overflowWrap: "normal",
           }}>
@@ -44,19 +42,19 @@ export default function Features() {
         </div>
 
         {/* Top grid: 2 col */}
-        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-2)", gap: 24, marginBottom: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-2)", gap: 20, marginBottom: 20 }}>
           {/* Left: Pricing comparison */}
-          <div style={{ background: "#fff", borderRadius: 24, padding: "32px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column" }}>
+          <div style={{ background: "#fff", borderRadius: 20, padding: "40px 36px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column" }}>
             <div style={{
               width: 44, height: 44, borderRadius: 12, background: "rgba(108,59,255,0.1)",
               display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20,
             }}>
               <IconLightning size={20} color="#6c3bff" />
             </div>
-            <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.4 }}>
+            <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#0d0e1a", marginBottom: 10, lineHeight: 1.2 }}>
               Affordable premium custom websites at a fraction of the cost.
             </h3>
-            <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6, marginBottom: 24 }}>
+            <p style={{ fontSize: "1em", color: "#666", lineHeight: 1.6, marginBottom: 28 }}>
               Premium Custom Websites — Without the Premium Price<br />
               Get a fully customized website at a fraction of the cost
             </p>
@@ -65,11 +63,11 @@ export default function Features() {
               {/* Agency Row */}
               <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 80, flexShrink: 0 }}>
-                  <div style={{ width: 24, height: 24, borderRadius: "50%", border: "1px solid #ccc", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: "#4b5563", fontWeight: 700 }}>?</div>
-                  <span style={{ fontSize: "14px", fontWeight: 600, color: "#111" }}>Agency</span>
+                  <div style={{ width: 24, height: 24, borderRadius: "50%", border: "1px solid #ddd", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, color: "#666", fontWeight: 600 }}>?</div>
+                  <span style={{ fontSize: "0.9em", fontWeight: 500, color: "#111" }}>Agency</span>
                 </div>
                 <div style={{ flex: 1, background: "#f0f0f0", borderRadius: 8, padding: "12px 16px", display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
-                  <span style={{ fontSize: "14px", fontWeight: 600, color: "#111" }}>Rs. 50,000</span>
+                  <span style={{ fontSize: "0.9em", fontWeight: 600, color: "#111" }}>Rs. 50,000</span>
                 </div>
               </div>
               {/* Clivik Row */}
@@ -78,23 +76,23 @@ export default function Features() {
                   <div style={{ width: 24, height: 24, borderRadius: 8, background: "linear-gradient(135deg,#8b5cf6,#6c3bff)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <IconCloud size={12} color="#fff" />
                   </div>
-                  <span style={{ fontSize: "14px", fontWeight: 600, color: "#111" }}>Clivik</span>
+                  <span style={{ fontSize: "0.9em", fontWeight: 500, color: "#111" }}>Clivik</span>
                 </div>
                 {/* bar is ~8% of Agency's price, so proportionally much shorter */}
-                <div style={{ width: "8%", minWidth: 96, background: "#4e28cc", borderRadius: 8, padding: "12px 16px", display: "flex", alignItems: "center", justifyContent: "flex-end", boxShadow: "0 2px 10px rgba(78,40,204,0.3)" }}>
-                  <span style={{ fontSize: "14px", fontWeight: 700, color: "#fff", whiteSpace: "nowrap" }}>Rs. 3999</span>
+                <div style={{ width: "8%", minWidth: 90, background: "#4e28cc", borderRadius: 8, padding: "12px 16px", display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+                  <span style={{ fontSize: "0.9em", fontWeight: 700, color: "#fff", whiteSpace: "nowrap" }}>Rs. 3999</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Card 2: Top Right */}
-          <div style={{ background: "#fff", borderRadius: 24, padding: "32px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column", gap: 0 }}>
-            <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#0d0e1a", marginBottom: 16, lineHeight: 1.4 }}>&quot;Your Business Replies Even While You Sleep.&quot;</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 32 }}>
+          <div style={{ background: "#fff", borderRadius: 20, padding: "40px 36px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column", gap: 0 }}>
+            <h3 style={{ fontSize: "1.3em", fontWeight: 800, color: "#0d0e1a", marginBottom: 16 }}>&quot;Your Business Replies Even While You Sleep.&quot;</h3>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 32 }}>
               {rightSteps.map((s, i) => (
-                <div key={i} style={{ fontSize: "16px", color: "#374151", display: "flex", alignItems: "center", gap: 12, lineHeight: 1.5 }}>
-                  <div style={{ width: 24, height: 24, borderRadius: "50%", background: "#6c3bff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <div key={i} style={{ fontSize: "1em", color: "#444", display: "flex", alignItems: "center", gap: 10 }}>
+                  <div style={{ width: 22, height: 22, borderRadius: "50%", background: "#6c3bff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     {s.icon}
                   </div>
                   {s.text}
@@ -112,35 +110,35 @@ export default function Features() {
         </div>
 
         {/* Bottom bento: 3 col */}
-        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 20 }}>
           {/* Card 1 */}
-          <div style={{ background: "#fff", borderRadius: 24, padding: "32px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(108,59,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
-              <IconRefreshCw size={20} color="#6c3bff" />
+          <div style={{ background: "#fff", borderRadius: 20, padding: "32px 28px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
+            <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(108,59,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
+              <IconRefreshCw size={18} color="#6c3bff" />
             </div>
-            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.4, marginBottom: 12 }}>&quot;Live in 5 Days. Guaranteed.&quot;</h3>
-            <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6, marginBottom: 12 }}>While big agencies take 45 days — your website is live in just 5 days.</p>
-            <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6 }}>Fast. Premium.<br/>Zero compromise on quality.</p>
+            <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#0d0e1a", lineHeight: 1.3, marginBottom: 12 }}>&quot;Live in 5 Days. Guaranteed.&quot;</h3>
+            <p style={{ fontSize: "1em", color: "#777", lineHeight: 1.6, marginBottom: 16 }}>While big agencies take 45 days — your website is live in just 5 days.</p>
+            <p style={{ fontSize: "1em", color: "#777", lineHeight: 1.6 }}>Fast. Premium.<br/>Zero compromise on quality.</p>
           </div>
 
           {/* Card 2 */}
-          <div style={{ background: "#fff", borderRadius: 24, padding: "32px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(108,59,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
-              <IconSparkle size={20} color="#6c3bff" />
+          <div style={{ background: "#fff", borderRadius: 20, padding: "32px 28px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
+            <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(108,59,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
+              <IconSparkle size={18} color="#6c3bff" />
             </div>
-            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.4, marginBottom: 12 }}>&quot;Same Day Reply. Every Single Time.&quot;</h3>
-            <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6, marginBottom: 12 }}>WhatsApp karo — same day response. Guaranteed.</p>
-            <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6 }}>No waiting.<br/>No ghosting.<br/>No excuses.</p>
+            <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#0d0e1a", lineHeight: 1.3, marginBottom: 12 }}>&quot;Same Day Reply. Every Single Time.&quot;</h3>
+            <p style={{ fontSize: "1em", color: "#777", lineHeight: 1.6, marginBottom: 16 }}>WhatsApp karo — same day response. Guaranteed.</p>
+            <p style={{ fontSize: "1em", color: "#777", lineHeight: 1.6 }}>No waiting.<br/>No ghosting.<br/>No excuses.</p>
           </div>
 
           {/* Card 3 Dark */}
-          <div style={{ background: "#12131f", borderRadius: 24, padding: "32px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
-            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#fff", lineHeight: 1.4, marginBottom: 12 }}>&quot;No Hidden Charges. Ever.&quot;</h3>
-            <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.85)", lineHeight: 1.6, marginBottom: 24 }}>Jo price bataya — wahi final price hai.</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div style={{ background: "#12131f", borderRadius: 20, padding: "32px 28px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
+            <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#fff", lineHeight: 1.3, marginBottom: 12 }}>&quot;No Hidden Charges. Ever.&quot;</h3>
+            <p style={{ fontSize: "1em", color: "rgba(255,255,255,0.7)", lineHeight: 1.6, marginBottom: 20 }}>Jo price bataya — wahi final price hai.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {bottomDarkFeatures.map((f, i) => (
-                <div key={i} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "15px", color: "rgba(255,255,255,0.9)" }}>
-                  <div style={{ width: 22, height: 22, borderRadius: "50%", background: "rgba(108,59,255,0.5)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "1em", color: "rgba(255,255,255,0.85)" }}>
+                  <div style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(108,59,255,0.4)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     {f.icon}
                   </div>
                   {f.text}
