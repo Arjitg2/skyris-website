@@ -29,7 +29,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
       style={{
         display: "block",
         textDecoration: "none",
-        background: "#fff", borderRadius: 20, overflow: "hidden",
+        background: "#fff", borderRadius: 24, padding: 8, overflow: "hidden",
         boxShadow: "0 2px 24px rgba(0,0,0,0.08)",
         transition: "transform 0.3s ease, box-shadow 0.3s ease", cursor: "pointer",
       }}
@@ -46,34 +46,36 @@ function WorkCard({ work }: { work: typeof works[0] }) {
         if (overlay) overlay.style.opacity = "0";
       }}
     >
-      {/* Mac dots */}
-      {/* Mac dots */}
-      <div style={{ display: "flex", gap: 6, padding: "12px 16px", background: "#f0f0f0", alignItems: "center" }}>
-        <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f57" }} />
-        <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#febc2e" }} />
-        <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#28c840" }} />
-        <span style={{ marginLeft: "auto", fontSize: 13, fontWeight: 500, color: "#4b5563", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "80%" }}>{work.title}</span>
-      </div>
+      {/* Inner Radius Formula: Inner radius = Outer radius (24px) - Padding (8px) = 16px */}
+      <div style={{ borderRadius: 16, overflow: "hidden" }}>
+        {/* Mac dots */}
+        <div style={{ display: "flex", gap: 6, padding: "12px 16px", background: "#f0f0f0", alignItems: "center" }}>
+          <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f57" }} />
+          <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#febc2e" }} />
+          <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#28c840" }} />
+          <span style={{ marginLeft: "auto", fontSize: 13, fontWeight: 500, color: "#4b5563", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "80%" }}>{work.title}</span>
+        </div>
 
-      {/* Image Preview */}
-      <div style={{ position: "relative", width: "100%", aspectRatio: "9/16", background: "#111" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={work.imageSrc} alt={work.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-        
-        {/* Hover Overlay */}
-        <div 
-          className="work-overlay"
-          style={{ 
-            position: "absolute", inset: 0, 
-            background: "linear-gradient(to top, rgba(0,0,0,0.85), transparent 50%)", 
-            opacity: 0, transition: "opacity 0.3s ease",
-            display: "flex", alignItems: "flex-end", padding: 24
-          }} 
-        >
-           <div style={{ color: "#fff", fontWeight: 700, fontSize: "16px", display: "inline-flex", alignItems: "center", gap: 8 }}>
-             <span>Visit Website</span>
-             <span style={{ transform: "translateY(0.5px)" }}>&rarr;</span>
-           </div>
+        {/* Image Preview */}
+        <div style={{ position: "relative", width: "100%", aspectRatio: "9/16", background: "#111" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={work.imageSrc} alt={work.title} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          
+          {/* Hover Overlay */}
+          <div 
+            className="work-overlay"
+            style={{ 
+              position: "absolute", inset: 0, 
+              background: "linear-gradient(to top, rgba(0,0,0,0.85), transparent 50%)", 
+              opacity: 0, transition: "opacity 0.3s ease",
+              display: "flex", alignItems: "flex-end", padding: 24
+            }} 
+          >
+             <div style={{ color: "#fff", fontWeight: 700, fontSize: "16px", display: "inline-flex", alignItems: "center", gap: 8 }}>
+               <span>Visit Website</span>
+               <span style={{ transform: "translateY(0.5px)" }}>&rarr;</span>
+             </div>
+          </div>
         </div>
       </div>
     </a>
@@ -97,7 +99,7 @@ export default function Works() {
             }}>Works</div>
             <h2 style={{
               fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
-              lineHeight: 1.15, letterSpacing: "-0.04em", maxWidth: "var(--title-max-width)",
+              lineHeight: 1.4, letterSpacing: "-0.04em", maxWidth: "var(--title-max-width)",
               fontFamily: "'FullerSansDT', 'Inter', sans-serif"
             }}>Explore Featured Businesses</h2>
           </div>

@@ -19,16 +19,16 @@ export default function About() {
           }}>About Clivik</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
-            lineHeight: 1.15, letterSpacing: "-0.04em",
+            lineHeight: 1.4, letterSpacing: "-0.03em",
             maxWidth: "100%", fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>Built by Someone Who <br className="desktop-br" />Understands Your Business.</h2>
         </div>
 
         {/* Content Grid */}
         <div style={{ display: "flex", flexDirection: "var(--about-flex, row)" as any, gap: 40, alignItems: "center" }}>
-          {/* Left/Top Image Content */}
+          {/* Left/Top Image Content — Inner radius (16px) = Outer radius (24px) - Padding (8px) */}
           <div style={{ 
-            background: "#ffffff", borderRadius: 24, padding: 16, flex: "1 1 50%",
+            background: "#ffffff", borderRadius: 24, padding: 8, flex: "1 1 50%",
             boxShadow: "0 12px 40px rgba(0,0,0,0.06)", position: "relative"
           }}>
             <div style={{ 
@@ -51,13 +51,13 @@ export default function About() {
               boxShadow: "0 8px 32px rgba(0,0,0,0.12)", display: "flex", flexDirection: "column",
               border: "1px solid rgba(0,0,0,0.04)",
             }}>
-              <span style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "16px", lineHeight: 1.25 }}>Arjit Gupta</span>
-              <span style={{ color: "#6c3bff", fontWeight: 600, fontSize: "14px", lineHeight: 1.25, marginTop: 4 }}>Founder, Clivik</span>
+              <span style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "16px", lineHeight: 1.4 }}>Arjit Gupta</span>
+              <span style={{ color: "#6c3bff", fontWeight: 600, fontSize: "14px", lineHeight: 1.4, marginTop: 4 }}>Founder, Clivik</span>
             </div>
           </div>
 
           {/* Right/Bottom Text Content */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "var(--about-para-gap, 24px)", fontSize: "16px", color: "#374151", lineHeight: 1.75, flex: "1 1 50%", maxWidth: "var(--about-text-max-width, 100%)" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--about-para-gap, 24px)", fontSize: "16px", color: "#374151", lineHeight: 1.6, flex: "1 1 50%", maxWidth: "var(--about-text-max-width, 100%)" }}>
             <p style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "20px", lineHeight: 1.4 }}>
               Hi, I am Arjit Gupta — founder of Clivik.
             </p>

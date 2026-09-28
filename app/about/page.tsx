@@ -37,10 +37,10 @@ export default function AboutPage() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
             About Clivik
           </div>
-          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.03em", lineHeight: 1.4, marginBottom: 16 }}>
             Built by Someone Who<br />Understands Your Business
           </h1>
-          <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 520, margin: "0 auto" }}>
+          <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.85)", maxWidth: 520, margin: "0 auto", lineHeight: 1.6 }}>
             Clivik exists because local businesses deserve to be found online — not just the big brands with big budgets.
           </p>
           <Link href="/contact" style={{
@@ -64,8 +64,8 @@ export default function AboutPage() {
       {/* Founder Section */}
       <section style={{ background: "#f2f2f7", padding: "var(--about-founder-pt, 64px) clamp(20px,6vw,120px) 120px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "var(--about-founder-gap, 32px)", alignItems: "center" }}>
-          {/* Photo */}
-          <div style={{ background: "#fff", borderRadius: 24, padding: 16, boxShadow: "0 12px 40px rgba(0,0,0,0.08)", position: "relative" }}>
+          {/* Photo — Inner radius (16px) = Outer radius (24px) - Padding (8px) */}
+          <div style={{ background: "#fff", borderRadius: 24, padding: 8, boxShadow: "0 12px 40px rgba(0,0,0,0.08)", position: "relative" }}>
             <div style={{ position: "relative", width: "100%", aspectRatio: "3/4", borderRadius: 16, overflow: "hidden", background: "#e0e0e0", minHeight: 320 }}>
               <Image
                 src="https://res.cloudinary.com/dxvsqh2jw/image/upload/v1790584426/ChatGPT_Image_Sep_28_2026_02_02_51_PM_n7nhui.png"
@@ -77,14 +77,14 @@ export default function AboutPage() {
               />
             </div>
             <div style={{ position: "absolute", bottom: -12, right: 24, background: "#fff", padding: "16px 24px", borderRadius: 16, boxShadow: "0 8px 32px rgba(0,0,0,0.12)", border: "1px solid rgba(0,0,0,0.04)" }}>
-              <div style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "16px", lineHeight: 1.25 }}>Arjit Gupta</div>
-              <div style={{ color: "#6c3bff", fontWeight: 600, fontSize: "14px", lineHeight: 1.25, marginTop: 4 }}>Founder, Clivik</div>
+              <div style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "16px", lineHeight: 1.4 }}>Arjit Gupta</div>
+              <div style={{ color: "#6c3bff", fontWeight: 600, fontSize: "14px", lineHeight: 1.4, marginTop: 4 }}>Founder, Clivik</div>
             </div>
           </div>
 
           {/* Story */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "var(--about-founder-story-gap, 24px)", fontSize: "16px", color: "#374151", lineHeight: 1.75 }}>
-            <p style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "24px", lineHeight: 1.3 }}>Hi, I&apos;m Arjit Gupta.</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--about-founder-story-gap, 24px)", fontSize: "16px", color: "#374151", lineHeight: 1.6 }}>
+            <p style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "24px", lineHeight: 1.4 }}>Hi, I&apos;m Arjit Gupta.</p>
             <p>I started Clivik because I saw local Indian businesses losing money to big agencies that overcharge and under-deliver.</p>
             <p>We don&apos;t do fancy pitches. We just build digital systems (websites, WhatsApp automation) that actually get you more customers — at a price that makes sense for local businesses.</p>
             <p>Let&apos;s work together.</p>

@@ -94,10 +94,10 @@ export default function PricingPage() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20 }}>
             Pricing
           </div>
-          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.4, marginBottom: 16 }}>
             Smart Pricing for<br />Serious Businesses
           </h1>
-          <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 480, margin: "0 auto" }}>
+          <p style={{ fontSize: "1.1em", color: "rgba(255,255,255,0.75)", maxWidth: 480, margin: "0 auto", lineHeight: 1.6 }}>
             Everything you need to get customers online — without overpaying.
           </p>
 
@@ -204,7 +204,7 @@ export default function PricingPage() {
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: "1.3em", fontWeight: 700, color: "#0d0e1a", marginBottom: 12 }}>
               <IconShield size={22} color="#a78bfa" /> Not sure which plan is right for you?
             </div>
-            <p style={{ color: "#666", lineHeight: 1.7, marginBottom: 28 }}>
+            <p style={{ color: "#666", lineHeight: 1.6, marginBottom: 28 }}>
               WhatsApp us — we'll suggest the best package for YOUR business. Free advice. Zero pressure.
             </p>
             <a
@@ -220,12 +220,12 @@ export default function PricingPage() {
           </div>
 
           {/* FAQ */}
-          <h2 style={{ fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a", marginBottom: 32, textAlign: "center", fontFamily: "'FullerSansDT', 'Inter', sans-serif" }}>Frequently Asked Questions</h2>
+          <h2 style={{ fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a", marginBottom: 32, textAlign: "center", fontFamily: "'FullerSansDT', 'Inter', sans-serif", lineHeight: 1.4 }}>Frequently Asked Questions</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 760, margin: "0 auto" }}>
             {faqs.map(faq => (
               <div key={faq.q} style={{ background: "#fff", borderRadius: 16, padding: "24px 28px", border: "1px solid rgba(0,0,0,0.07)" }}>
-                <div style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "1.05em", marginBottom: 8 }}>{faq.q}</div>
-                <div style={{ color: "#666", lineHeight: 1.7 }}>{faq.a}</div>
+                <div style={{ fontWeight: 700, color: "#0d0e1a", fontSize: "1.05em", marginBottom: 8, lineHeight: 1.4 }}>{faq.q}</div>
+                <div style={{ color: "#666", lineHeight: 1.6 }}>{faq.a}</div>
               </div>
             ))}
           </div>

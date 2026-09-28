@@ -110,12 +110,12 @@ Please note that disabling certain cookies may affect your ability to use some f
 - **Right to Object** — Object to our processing of your data for marketing purposes
 - **Right to Data Portability** — Request your data in a structured, machine-readable format
 
-To exercise any of these rights, please contact us at **helloclivik@gmail.com**. We will respond to all requests within **30 days**.`,
+To exercise any of these rights, please contact us at **hello@clivik.dpdns.org**. We will respond to all requests within **30 days**.`,
     },
     {
       id: "children",
       title: "9. Children's Privacy",
-      content: `Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe that a child has provided us with personal information without parental consent, please contact us immediately at helloclivik@gmail.com and we will take steps to delete such information.`,
+      content: `Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe that a child has provided us with personal information without parental consent, please contact us immediately at hello@clivik.dpdns.org and we will take steps to delete such information.`,
     },
     {
       id: "contact",
@@ -123,7 +123,7 @@ To exercise any of these rights, please contact us at **helloclivik@gmail.com**.
       content: `If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
 
 **Clivik — Digital Presence Agency**
-Email: helloclivik@gmail.com
+Email: hello@clivik.dpdns.org
 WhatsApp: +91 6265022474
 Location: Bhopal, Madhya Pradesh, India
 
@@ -164,11 +164,11 @@ Your continued use of our services after any changes to this Privacy Policy cons
           </div>
           <h1 style={{
             fontSize: "clamp(2.4em, 5.5vw, 3.7em)", fontWeight: 800,
-            color: "#fff", letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: 20,
+            color: "#fff", letterSpacing: "-0.03em", lineHeight: 1.4, marginBottom: 20,
           }}>
             Privacy Policy
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1.05em", lineHeight: 1.7, maxWidth: 600 }}>
+          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1.05em", lineHeight: 1.6, maxWidth: 600 }}>
             At Clivik, we take your privacy seriously. This policy explains how we collect, use, and protect your personal information.
           </p>
           <div style={{
@@ -236,7 +236,7 @@ Your continued use of our services after any changes to this Privacy Policy cons
                 }}>
                   {section.title}
                 </h2>
-                <div style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.97em", lineHeight: 1.8 }}>
+                <div style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.97em", lineHeight: 1.6 }}>
                   {section.content.split("\n").map((line, i) => {
                     if (line.trim() === "") return <br key={i} />;
 
@@ -271,10 +271,10 @@ Your continued use of our services after any changes to this Privacy Policy cons
             border: "1px solid rgba(108,59,255,0.25)", borderRadius: 20, padding: "36px 40px",
             textAlign: "center",
           }}>
-            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1em", lineHeight: 1.7, marginBottom: 20 }}>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1em", lineHeight: 1.6, marginBottom: 20 }}>
               Have questions about this policy? We&apos;re happy to help.
             </p>
-            <a href="mailto:helloclivik@gmail.com" style={{
+            <a href="mailto:hello@clivik.dpdns.org" style={{
               display: "inline-flex", alignItems: "center", gap: 8,
               background: "#6c3bff", color: "#fff", textDecoration: "none",
               padding: "14px 28px", borderRadius: 12, fontWeight: 600, fontSize: "0.95em",
@@ -289,7 +289,7 @@ Your continued use of our services after any changes to this Privacy Policy cons
                 (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
               }}
             >
-              📧 helloclivik@gmail.com
+              📧 hello@clivik.dpdns.org
             </a>
           </div>
         </div>

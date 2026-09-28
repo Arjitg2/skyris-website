@@ -167,12 +167,12 @@ export default function Footer() {
             <div>
               <h2 style={{
                 fontSize: "var(--title-size)", fontWeight: 700, color: "#fff",
-                lineHeight: 1.15, letterSpacing: "-0.04em", marginBottom: 24,
+                lineHeight: 1.4, letterSpacing: "-0.04em", marginBottom: 24,
                 fontFamily: "'FullerSansDT', 'Inter', sans-serif"
               }}>
                 Ready to See<br />What<br />Your Business<br />Looks<br />Like Online?
               </h2>
-              <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.85)", lineHeight: 1.7, maxWidth: 440 }}>
+              <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.85)", lineHeight: 1.6, maxWidth: 440 }}>
                 Tell us about your business and we will send you a free custom website mockup within 24 hours. See it first, pay only if you love it. Zero risk involved.
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function Footer() {
                 </div>
                 <span style={{ fontWeight: 700, color: "#fff", fontSize: "22px" }}>Clivik</span>
               </div>
-              <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "15px", lineHeight: 1.7, maxWidth: 340, marginBottom: 28 }}>
+              <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "15px", lineHeight: 1.6, maxWidth: 340, marginBottom: 28 }}>
                 Clivik helps Indian businesses automate customer communication, generate more leads, and grow faster using modern digital solutions.
               </p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -245,7 +245,7 @@ export default function Footer() {
                 <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "16px", marginBottom: 20 }}>Contact Us</h4>
                 {[
                   { icon: <IconWhatsApp size={16} color="#25D366" />, text: "+91 62650 22474", href: "https://wa.me/916265022474" },
-                  { icon: <IconMail size={16} color="#c4b5fd" />, text: "hello@clivik.com", href: "mailto:hello@clivik.com" },
+                  { icon: <IconMail size={16} color="#c4b5fd" />, text: "hello@clivik.dpdns.org", href: "mailto:hello@clivik.dpdns.org" },
                   { icon: <IconMapPin size={16} color="#c4b5fd" />, text: "Bhopal, M.P.", href: "https://maps.google.com/?q=Bhopal,Madhya+Pradesh" },
                   { icon: <IconClock2 size={16} color="#c4b5fd" />, text: "Same Day Response", href: "#" },
                 ].map(link => (

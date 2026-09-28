@@ -98,7 +98,7 @@ export default function WhyWebsite() {
           }}>What We Do</div>
           <h2 style={{
             fontSize: "clamp(2em, 9vw, var(--title-size))", fontWeight: 700, color: "#fff",
-            lineHeight: 1.15, letterSpacing: "-0.04em",
+            lineHeight: 1.4, letterSpacing: "-0.04em",
             margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif",
           }}>
@@ -146,7 +146,7 @@ export default function WhyWebsite() {
               }}>
                 {s.icon}
               </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#fff", marginBottom: 12, lineHeight: 1.25 }}>{s.title}</h3>
+              <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#fff", marginBottom: 12, lineHeight: 1.4 }}>{s.title}</h3>
               <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.9)", lineHeight: 1.6, marginBottom: 24 }}>{s.desc}</p>
               
               {/* Bullets */}

@@ -53,7 +53,7 @@ export default function Process() {
           }}>The Process</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
-            lineHeight: 1.15, letterSpacing: "-0.04em", marginBottom: 16,
+            lineHeight: 1.4, letterSpacing: "-0.04em", marginBottom: 16,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
             From WhatsApp Chat to Full Automation.
@@ -94,8 +94,8 @@ export default function Process() {
                   {s.icon}
                 </div>
               </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.3 }}>{s.title}</h3>
-              <p style={{ fontSize: "15px", color: "#4b5563", lineHeight: 1.65 }}>{s.desc}</p>
+              <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.4 }}>{s.title}</h3>
+              <p style={{ fontSize: "15px", color: "#4b5563", lineHeight: 1.6 }}>{s.desc}</p>
             </div>
           ))}
         </div>

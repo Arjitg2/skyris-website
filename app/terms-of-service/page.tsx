@@ -94,7 +94,7 @@ If we terminate the project without cause, we will refund any payments made for 
       content: `If you have any questions about these Terms, please contact us:
 
 **Clivik — Digital Presence Agency**
-Email: helloclivik@gmail.com
+Email: hello@clivik.dpdns.org
 WhatsApp: +91 6265022474
 Location: Bhopal, Madhya Pradesh, India`,
     },
@@ -126,11 +126,11 @@ Location: Bhopal, Madhya Pradesh, India`,
           </div>
           <h1 style={{
             fontSize: "clamp(2.4em, 5.5vw, 3.7em)", fontWeight: 800,
-            color: "#fff", letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: 20,
+            color: "#fff", letterSpacing: "-0.03em", lineHeight: 1.4, marginBottom: 20,
           }}>
             Terms and Conditions
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1.05em", lineHeight: 1.7, maxWidth: 600 }}>
+          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1.05em", lineHeight: 1.6, maxWidth: 600 }}>
             These terms govern your use of Clivik's services and website. Please read them carefully before engaging with us.
           </p>
           <div style={{
@@ -198,7 +198,7 @@ Location: Bhopal, Madhya Pradesh, India`,
                 }}>
                   {section.title}
                 </h2>
-                <div style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.97em", lineHeight: 1.8 }}>
+                <div style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.97em", lineHeight: 1.6 }}>
                   {section.content.split("\n").map((line, i) => {
                     if (line.trim() === "") return <br key={i} />;
 
@@ -233,10 +233,10 @@ Location: Bhopal, Madhya Pradesh, India`,
             border: "1px solid rgba(108,59,255,0.25)", borderRadius: 20, padding: "36px 40px",
             textAlign: "center",
           }}>
-            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1em", lineHeight: 1.7, marginBottom: 20 }}>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1em", lineHeight: 1.6, marginBottom: 20 }}>
               Have questions about our terms? We&apos;re happy to clarify.
             </p>
-            <a href="mailto:helloclivik@gmail.com" style={{
+            <a href="mailto:hello@clivik.dpdns.org" style={{
               display: "inline-flex", alignItems: "center", gap: 8,
               background: "#6c3bff", color: "#fff", textDecoration: "none",
               padding: "14px 28px", borderRadius: 12, fontWeight: 600, fontSize: "0.95em",
@@ -251,7 +251,7 @@ Location: Bhopal, Madhya Pradesh, India`,
                 (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
               }}
             >
-              📧 helloclivik@gmail.com
+              📧 hello@clivik.dpdns.org
             </a>
           </div>
         </div>

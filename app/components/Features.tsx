@@ -34,7 +34,7 @@ export default function Features() {
           }}>Why Clivik</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
-            lineHeight: 1.15, letterSpacing: "-0.04em", maxWidth: "100%",
+            lineHeight: 1.4, letterSpacing: "-0.04em", maxWidth: "100%",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif",
             wordBreak: "normal", overflowWrap: "normal",
           }}>
@@ -53,7 +53,7 @@ export default function Features() {
             }}>
               <IconLightning size={20} color="#6c3bff" />
             </div>
-            <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.25 }}>
+            <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.4 }}>
               Affordable premium custom websites at a fraction of the cost.
             </h3>
             <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6, marginBottom: 24 }}>
@@ -90,7 +90,7 @@ export default function Features() {
 
           {/* Card 2: Top Right */}
           <div style={{ background: "#fff", borderRadius: 24, padding: "32px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)", display: "flex", flexDirection: "column", gap: 0 }}>
-            <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#0d0e1a", marginBottom: 16, lineHeight: 1.25 }}>&quot;Your Business Replies Even While You Sleep.&quot;</h3>
+            <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#0d0e1a", marginBottom: 16, lineHeight: 1.4 }}>&quot;Your Business Replies Even While You Sleep.&quot;</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 32 }}>
               {rightSteps.map((s, i) => (
                 <div key={i} style={{ fontSize: "16px", color: "#374151", display: "flex", alignItems: "center", gap: 12, lineHeight: 1.5 }}>
@@ -118,7 +118,7 @@ export default function Features() {
             <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(108,59,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
               <IconRefreshCw size={20} color="#6c3bff" />
             </div>
-            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.3, marginBottom: 12 }}>&quot;Live in 5 Days. Guaranteed.&quot;</h3>
+            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.4, marginBottom: 12 }}>&quot;Live in 5 Days. Guaranteed.&quot;</h3>
             <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6, marginBottom: 12 }}>While big agencies take 45 days — your website is live in just 5 days.</p>
             <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6 }}>Fast. Premium.<br/>Zero compromise on quality.</p>
           </div>
@@ -128,14 +128,14 @@ export default function Features() {
             <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(108,59,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24 }}>
               <IconSparkle size={20} color="#6c3bff" />
             </div>
-            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.3, marginBottom: 12 }}>&quot;Same Day Reply. Every Single Time.&quot;</h3>
+            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.4, marginBottom: 12 }}>&quot;Same Day Reply. Every Single Time.&quot;</h3>
             <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6, marginBottom: 12 }}>WhatsApp karo — same day response. Guaranteed.</p>
             <p style={{ fontSize: "16px", color: "#4b5563", lineHeight: 1.6 }}>No waiting.<br/>No ghosting.<br/>No excuses.</p>
           </div>
 
           {/* Card 3 Dark */}
           <div style={{ background: "#12131f", borderRadius: 24, padding: "32px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
-            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#fff", lineHeight: 1.3, marginBottom: 12 }}>&quot;No Hidden Charges. Ever.&quot;</h3>
+            <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#fff", lineHeight: 1.4, marginBottom: 12 }}>&quot;No Hidden Charges. Ever.&quot;</h3>
             <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.85)", lineHeight: 1.6, marginBottom: 24 }}>Jo price bataya — wahi final price hai.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {bottomDarkFeatures.map((f, i) => (

@@ -26,7 +26,7 @@ export default function Testimonials() {
           }}>Testimonials</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
-            lineHeight: 1.15, letterSpacing: "-0.04em",
+            lineHeight: 1.4, letterSpacing: "-0.04em",
             maxWidth: "100%", margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
@@ -48,7 +48,7 @@ export default function Testimonials() {
               <div style={{ display: "flex", gap: 4, marginBottom: 16 }}>
                 {Array.from({ length: 5 }).map((_, si) => <IconStar key={si} size={15} color="#f59e0b" />)}
               </div>
-              <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.7, marginBottom: 24 }}>
+              <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.6, marginBottom: 24 }}>
                 &ldquo;{t.text}&rdquo;
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: 12, borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 16 }}>
@@ -60,8 +60,8 @@ export default function Testimonials() {
                   <IconUser size={18} color="#fff" />
                 </div>
                 <div>
-                  <div style={{ fontSize: "15px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.25 }}>{t.name}</div>
-                  <div style={{ fontSize: "13px", fontWeight: 500, color: "#4b5563", marginTop: 2, lineHeight: 1.25 }}>{t.role}</div>
+                  <div style={{ fontSize: "15px", fontWeight: 700, color: "#0d0e1a", lineHeight: 1.4 }}>{t.name}</div>
+                  <div style={{ fontSize: "13px", fontWeight: 500, color: "#4b5563", marginTop: 2, lineHeight: 1.4 }}>{t.role}</div>
                 </div>
               </div>
             </div>

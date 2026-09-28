@@ -10,7 +10,8 @@ function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, wi
   return (
     <div style={{
       position: "absolute", top, left, width,
-      background: themeMode === 'dark' ? "var(--bg-dark-card, #1a1b2e)" : "#fff", borderRadius: 16, overflow: "hidden",
+      background: themeMode === 'dark' ? "var(--bg-dark-card, #1a1b2e)" : "#fff",
+      borderRadius: 24, padding: 8, overflow: "hidden",
       boxShadow: "0 24px 64px rgba(0,0,0,0.4)",
       border: themeMode === 'dark' ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.05)",
       transform: `rotate(${rotate}deg)`,
@@ -18,21 +19,24 @@ function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, wi
       animation: `floatY 5s ease-in-out ${delay}s infinite`,
       ["--rot" as string]: `${rotate}deg`, zIndex: 2,
     }}>
-      {/* Browser Bar */}
-      <div style={{ display: "flex", gap: 5, padding: "10px 12px 6px", background: themeMode === 'dark' ? "rgba(255,255,255,0.03)" : "#f5f5f5", borderBottom: themeMode === 'dark' ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
-        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#ff5f57" }} />
-        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#febc2e" }} />
-        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#28c840" }} />
-      </div>
-      <div style={{ position: "relative", width: "100%", aspectRatio: "9/16" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={imageSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} />
-        <div style={{ position: "absolute", inset: 0, background: themeMode === 'dark' ? "linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.1))" : "linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.1))" }} />
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "16px 16px 12px" }}>
-          <div style={{ fontSize: 12, fontWeight: 800, color: themeMode === 'dark' ? "#fff" : "#111", letterSpacing: 0.5, marginBottom: 2 }}>{title}</div>
-          <div style={{ fontSize: 10, color: themeMode === 'dark' ? "rgba(255,255,255,0.8)" : "#555", marginBottom: 6 }}>{subtitle}</div>
-          <div style={{ fontSize: 9, color: themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888", display: "flex", alignItems: "center", gap: 4 }}>
-             <IconMapPin size={9} color={themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888"} /> [{location}]
+      {/* Inner Radius Formula: Inner radius = Outer radius (24px) - Padding (8px) = 16px */}
+      <div style={{ borderRadius: 16, overflow: "hidden", background: themeMode === 'dark' ? "#12131f" : "#f9f9fb" }}>
+        {/* Browser Bar */}
+        <div style={{ display: "flex", gap: 5, padding: "10px 12px 6px", background: themeMode === 'dark' ? "rgba(255,255,255,0.03)" : "#f5f5f5", borderBottom: themeMode === 'dark' ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
+          <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#ff5f57" }} />
+          <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#febc2e" }} />
+          <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#28c840" }} />
+        </div>
+        <div style={{ position: "relative", width: "100%", aspectRatio: "9/16" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={imageSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} />
+          <div style={{ position: "absolute", inset: 0, background: themeMode === 'dark' ? "linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.1))" : "linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.1))" }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "16px 16px 12px" }}>
+            <div style={{ fontSize: 12, fontWeight: 800, color: themeMode === 'dark' ? "#fff" : "#111", letterSpacing: 0.5, marginBottom: 2 }}>{title}</div>
+            <div style={{ fontSize: 10, color: themeMode === 'dark' ? "rgba(255,255,255,0.8)" : "#555", marginBottom: 6 }}>{subtitle}</div>
+            <div style={{ fontSize: 9, color: themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888", display: "flex", alignItems: "center", gap: 4 }}>
+               <IconMapPin size={9} color={themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888"} /> [{location}]
+            </div>
           </div>
         </div>
       </div>
@@ -77,7 +81,7 @@ export default function Hero() {
           </div>
 
           <h1 style={{
-            fontSize: "calc(var(--hero-title-size) * 1.1)", fontWeight: 700, lineHeight: 1.15,
+            fontSize: "calc(var(--hero-title-size) * 1.1)", fontWeight: 700, lineHeight: 1.4,
             color: "#fff", letterSpacing: "-0.04em", marginBottom: 24,
             maxWidth: "100%", fontFamily: "'FullerSansDT', 'Inter', sans-serif",
           }}>

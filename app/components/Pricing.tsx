@@ -55,7 +55,7 @@ export default function Pricing() {
           }}>Pricing</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 700, color: "#fff",
-            lineHeight: 1.15, letterSpacing: "-0.04em",
+            lineHeight: 1.4, letterSpacing: "-0.04em",
             maxWidth: "var(--title-max-width)", margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
@@ -143,7 +143,7 @@ export default function Pricing() {
           {stats.map(s => (
             <div key={s.label1} style={{ display: "flex", alignItems: "center", gap: 20 }}>
               <div style={{ fontSize: "clamp(1.8em, 6vw, 4.2em)", fontWeight: 700, letterSpacing: "-0.04em", color: "#fff", lineHeight: 1, whiteSpace: "nowrap", flexShrink: 0 }}>{s.n}</div>
-              <div style={{ fontSize: "var(--stats-label)", color: "rgba(255,255,255,0.85)", lineHeight: 1.3 }}>
+              <div style={{ fontSize: "var(--stats-label)", color: "rgba(255,255,255,0.85)", lineHeight: 1.4 }}>
                 {s.label1}<br/>{s.label2}
               </div>
             </div>

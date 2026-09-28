@@ -180,7 +180,7 @@ export default function ContactModal() {
               </div>
               <h2 style={{
                 fontSize: "clamp(1.3em, 4vw, 1.65em)", fontWeight: 800,
-                color: "#0d0e1a", lineHeight: 1.2, marginBottom: 6,
+                color: "#0d0e1a", lineHeight: 1.4, marginBottom: 6,
               }}>
                 Let&apos;s Build Something Great
               </h2>
