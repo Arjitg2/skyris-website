@@ -29,10 +29,10 @@ function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, wi
         <img src={imageSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} />
         <div style={{ position: "absolute", inset: 0, background: themeMode === 'dark' ? "linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.1))" : "linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.1))" }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "16px 16px 12px" }}>
-          <div style={{ fontSize: 12, fontWeight: 800, color: themeMode === 'dark' ? "#fff" : "#111", letterSpacing: 0.5, marginBottom: 2 }}>{title}</div>
-          <div style={{ fontSize: 10, color: themeMode === 'dark' ? "rgba(255,255,255,0.8)" : "#555", marginBottom: 6 }}>{subtitle}</div>
-          <div style={{ fontSize: 9, color: themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888", display: "flex", alignItems: "center", gap: 4 }}>
-             <IconMapPin size={9} color={themeMode === 'dark' ? "rgba(255,255,255,0.5)" : "#888"} /> [{location}]
+          <div style={{ fontSize: 12, fontWeight: 800, color: themeMode === 'dark' ? "#fff" : "#111", letterSpacing: 0.5, marginBottom: 4 }}>{title}</div>
+          <div style={{ fontSize: 11, color: themeMode === 'dark' ? "rgba(255,255,255,0.9)" : "#374151", marginBottom: 6 }}>{subtitle}</div>
+          <div style={{ fontSize: 10, color: themeMode === 'dark' ? "rgba(255,255,255,0.8)" : "#4b5563", display: "flex", alignItems: "center", gap: 4 }}>
+             <IconMapPin size={10} color={themeMode === 'dark' ? "rgba(255,255,255,0.8)" : "#4b5563"} /> [{location}]
           </div>
         </div>
       </div>
@@ -46,8 +46,8 @@ export default function Hero() {
       background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
       display: "flex", flexDirection: "column",
       position: "relative", overflow: "hidden",
-      paddingTop: 85, /* slightly lower than original 68 */
-      paddingBottom: 115, /* increased from 80 but less than 170 to keep ticker visible */
+      paddingTop: 88,
+      paddingBottom: 120,
     }}>
       {/* Orbs */}
       <div style={{ position: "absolute", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.28) 0%, transparent 70%)", top: "-100px", left: "-100px", pointerEvents: "none" }} />
@@ -74,13 +74,14 @@ export default function Hero() {
         <div style={{ textAlign: "var(--hero-text-align)" as React.CSSProperties["textAlign"] }}>
           {/* Eyebrow Badge */}
           <div style={{
-            display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.9em", fontWeight: 500, marginBottom: 20
+            display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.24)", color: "#fff", fontSize: "0.875rem", fontWeight: 500, marginBottom: 24
           }}>
-            <IconZap size={16} color="#a78bfa" /> From Clicks to Customers — On Autopilot
+            <IconZap size={16} color="#c4b5fd" />
+            <span>From Clicks to Customers — On Autopilot</span>
           </div>
 
           <h1 style={{
-            fontSize: "calc(var(--hero-title-size) * 1.1)", fontWeight: 700, lineHeight: 1.1,
+            fontSize: "calc(var(--hero-title-size) * 1.1)", fontWeight: 700, lineHeight: 1.15,
             color: "#fff", letterSpacing: "-0.04em", marginBottom: 24,
             maxWidth: "100%", fontFamily: "'FullerSansDT', 'Inter', sans-serif",
           }}>
@@ -88,8 +89,8 @@ export default function Hero() {
           </h1>
 
           <p style={{
-            color: "rgba(255,255,255,0.75)", fontSize: "0.9em",
-            marginBottom: 32, fontWeight: 300, lineHeight: 1.6,
+            color: "rgba(255,255,255,0.92)", fontSize: "1rem",
+            marginBottom: 32, fontWeight: 400, lineHeight: 1.6,
             maxWidth: "var(--hero-sub-max)", margin: "0 auto 32px",
             whiteSpace: "var(--hero-sub-wrap)",
           }}>
@@ -97,15 +98,15 @@ export default function Hero() {
           </p>
 
           {/* Service Chips */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 36, justifyContent: "var(--hero-chips-justify)" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 32, justifyContent: "var(--hero-chips-justify)" }}>
             {[
               { icon: <IconBot size={16} color="#36309d" />, text: "WhatsApp Automation" },
               { icon: <IconGlobe size={16} color="#36309d" />, text: "Website Development" },
               { icon: <IconStar size={16} color="#36309d" />, text: "Google Business" },
             ].map((chip, i) => (
-              <div key={i} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.2)", background: "#fff" }}>
-                {chip.icon}
-                <span style={{ color: "#36309d", fontSize: "0.9em", fontWeight: 600 }}>{chip.text}</span>
+              <div key={i} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.3)", background: "#ffffff", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
+                <span className="optical-center">{chip.icon}</span>
+                <span style={{ color: "#36309d", fontSize: "0.875rem", fontWeight: 600 }}>{chip.text}</span>
               </div>
             ))}
           </div>
@@ -114,9 +115,9 @@ export default function Hero() {
           {/* CTAs */}
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "var(--hero-chips-justify)" }} className="hero-cta-row">
             <Link href="https://wa.me/916265022474" target="_blank" rel="noopener noreferrer" style={{
-              display: "inline-flex", alignItems: "center", padding: "18px 48px",
+              display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", minHeight: 52,
               borderRadius: 12, background: "#fff", color: "#3730a3", textDecoration: "none",
-              fontSize: "1em", fontWeight: 700, transition: "all 0.25s ease",
+              fontSize: "1rem", fontWeight: 700, transition: "all 0.25s ease",
               boxShadow: "0 4px 24px rgba(255,255,255,0.4)",
               flex: "var(--hero-btn-flex)",
               justifyContent: "center",
@@ -124,11 +125,14 @@ export default function Hero() {
             }}
               onMouseEnter={e => { e.currentTarget.style.background = "#f0f0f0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#fff"; e.currentTarget.style.transform = "translateY(0)"; }}
-            >Open WhatsApp &rarr;</Link>
+            >
+              <span>Open WhatsApp</span>
+              <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
+            </Link>
             <Link href="/portfolio" style={{
-              display: "inline-flex", alignItems: "center", padding: "18px 48px",
+              display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", minHeight: 52,
               borderRadius: 12, background: "#6c3bff", color: "#fff",
-              textDecoration: "none", fontSize: "1em", fontWeight: 500,
+              textDecoration: "none", fontSize: "1rem", fontWeight: 600,
               border: "none", transition: "all 0.25s ease",
               flex: "var(--hero-btn-flex)",
               justifyContent: "center",
@@ -136,7 +140,9 @@ export default function Hero() {
             }}
               onMouseEnter={e => { e.currentTarget.style.background = "#5a2fe0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#6c3bff"; e.currentTarget.style.transform = "translateY(0)"; }}
-            >View Our Work</Link>
+            >
+              <span>View Our Work</span>
+            </Link>
           </div>
         </div>
 

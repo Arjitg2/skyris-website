@@ -44,25 +44,26 @@ export default function Process() {
         
         <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
           <div style={{
-            display: "inline-block", padding: "5px 14px", borderRadius: 999,
-            background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111",
-            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 20,
+            display: "inline-flex", alignItems: "center", justifyContent: "center",
+            padding: "8px 16px", borderRadius: 999,
+            background: "#fff", fontSize: "0.875rem", fontWeight: 500, color: "#111",
+            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 24,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>The Process</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
-            lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 12,
+            lineHeight: 1.15, letterSpacing: "-0.04em", marginBottom: 16,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
             From WhatsApp Chat to Full Automation.
           </h2>
-          <p style={{ color: "#666", fontSize: "1.05em" }}>Simple. Fast. Zero technical stress for you.</p>
+          <p style={{ color: "#4b5563", fontSize: "1rem" }}>Simple. Fast. Zero technical stress for you.</p>
         </div>
 
         <div style={{ 
           display: "grid", 
           gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", 
-          gap: 40 
+          gap: 32 
         }}>
           {steps.map((s, i) => (
             <div key={i} style={{
@@ -84,16 +85,16 @@ export default function Process() {
               (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 16px rgba(0,0,0,0.05)";
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
-                <div style={{ fontSize: "1.4em", fontWeight: 800, color: "rgba(0,0,0,0.1)" }}>{s.num}</div>
+                <div style={{ fontSize: "1.4em", fontWeight: 800, color: "rgba(0,0,0,0.2)" }}>{s.num}</div>
                 <div style={{
                   width: 44, height: 44, borderRadius: 12, background: "rgba(108,59,255,0.1)",
-                  display: "flex", alignItems: "center", justifyContent: "center"
+                  display: "inline-flex", alignItems: "center", justifyContent: "center"
                 }}>
                   {s.icon}
                 </div>
               </div>
               <h3 style={{ fontSize: "1.25em", fontWeight: 800, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.3 }}>{s.title}</h3>
-              <p style={{ fontSize: "0.95em", color: "#666", lineHeight: 1.6 }}>{s.desc}</p>
+              <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6 }}>{s.desc}</p>
             </div>
           ))}
         </div>

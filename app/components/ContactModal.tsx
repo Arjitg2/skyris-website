@@ -74,16 +74,16 @@ export default function ContactModal() {
   };
 
   const inputStyle: React.CSSProperties = {
-    width: "100%", padding: "12px 16px", borderRadius: 10,
+    width: "100%", padding: "12px 16px", minHeight: 48, borderRadius: 10,
     background: "#f5f4ff", border: "1.5px solid #e0d9ff",
-    color: "#0d0e1a", fontSize: "1em", fontFamily: "inherit", outline: "none",
+    color: "#0d0e1a", fontSize: "1rem", fontFamily: "inherit", outline: "none",
     transition: "border-color 0.2s, background 0.2s",
     boxSizing: "border-box",
   };
 
   const labelStyle: React.CSSProperties = {
-    display: "block", fontSize: "0.88em", fontWeight: 600,
-    color: "#3d3d5c", marginBottom: 6,
+    display: "block", fontSize: "0.875rem", fontWeight: 600,
+    color: "#1f2937", marginBottom: 8,
   };
 
   return (
@@ -115,20 +115,20 @@ export default function ContactModal() {
           boxSizing: "border-box",
         }}
       >
-        {/* Close button */}
+        {/* Close button (min 44x44px touch target) */}
         <button
           onClick={() => setOpen(false)}
           style={{
             position: "absolute", top: 16, right: 16,
-            width: 34, height: 34, borderRadius: "50%",
+            width: 44, height: 44, borderRadius: "50%",
             background: "#f0eeff", border: "none", cursor: "pointer",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontSize: "1.2em", color: "#6c3bff", fontWeight: 700,
+            display: "inline-flex", alignItems: "center", justifyContent: "center",
+            fontSize: "1.35rem", color: "#6c3bff", fontWeight: 700,
             lineHeight: 1,
           }}
           aria-label="Close modal"
         >
-          ×
+          <span style={{ transform: "translateY(-1px)" }}>×</span>
         </button>
 
         {submitted ? (
@@ -137,23 +137,24 @@ export default function ContactModal() {
             <div style={{
               width: 64, height: 64, borderRadius: "50%",
               background: "linear-gradient(135deg,#8b5cf6,#6c3bff)",
-              display: "flex", alignItems: "center", justifyContent: "center",
+              display: "inline-flex", alignItems: "center", justifyContent: "center",
               margin: "0 auto 20px",
             }}>
               <IconSend size={28} color="#fff" />
             </div>
-            <h3 style={{ fontSize: "1.5em", fontWeight: 800, color: "#0d0e1a", marginBottom: 10 }}>
+            <h3 style={{ fontSize: "1.5em", fontWeight: 800, color: "#0d0e1a", marginBottom: 12 }}>
               Opening WhatsApp…
             </h3>
-            <p style={{ fontSize: "1em", color: "#666", lineHeight: 1.6 }}>
+            <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6 }}>
               Your message is ready. Send it on WhatsApp and we will respond same day!
             </p>
             <button
               onClick={() => setOpen(false)}
               style={{
-                marginTop: 24, padding: "12px 32px", borderRadius: 12,
+                marginTop: 24, padding: "12px 32px", minHeight: 48, borderRadius: 12,
                 background: "#6c3bff", color: "#fff", border: "none",
-                fontSize: "1em", fontWeight: 600, cursor: "pointer",
+                fontSize: "1rem", fontWeight: 600, cursor: "pointer",
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
               }}
             >
               Done
@@ -161,26 +162,26 @@ export default function ContactModal() {
           </div>
         ) : (
           /* Form */
-          <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+          <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {/* Heading */}
             <div style={{ marginBottom: 4 }}>
               <div style={{
                 display: "inline-flex", alignItems: "center", gap: 8,
-                padding: "4px 12px", borderRadius: 999,
+                padding: "6px 12px", borderRadius: 999,
                 background: "#f0eeff", marginBottom: 12,
               }}>
-                <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#6c3bff" }} />
-                <span style={{ fontSize: "0.82em", fontWeight: 600, color: "#6c3bff" }}>
+                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#6c3bff" }} />
+                <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: "#6c3bff" }}>
                   Free • No payment needed
                 </span>
               </div>
               <h2 style={{
                 fontSize: "clamp(1.3em, 4vw, 1.65em)", fontWeight: 800,
-                color: "#0d0e1a", lineHeight: 1.2, marginBottom: 6,
+                color: "#0d0e1a", lineHeight: 1.25, marginBottom: 8,
               }}>
                 Let&apos;s Build Something Great
               </h2>
-              <p style={{ fontSize: "0.93em", color: "#666", lineHeight: 1.5 }}>
+              <p style={{ fontSize: "0.9375rem", color: "#4b5563", lineHeight: 1.5 }}>
                 Takes 2 minutes to fill. We respond to every enquiry same day.
               </p>
             </div>
@@ -220,14 +221,14 @@ export default function ContactModal() {
               <div style={{ position: "relative" }}>
                 <span style={{
                   position: "absolute", left: 14, top: "50%", transform: "translateY(-50%)",
-                  display: "flex", alignItems: "center",
+                  display: "inline-flex", alignItems: "center",
                 }}>
-                  <IconPhone size={15} color="#9f8ccc" />
+                  <IconPhone size={16} color="#6c3bff" />
                 </span>
                 <input
                   type="tel" required placeholder="+91 98765 43210"
                   value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })}
-                  style={{ ...inputStyle, paddingLeft: 40 }}
+                  style={{ ...inputStyle, paddingLeft: 42 }}
                   onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "#f0eeff"; }}
                   onBlur={e => { e.currentTarget.style.borderColor = "#e0d9ff"; e.currentTarget.style.background = "#f5f4ff"; }}
                 />
@@ -252,11 +253,11 @@ export default function ContactModal() {
               type="submit"
               disabled={isSubmitting}
               style={{
-                padding: "14px", borderRadius: 12,
+                padding: "14px 20px", minHeight: 48, borderRadius: 12,
                 background: isSubmitting ? "#8b5cf6" : "linear-gradient(135deg,#8b5cf6,#6c3bff)",
-                color: "#fff", border: "none", fontSize: "1em",
+                color: "#fff", border: "none", fontSize: "1rem",
                 fontWeight: 700, cursor: isSubmitting ? "not-allowed" : "pointer",
-                display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
                 transition: "all 0.2s",
                 boxShadow: "0 4px 20px rgba(108,59,255,0.35)",
                 opacity: isSubmitting ? 0.8 : 1,
@@ -264,10 +265,11 @@ export default function ContactModal() {
               onMouseEnter={e => { if(!isSubmitting){ e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 32px rgba(108,59,255,0.45)"; } }}
               onMouseLeave={e => { if(!isSubmitting){ e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(108,59,255,0.35)"; } }}
             >
-              {isSubmitting ? "Sending..." : "Submit \u2192"}
+              <span>{isSubmitting ? "Sending..." : "Submit"}</span>
+              {!isSubmitting && <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>}
             </button>
 
-            <p style={{ fontSize: "0.8em", color: "#aaa", textAlign: "center", marginTop: -6 }}>
+            <p style={{ fontSize: "0.8125rem", color: "#4b5563", textAlign: "center", marginTop: -4 }}>
               No spam. No payment needed. We&apos;ll contact you via WhatsApp.
             </p>
           </form>

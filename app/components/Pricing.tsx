@@ -46,29 +46,30 @@ export default function Pricing() {
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
           <div style={{
-            display: "inline-block", padding: "5px 14px", borderRadius: 999,
-            background: "rgba(255,255,255,0.07)", fontSize: "1em", fontWeight: 500,
-            color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.1)", marginBottom: 20,
+            display: "inline-flex", alignItems: "center", justifyContent: "center",
+            padding: "8px 16px", borderRadius: 999,
+            background: "rgba(255,255,255,0.12)", fontSize: "0.875rem", fontWeight: 500,
+            color: "#ffffff", border: "1px solid rgba(255,255,255,0.2)", marginBottom: 24,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>Pricing</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#fff",
-            lineHeight: 1.1, letterSpacing: "-0.04em",
+            lineHeight: 1.15, letterSpacing: "-0.04em",
             maxWidth: "var(--title-max-width)", margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
             Smart Pricing for Serious Businesses
           </h2>
           <p style={{
-            fontSize: "1.25em", color: "rgba(255,255,255,0.6)", marginTop: 20,
-            maxWidth: 600, margin: "20px auto 0"
+            fontSize: "1.125rem", color: "rgba(255,255,255,0.85)", marginTop: 16,
+            maxWidth: 600, margin: "16px auto 0"
           }}>
             Everything you need to get customers online — without overpaying.
           </p>
         </div>
 
         {/* Cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 20, alignItems: "start", marginBottom: 80 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 24, alignItems: "start", marginBottom: 80 }}>
           {plans.map(plan => (
             <div key={plan.name} style={{
               background: plan.featured ? "#fff" : "rgba(255,255,255,0.04)",
@@ -80,14 +81,14 @@ export default function Pricing() {
               width: "100%",
             }}>
               {/* Plan name + badge: wrap badge to next line on mobile if needed */}
-              <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
                 <h3 style={{ fontSize: "1.4em", fontWeight: 800, whiteSpace: "nowrap" }}>{plan.name}</h3>
                 {plan.badge && (
-                  <span style={{ padding: "4px 14px", borderRadius: 999, background: "#6c3bff", color: "#fff", fontSize: "0.85em", fontWeight: 600, whiteSpace: "nowrap", alignSelf: "center" }}>{plan.badge}</span>
+                  <span style={{ padding: "4px 12px", borderRadius: 999, background: "#6c3bff", color: "#fff", fontSize: "0.8125rem", fontWeight: 600, whiteSpace: "nowrap", alignSelf: "center" }}>{plan.badge}</span>
                 )}
               </div>
               
-              <p style={{ fontSize: "1em", color: plan.featured ? "#444" : "rgba(255,255,255,0.6)", marginBottom: 28, lineHeight: 1.5, whiteSpace: "pre-line" }}>
+              <p style={{ fontSize: "1rem", color: plan.featured ? "#374151" : "rgba(255,255,255,0.88)", marginBottom: 28, lineHeight: 1.5, whiteSpace: "pre-line" }}>
                 {plan.desc}
               </p>
 
@@ -96,22 +97,22 @@ export default function Pricing() {
                 <div style={{ fontSize: "clamp(1.8em, 6.5vw, 3em)", fontWeight: 900, letterSpacing: "-0.03em", whiteSpace: "nowrap", lineHeight: 1.1 }}>
                   {plan.price}
                 </div>
-                <div style={{ fontSize: "0.95em", fontWeight: 500, color: plan.featured ? "#666" : "rgba(255,255,255,0.6)", marginTop: 6 }}>
+                <div style={{ fontSize: "0.9375rem", fontWeight: 500, color: plan.featured ? "#4b5563" : "rgba(255,255,255,0.85)", marginTop: 8 }}>
                   {plan.type}
                 </div>
               </div>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 36 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
                 {plan.features.map(f => (
-                  <div key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: "1em" }}>
+                  <div key={f} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "1rem" }}>
                     <div style={{
                       width: 20, height: 20, borderRadius: "50%",
                       background: plan.featured ? "#0d0e1a" : "#fff",
-                      display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                      display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
                     }}>
                       <IconCheck size={10} color={plan.featured ? "#fff" : "#131525"} />
                     </div>
-                    <span style={{ color: plan.featured ? "#333" : "rgba(255,255,255,0.85)" }}>{f}</span>
+                    <span style={{ color: plan.featured ? "#1f2937" : "rgba(255,255,255,0.92)" }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -120,15 +121,19 @@ export default function Pricing() {
                 href={`https://wa.me/916265022474?text=${encodeURIComponent(plan.waMsg)}`}
                 target="_blank" rel="noopener noreferrer"
                 style={{
-                  display: "block", width: "100%", padding: "15px", borderRadius: 12, border: "none",
+                  display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  width: "100%", padding: "14px 20px", minHeight: 48, borderRadius: 12, border: "none",
                   background: plan.featured ? "#6c3bff" : "#fff",
                   color: plan.featured ? "#fff" : "#0d0e1a",
-                  fontSize: "1em", fontWeight: 700, cursor: "pointer", transition: "all 0.2s",
+                  fontSize: "1rem", fontWeight: 700, cursor: "pointer", transition: "all 0.2s",
                   textDecoration: "none", textAlign: "center", boxSizing: "border-box",
                 }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = "0.9"; (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = "1"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
-              >{plan.btnText}</a>
+              >
+                <span>Get Started</span>
+                <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
+              </a>
             </div>
           ))}
         </div>
@@ -150,24 +155,26 @@ export default function Pricing() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: "1.3em", fontWeight: 700, color: "#fff", marginBottom: 12 }}>
             <IconShield size={22} color="#6ea8fe" /> Not sure which plan is right for you?
           </div>
-          <p style={{ fontSize: "1em", color: "rgba(255,255,255,0.6)", marginBottom: 24, lineHeight: 1.6 }}>
+          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.85)", marginBottom: 24, lineHeight: 1.6 }}>
             WhatsApp us — we'll suggest the best<br/>package for YOUR business. Free advice.<br/>Zero pressure.
           </p>
           <a
             href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20need%20help%20choosing%20the%20right%20plan%20for%20my%20business."
             target="_blank" rel="noopener noreferrer"
             style={{
-              display: "block", width: "100%", textAlign: "center",
+              display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
+              width: "100%", textAlign: "center",
               background: "#25D366", color: "#fff",
-              padding: "15px 20px", borderRadius: 12,
-              fontSize: "1.05em", fontWeight: 700, cursor: "pointer",
+              padding: "14px 20px", minHeight: 48, borderRadius: 12,
+              fontSize: "1rem", fontWeight: 700, cursor: "pointer",
               textDecoration: "none", transition: "opacity 0.2s",
               whiteSpace: "nowrap", boxSizing: "border-box",
             }}
             onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.9"}
             onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}
           >
-            Chat on WhatsApp &rarr;
+            <span>Chat on WhatsApp</span>
+            <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
           </a>
         </div>
       </div>

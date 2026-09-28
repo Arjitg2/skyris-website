@@ -89,9 +89,10 @@ export default function WhyWebsite() {
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "calc(var(--sec-mb) * 1.3)" }}>
           <div style={{
-            display: "inline-block", padding: "5px 14px", borderRadius: 999,
-            background: "rgba(255,255,255,0.07)", fontSize: "1em", fontWeight: 500, /* Subheading size 1em */
-            color: "rgba(255,255,255,0.8)", border: "1px solid rgba(255,255,255,0.1)", marginBottom: 20,
+            display: "inline-flex", alignItems: "center", justifyContent: "center",
+            padding: "8px 16px", borderRadius: 999,
+            background: "rgba(255,255,255,0.12)", fontSize: "0.875rem", fontWeight: 500,
+            color: "#ffffff", border: "1px solid rgba(255,255,255,0.2)", marginBottom: 24,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>What We Do</div>
           <h2 style={{
@@ -107,7 +108,7 @@ export default function WhyWebsite() {
         </div>
 
         {/* 3x2 card grid */}
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 20 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 24 }}>
           {services.map((s, i) => (
             <div
               key={i}
@@ -117,7 +118,7 @@ export default function WhyWebsite() {
                 background: "rgba(255,255,255,0.04)",
                 border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: 20,
-                padding: "36px 32px",
+                padding: "32px 28px",
                 transition: "background 0.3s, border-color 0.3s, transform 0.3s",
                 cursor: "default",
                 display: "flex",
@@ -137,24 +138,24 @@ export default function WhyWebsite() {
               }}
             >
               <div style={{
-                width: 52, height: 52, borderRadius: 14,
+                width: 48, height: 48, borderRadius: 12,
                 background: "rgba(108,59,255,0.15)",
-                display: "flex", alignItems: "center", justifyContent: "center",
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
                 marginBottom: 24,
               }}>
                 {s.icon}
               </div>
-              <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#fff", marginBottom: 12, lineHeight: 1.25 }}>{s.title}</h3>
-              <p style={{ fontSize: "1em", color: "rgba(255,255,255,0.8)", lineHeight: 1.6, marginBottom: 20 }}>{s.desc}</p>
+              <h3 style={{ fontSize: "1.35em", fontWeight: 800, color: "#fff", marginBottom: 12, lineHeight: 1.25 }}>{s.title}</h3>
+              <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.9)", lineHeight: 1.6, marginBottom: 20 }}>{s.desc}</p>
               
               {/* Bullets */}
               <div style={{ marginTop: "auto" }}>
                 {s.bullets.map((b, bi) => (
-                  <div key={bi} style={{ display: "flex", alignItems: "flex-start", marginBottom: 8 }}>
-                    <span style={{ display: "inline-flex", marginRight: 10, marginTop: 4, flexShrink: 0 }}>
-                      <IconCheck size={16} color="#a78bfa" />
+                  <div key={bi} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+                    <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <IconCheck size={16} color="#c4b5fd" />
                     </span>
-                    <span style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95em", lineHeight: "1.4" }}>{b}</span>
+                    <span style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.9375rem", lineHeight: "1.4" }}>{b}</span>
                   </div>
                 ))}
               </div>

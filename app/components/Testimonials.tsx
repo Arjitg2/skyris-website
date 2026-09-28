@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { IconStar, IconUser } from "./icons";
 
 const testimonials = [
@@ -17,14 +17,15 @@ export default function Testimonials() {
         {/* Testimonials header */}
         <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
           <div style={{
-            display: "inline-block", padding: "5px 14px", borderRadius: 999,
-            background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111", /* Subheading size 1em */
-            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 20,
+            display: "inline-flex", alignItems: "center", justifyContent: "center",
+            padding: "8px 16px", borderRadius: 999,
+            background: "#fff", fontSize: "0.875rem", fontWeight: 500, color: "#111",
+            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 24,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>Testimonials</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
-            lineHeight: 1.1, letterSpacing: "-0.04em",
+            lineHeight: 1.15, letterSpacing: "-0.04em",
             maxWidth: "100%", margin: "0 auto",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
@@ -33,33 +34,33 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "var(--grid-3)", gap: 24 }}>
           {testimonials.map((t, i) => (
             <div key={i} style={{
-              background: "#fff", borderRadius: 20, padding: "28px",
+              background: "#fff", borderRadius: 20, padding: "32px 24px",
               boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
               transition: "transform 0.2s, box-shadow 0.2s", cursor: "default",
             }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 14px 44px rgba(0,0,0,0.1)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 16px rgba(0,0,0,0.05)"; }}
             >
-              <div style={{ display: "flex", gap: 3, marginBottom: 14 }}>
+              <div style={{ display: "flex", gap: 4, marginBottom: 16 }}>
                 {Array.from({ length: 5 }).map((_, si) => <IconStar key={si} size={14} color="#f59e0b" />)}
               </div>
-              <p style={{ fontSize: "1em", color: "#444", lineHeight: 1.7, marginBottom: 20 }}>
+              <p style={{ fontSize: "1rem", color: "#374151", lineHeight: 1.6, marginBottom: 20 }}>
                 &ldquo;{t.text}&rdquo;
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: 12, borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 16 }}>
                 <div style={{
                   width: 40, height: 40, borderRadius: "50%",
                   background: "linear-gradient(135deg,#8b5cf6,#6c3bff)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
+                  display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
                 }}>
                   <IconUser size={18} color="#fff" />
                 </div>
                 <div>
-                  <div style={{ fontSize: "1em", fontWeight: 700, color: "#0d0e1a" }}>{t.name}</div>
-                  <div style={{ fontSize: "0.9em", color: "#888" }}>{t.role}</div>
+                  <div style={{ fontSize: "1rem", fontWeight: 700, color: "#0d0e1a" }}>{t.name}</div>
+                  <div style={{ fontSize: "0.875rem", color: "#4b5563" }}>{t.role}</div>
                 </div>
               </div>
             </div>

@@ -168,22 +168,22 @@ Your continued use of our services after any changes to this Privacy Policy cons
           }}>
             Privacy Policy
           </h1>
-          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "1.05em", lineHeight: 1.7, maxWidth: 600 }}>
+          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "1.05em", lineHeight: 1.7, maxWidth: 600 }}>
             At Clivik, we take your privacy seriously. This policy explains how we collect, use, and protect your personal information.
           </p>
           <div style={{
             display: "flex", gap: 24, marginTop: 28, flexWrap: "wrap", justifyContent: "center"
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ color: "#6c3bff", fontSize: "1.1em" }}>📅</span>
-              <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.9em" }}>
-                <strong style={{ color: "rgba(255,255,255,0.7)" }}>Last Updated:</strong> May 9, 2026
+              <span style={{ color: "#6c3bff", fontSize: "1.1em" }} aria-hidden="true">📅</span>
+              <span style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9em" }}>
+                <strong style={{ color: "#fff" }}>Last Updated:</strong> May 9, 2026
               </span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ color: "#6c3bff", fontSize: "1.1em" }}>🏢</span>
-              <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.9em" }}>
-                <strong style={{ color: "rgba(255,255,255,0.7)" }}>Operator:</strong> Clivik, Bhopal, M.P., India
+              <span style={{ color: "#6c3bff", fontSize: "1.1em" }} aria-hidden="true">🏢</span>
+              <span style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9em" }}>
+                <strong style={{ color: "#fff" }}>Operator:</strong> Clivik, Bhopal, M.P., India
               </span>
             </div>
           </div>
@@ -194,26 +194,27 @@ Your continued use of our services after any changes to this Privacy Policy cons
       </section>
 
       {/* Table of Contents + Content */}
-      <section style={{ padding: "60px var(--sec-px) 100px" }}>
+      <section style={{ padding: "64px var(--sec-px) 96px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
 
           {/* TOC */}
           <div style={{
             background: "var(--bg-dark-card)", border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: 20, padding: "32px 36px", marginBottom: 56,
+            borderRadius: 20, padding: "32px", marginBottom: 56,
           }}>
-            <h2 style={{ color: "#fff", fontSize: "1em", fontWeight: 700, marginBottom: 20, letterSpacing: "0.05em", textTransform: "uppercase", opacity: 0.5 }}>
+            <h2 style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95em", fontWeight: 700, marginBottom: 20, letterSpacing: "0.05em", textTransform: "uppercase" }}>
               Table of Contents
             </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "10px 32px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "8px 32px" }}>
               {sections.map((s) => (
                 <a key={s.id} href={`#${s.id}`} style={{
-                  color: "rgba(255,255,255,0.55)", textDecoration: "none", fontSize: "0.95em",
-                  padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,0.05)",
+                  color: "rgba(255,255,255,0.85)", textDecoration: "none", fontSize: "0.95em",
+                  minHeight: 44, display: "inline-flex", alignItems: "center",
+                  borderBottom: "1px solid rgba(255,255,255,0.08)",
                   transition: "color 0.2s",
                 }}
                   onMouseEnter={e => (e.currentTarget.style.color = "#a78bfa")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.55)")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
                 >
                   {s.title}
                 </a>
@@ -227,7 +228,7 @@ Your continued use of our services after any changes to this Privacy Policy cons
               <div key={section.id} id={section.id} style={{
                 background: "var(--bg-dark-card)", border: "1px solid rgba(255,255,255,0.07)",
                 borderRadius: 20, padding: "clamp(24px, 5vw, 40px)",
-                scrollMarginTop: 100,
+                scrollMarginTop: 104,
               }}>
                 <h2 style={{
                   color: "#fff", fontSize: "1.25em", fontWeight: 700,
@@ -236,7 +237,7 @@ Your continued use of our services after any changes to this Privacy Policy cons
                 }}>
                   {section.title}
                 </h2>
-                <div style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.97em", lineHeight: 1.8 }}>
+                <div style={{ color: "rgba(255,255,255,0.88)", fontSize: "0.97em", lineHeight: 1.8 }}>
                   {section.content.split("\n").map((line, i) => {
                     if (line.trim() === "") return <br key={i} />;
 
@@ -244,15 +245,15 @@ Your continued use of our services after any changes to this Privacy Policy cons
                     const parts = line.split(/\*\*(.*?)\*\*/g);
                     const rendered = parts.map((part, j) =>
                       j % 2 === 1
-                        ? <strong key={j} style={{ color: "rgba(255,255,255,0.9)", fontWeight: 600 }}>{part}</strong>
+                        ? <strong key={j} style={{ color: "#fff", fontWeight: 600 }}>{part}</strong>
                         : part
                     );
 
                     // Bullet point
                     if (line.trim().startsWith("- ")) {
                       return (
-                        <div key={i} style={{ display: "flex", gap: 10, marginBottom: 8 }}>
-                          <span style={{ color: "#6c3bff", flexShrink: 0, marginTop: 3 }}>▸</span>
+                        <div key={i} style={{ display: "flex", gap: 12, marginBottom: 8, alignItems: "flex-start" }}>
+                          <span style={{ color: "#a78bfa", flexShrink: 0, marginTop: 2, fontSize: "0.9em" }} aria-hidden="true">▸</span>
                           <span>{rendered}</span>
                         </div>
                       );
@@ -268,16 +269,16 @@ Your continued use of our services after any changes to this Privacy Policy cons
           {/* Bottom CTA */}
           <div style={{
             marginTop: 56, background: "linear-gradient(135deg, rgba(108,59,255,0.15), rgba(139,92,246,0.08))",
-            border: "1px solid rgba(108,59,255,0.25)", borderRadius: 20, padding: "36px 40px",
+            border: "1px solid rgba(108,59,255,0.25)", borderRadius: 20, padding: "40px",
             textAlign: "center",
           }}>
-            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "1em", lineHeight: 1.7, marginBottom: 20 }}>
+            <p style={{ color: "rgba(255,255,255,0.88)", fontSize: "1em", lineHeight: 1.7, marginBottom: 24 }}>
               Have questions about this policy? We&apos;re happy to help.
             </p>
             <a href="mailto:helloclivik@gmail.com" style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
+              display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
               background: "#6c3bff", color: "#fff", textDecoration: "none",
-              padding: "14px 28px", borderRadius: 12, fontWeight: 600, fontSize: "0.95em",
+              minHeight: 48, padding: "12px 28px", borderRadius: 12, fontWeight: 600, fontSize: "0.95em",
               transition: "all 0.2s", boxShadow: "0 4px 20px rgba(108,59,255,0.35)",
             }}
               onMouseEnter={e => {

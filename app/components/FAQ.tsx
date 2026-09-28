@@ -29,21 +29,21 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
         onClick={() => setOpen(!open)}
         style={{
           width: "100%", display: "flex", alignItems: "center",
-          justifyContent: "space-between", padding: "22px 24px",
+          justifyContent: "space-between", padding: "20px 24px", minHeight: 56,
           background: "transparent", border: "none", cursor: "pointer", textAlign: "left", gap: 16,
-          fontFamily: "inherit", fontSize: "1em",
+          fontFamily: "inherit", fontSize: "1rem",
         }}
       >
-        <span style={{ fontSize: "1.15em", fontWeight: 600, color: "#0d0e1a", display: "flex", gap: 12, alignItems: "center" }}>
-          <span style={{ color: "#bbb", fontSize: "0.9em", fontWeight: 500, flexShrink: 0, fontVariantNumeric: "tabular-nums" }}>{faq.n}</span>
-          {faq.q}
+        <span style={{ fontSize: "1.125rem", fontWeight: 600, color: "#0d0e1a", display: "flex", gap: 12, alignItems: "center" }}>
+          <span style={{ color: "#6b7280", fontSize: "0.9375rem", fontWeight: 600, flexShrink: 0, fontVariantNumeric: "tabular-nums" }}>{faq.n}</span>
+          <span>{faq.q}</span>
         </span>
 
-        {/* Plus → X — pure CSS transform, no layout shift, no jitter */}
+        {/* Plus → X — pure CSS transform */}
         <span style={{
-          width: 28, height: 28, borderRadius: "50%",
+          width: 32, height: 32, borderRadius: "50%",
           background: open ? "#6c3bff" : "rgba(0,0,0,0.06)",
-          display: "flex", alignItems: "center", justifyContent: "center",
+          display: "inline-flex", alignItems: "center", justifyContent: "center",
           flexShrink: 0, transition: "background 0.3s ease",
           position: "relative",
         }}>
@@ -51,14 +51,14 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
           <span style={{
             position: "absolute",
             width: 12, height: 2, borderRadius: 2,
-            background: open ? "#fff" : "#333",
+            background: open ? "#fff" : "#1f2937",
             transition: "background 0.3s ease",
           }} />
           {/* Vertical bar — collapses when open */}
           <span style={{
             position: "absolute",
             width: 2, height: 12, borderRadius: 2,
-            background: open ? "#fff" : "#333",
+            background: open ? "#fff" : "#1f2937",
             transform: open ? "scaleY(0)" : "scaleY(1)",
             transition: "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease",
             transformOrigin: "center",
@@ -66,14 +66,14 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
         </span>
       </button>
 
-      {/* Smooth max-height reveal — NO mount/unmount, NO jitter */}
+      {/* Smooth max-height reveal */}
       <div style={{
-        maxHeight: open ? "240px" : "0px",
+        maxHeight: open ? "260px" : "0px",
         overflow: "hidden",
         transition: "max-height 0.42s cubic-bezier(0.4, 0, 0.2, 1)",
       }}>
         <div style={{ padding: "0 24px 24px 24px", paddingLeft: "60px" }}>
-          <p style={{ fontSize: "1em", color: "#666", lineHeight: 1.75, margin: 0 }}>{faq.a}</p>
+          <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
         </div>
       </div>
     </div>
@@ -87,14 +87,15 @@ export default function FAQ() {
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div style={{ marginBottom: "var(--sec-mb)" as any }}>
           <div style={{
-            display: "inline-block", padding: "5px 14px", borderRadius: 999,
-            background: "#fff", fontSize: "1em", fontWeight: 500, color: "#111", /* Subheading size 1em */
-            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 20,
+            display: "inline-flex", alignItems: "center", justifyContent: "center",
+            padding: "8px 16px", borderRadius: 999,
+            background: "#fff", fontSize: "0.875rem", fontWeight: 500, color: "#111",
+            border: "1px solid rgba(0,0,0,0.08)", marginBottom: 24,
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>FAQ</div>
           <h2 style={{
             fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
-            lineHeight: 1.1, letterSpacing: "-0.04em", maxWidth: "var(--title-max-width)",
+            lineHeight: 1.15, letterSpacing: "-0.04em", maxWidth: "var(--title-max-width)",
             fontFamily: "'FullerSansDT', 'Inter', sans-serif"
           }}>
             Got Questions?<br/>We&apos;ve Got Answers.
