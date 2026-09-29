@@ -1,0 +1,38 @@
+# Clivik Digital Solutions
+
+> WhatsApp lead automation, customer review automation, and conversion-focused websites for local businesses.
+
+## About
+Clivik Digital Solutions is a digital growth and automation agency based in Bhopal, Madhya Pradesh, India. Founded by Arjit Gupta, Clivik helps local and lead-driven businesses capture, qualify, follow up with, and convert customers using automated WhatsApp communication, Google review automation, and modern web development.
+
+## Core Services
+- WhatsApp Lead Qualification: 24/7 automated qualification of inbound inquiries that filters serious buyers and schedules appointments without human delay.
+- Automated Lead Follow-Up: Multi-step conversational follow-ups on WhatsApp that re-engage prospects who did not buy or schedule on their first contact.
+- WhatsApp Marketing: Targeted broadcast campaigns, customer retention sequences, and promotional messaging with high open and response rates.
+- Customer Review Automation: Automated post-service review collection sent via WhatsApp directing satisfied clients to Google Maps profiles to build local SEO authority.
+- Website Development: Fast, custom-built, mobile-optimized websites delivered within 5 to 7 days, complete with WhatsApp click-to-chat and lead capture forms.
+
+## Target Customers
+Local businesses and lead-driven enterprises, including:
+- Healthcare & Dental Clinics
+- Restaurants, Cafes & Dining Outlets
+- Gyms & Fitness Centers
+- Real Estate Consultants & Property Firms
+- Local Retail Stores & Professional Service Providers
+
+## Business Location & Contact
+- Website: https://clivik.netlify.app/
+- WhatsApp: +91 62650 22474 (https://wa.me/916265022474)
+- Email: helloclivik@gmail.com
+- Location: Bhopal, Madhya Pradesh, India
+- Founder: Arjit Gupta
+
+## Important Pages
+- Home: https://clivik.netlify.app/
+- Services: https://clivik.netlify.app/services
+- Portfolio: https://clivik.netlify.app/portfolio
+- Pricing: https://clivik.netlify.app/pricing
+- About: https://clivik.netlify.app/about
+- Contact: https://clivik.netlify.app/contact
+- Privacy Policy: https://clivik.netlify.app/privacy-policy
+- Terms of Service: https://clivik.netlify.app/terms-of-service

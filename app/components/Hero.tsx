@@ -2,11 +2,15 @@
 import Link from "next/link";
 import { IconGlobe, IconStar, IconBot, IconInstagram, IconGift, IconMapPin, IconZap } from "./icons";
 
+import Image from "next/image";
+
 // Floating mock website image card
-function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, width = 280, imageSrc, themeMode }: {
+function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, width = 280, imageSrc, themeMode, isPriority = false }: {
   title: string; subtitle: string; location: string; rotate: number;
   top: string; left: string; delay: number; width?: number; imageSrc: string; themeMode: 'dark' | 'light';
+  isPriority?: boolean;
 }) {
+  const cardHeight = Math.round(width * 16 / 9);
   return (
     <div style={{
       position: "absolute", top, left, width,
@@ -25,9 +29,17 @@ function ImageMockCard({ title, subtitle, location, rotate, top, left, delay, wi
         <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#28c840" }} />
       </div>
       <div style={{ position: "relative", width: "100%", aspectRatio: "9/16" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={imageSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt={title} />
-        <div style={{ position: "absolute", inset: 0, background: themeMode === 'dark' ? "linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.1))" : "linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.1))" }} />
+        <Image
+          src={imageSrc}
+          width={width}
+          height={cardHeight}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          alt={`${title} - ${subtitle} preview`}
+          priority={isPriority}
+          loading={isPriority ? "eager" : "lazy"}
+          sizes="(max-width: 768px) 100vw, 320px"
+        />
+        <div style={{ position: "absolute", inset: 0, background: themeMode === 'dark' ? "linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.1))" : "linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.1))", pointerEvents: "none" }} />
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "16px 16px 12px" }}>
           <div style={{ fontSize: 12, fontWeight: 800, color: themeMode === 'dark' ? "#fff" : "#111", letterSpacing: 0.5, marginBottom: 4 }}>{title}</div>
           <div style={{ fontSize: 11, color: themeMode === 'dark' ? "rgba(255,255,255,0.9)" : "#374151", marginBottom: 6 }}>{subtitle}</div>
@@ -100,9 +112,9 @@ export default function Hero() {
           {/* Service Chips */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 32, justifyContent: "var(--hero-chips-justify)" }}>
             {[
-              { icon: <IconBot size={16} color="#36309d" />, text: "WhatsApp Automation" },
+              { icon: <IconBot size={16} color="#36309d" />, text: "WhatsApp Lead Qualification" },
+              { icon: <IconZap size={16} color="#36309d" />, text: "Automated Lead Follow-Up" },
               { icon: <IconGlobe size={16} color="#36309d" />, text: "Website Development" },
-              { icon: <IconStar size={16} color="#36309d" />, text: "Google Business" },
             ].map((chip, i) => (
               <div key={i} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.3)", background: "#ffffff", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
                 <span className="optical-center">{chip.icon}</span>
@@ -151,15 +163,15 @@ export default function Hero() {
           <div style={{ position: "relative", width: 320, height: "100%" }}>
             <ImageMockCard
               title="Skyris Analytics" subtitle="AI Studio Platform" location="Global"
-              rotate={-10} top="10px" left="-30px" delay={0} width={280} imageSrc="/My-Google-AI-Studio-App (1).png" themeMode="dark"
+              rotate={-10} top="10px" left="-30px" delay={0} width={280} imageSrc="/images/hero-ai-studio.webp" themeMode="dark" isPriority={true}
             />
             <ImageMockCard
               title="Dentify Bhopal" subtitle="Clinic Management" location="Bhopal"
-              rotate={-2} top="-15px" left="30px" delay={1.2} width={260} imageSrc="/Home-Dentify-free-template (1).png" themeMode="light"
+              rotate={-2} top="-15px" left="30px" delay={1.2} width={260} imageSrc="/images/hero-dentify.webp" themeMode="light" isPriority={false}
             />
             <ImageMockCard
               title="Sofra Restaurant" subtitle="Digital Dining" location="Bhopal"
-              rotate={8} top="20px" left="100px" delay={0.6} width={270} imageSrc="/Sofra-Restaurant-Template (1).png" themeMode="dark"
+              rotate={8} top="20px" left="100px" delay={0.6} width={270} imageSrc="/images/hero-sofra.webp" themeMode="dark" isPriority={false}
             />
           </div>
         </div>

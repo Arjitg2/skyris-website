@@ -4,14 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IconCloud } from "./icons";
 
 export default function Preloader() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Show preloader for a fraction of a second (800ms)
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
+    // Check if user has already visited in this session
+    if (typeof window !== "undefined" && !sessionStorage.getItem("clivik_loaded")) {
+      sessionStorage.setItem("clivik_loaded", "true");
+      setLoading(true);
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 250);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return (
@@ -20,7 +24,7 @@ export default function Preloader() {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
+          transition={{ duration: 0.25, ease: "easeInOut" }}
           style={{
             position: "fixed",
             top: 0, left: 0, right: 0, bottom: 0, height: "100dvh",
@@ -30,6 +34,7 @@ export default function Preloader() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            pointerEvents: "none",
           }}
         >
           <motion.div

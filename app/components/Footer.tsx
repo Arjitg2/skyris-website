@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import { siteConfig } from "@/lib/siteConfig";
 import { IconCloud, IconInstagram, IconX, IconYoutube, IconDribbble, IconBehance, IconSend, IconPhone, IconFacebook, IconWhatsApp, IconMail, IconMapPin, IconClock2 } from "./icons";
 
 const BUSINESS_DOMAINS = [
@@ -197,23 +199,28 @@ export default function Footer() {
                 Clivik helps Indian businesses automate customer communication, generate more leads, and grow faster using modern digital solutions.
               </p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-                {[
-                  { icon: <IconInstagram size={16} color="rgba(255,255,255,0.9)" />, text: "Instagram", href: "https://instagram.com" },
-                  { icon: <IconFacebook size={16} color="rgba(255,255,255,0.9)" />, text: "Facebook", href: "https://facebook.com" },
-                  { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.9)" />, text: "WhatsApp", href: "https://wa.me/916265022474" },
-                ].map((s, i) => (
-                  <a key={i} href={s.href} style={{
-                    color: "rgba(255,255,255,0.85)", textDecoration: "none", fontSize: "0.875rem",
-                    transition: "color 0.2s", display: "inline-flex", alignItems: "center", gap: 8,
-                    minHeight: 44, padding: "4px 8px",
-                  }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#fff"}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.85)"}
-                  >
-                    <span className="optical-center">{s.icon}</span>
-                    <span>{s.text}</span>
-                  </a>
-                ))}
+                <a href={siteConfig.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" style={{
+                  color: "rgba(255,255,255,0.85)", textDecoration: "none", fontSize: "0.875rem",
+                  transition: "color 0.2s", display: "inline-flex", alignItems: "center", gap: 8,
+                  minHeight: 44, padding: "4px 8px",
+                }}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#fff"}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.85)"}
+                >
+                  <span className="optical-center"><IconWhatsApp size={16} color="#25D366" /></span>
+                  <span>WhatsApp</span>
+                </a>
+                <a href={`mailto:${siteConfig.contact.email}`} style={{
+                  color: "rgba(255,255,255,0.85)", textDecoration: "none", fontSize: "0.875rem",
+                  transition: "color 0.2s", display: "inline-flex", alignItems: "center", gap: 8,
+                  minHeight: 44, padding: "4px 8px",
+                }}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#fff"}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.85)"}
+                >
+                  <span className="optical-center"><IconMail size={16} color="#c4b5fd" /></span>
+                  <span>Email</span>
+                </a>
               </div>
             </div>
 
@@ -231,13 +238,13 @@ export default function Footer() {
                   { label: "Privacy Policy", href: "/privacy-policy" },
                   { label: "Terms of Service", href: "/terms-of-service" },
                 ].map(link => (
-                  <a key={link.label} href={link.href} style={{
+                  <Link key={link.label} href={link.href} style={{
                     display: "flex", alignItems: "center", color: "rgba(255,255,255,0.85)", textDecoration: "none",
                     fontSize: "0.9375rem", minHeight: 44, transition: "color 0.2s",
                   }}
                     onMouseEnter={e => e.currentTarget.style.color = "#fff"}
                     onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.85)"}
-                  >{link.label}</a>
+                  >{link.label}</Link>
                 ))}
               </div>
 
@@ -245,12 +252,12 @@ export default function Footer() {
               <div>
                 <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "1rem", marginBottom: 20 }}>Contact Us</h4>
                 {[
-                  { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.85)" />, text: "+91 62650 22474", href: "https://wa.me/916265022474" },
-                  { icon: <IconMail size={16} color="rgba(255,255,255,0.85)" />, text: "hello@clivik.com", href: "mailto:hello@clivik.com" },
-                  { icon: <IconMapPin size={16} color="rgba(255,255,255,0.85)" />, text: "Bhopal, M.P.", href: "https://maps.google.com/?q=Bhopal,Madhya+Pradesh" },
-                  { icon: <IconClock2 size={16} color="rgba(255,255,255,0.85)" />, text: "Same Day Response", href: "#" },
+                  { icon: <IconWhatsApp size={16} color="rgba(255,255,255,0.85)" />, text: siteConfig.contact.phone, href: siteConfig.contact.whatsappUrl },
+                  { icon: <IconMail size={16} color="rgba(255,255,255,0.85)" />, text: siteConfig.contact.email, href: `mailto:${siteConfig.contact.email}` },
+                  { icon: <IconMapPin size={16} color="rgba(255,255,255,0.85)" />, text: "Bhopal, Madhya Pradesh", href: "https://maps.google.com/?q=Bhopal,Madhya+Pradesh" },
+                  { icon: <IconClock2 size={16} color="rgba(255,255,255,0.85)" />, text: "Same Day Response", href: siteConfig.contact.whatsappMockupUrl },
                 ].map(link => (
-                  <a key={link.text} href={link.href} style={{
+                  <a key={link.text} href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined} style={{
                     display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.85)", textDecoration: "none",
                     fontSize: "0.9375rem", minHeight: 44, transition: "color 0.2s", lineHeight: 1.4,
                   }}
@@ -285,27 +292,27 @@ export default function Footer() {
             {/* Row 3: copyright + privacy/terms */}
             <div style={{ display: "flex", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
               <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.875rem", margin: 0 }}>
-                &copy; 2026 Clivik. All rights reserved.
+                &copy; 2026 Clivik Digital Solutions. All rights reserved.
               </p>
               <div style={{ display: "flex", gap: 24 }}>
-                <a href="/privacy-policy" style={{
+                <Link href="/privacy-policy" style={{
                   color: "rgba(255,255,255,0.7)", fontSize: "0.875rem", textDecoration: "none",
                   transition: "color 0.2s", minHeight: 44, display: "inline-flex", alignItems: "center",
                 }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#fff"}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.7)"}
                 >
                   Privacy Policy
-                </a>
-                <a href="/terms-of-service" style={{
+                </Link>
+                <Link href="/terms-of-service" style={{
                   color: "rgba(255,255,255,0.7)", fontSize: "0.875rem", textDecoration: "none",
                   transition: "color 0.2s", minHeight: 44, display: "inline-flex", alignItems: "center",
                 }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#fff"}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.7)"}
                 >
                   Terms of Service
-                </a>
+                </Link>
               </div>
             </div>
           </div>
