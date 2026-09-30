@@ -201,6 +201,7 @@ body {
   --hero-chips-justify: flex-start;
   --hero-btn-flex: 0 0 auto;
   --hero-py: 20px;
+  --team-grid: repeat(2, 1fr);
 }
 
 @media (max-width: 1024px) {
@@ -280,6 +281,7 @@ body {
     --hero-chips-justify: center;
     --hero-btn-flex: 1 1 0;
     --hero-py: 40px;
+    --team-grid: 1fr;
   }
 }
 

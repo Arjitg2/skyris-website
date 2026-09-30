@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Clivik Digital Solutions",
   shortName: "Clivik",
-  title: "Clivik — WhatsApp Lead Automation for Local Businesses",
+  title: "Clivik — AI-Powered WhatsApp Automation for Businesses That Can't Afford to Lose Leads",
   description:
-    "Clivik helps local businesses qualify leads, automate WhatsApp follow-ups, run marketing campaigns, gather reviews, and build high-converting websites.",
+    "Capture, qualify, follow up and convert leads automatically — 24/7 on WhatsApp. Clivik engineers AI sales automation for lead-driven businesses.",
   url: "https://clivik.netlify.app",
   ogImage: "https://clivik.netlify.app/images/clivik-og.png",
   founder: {
@@ -11,6 +11,12 @@ export const siteConfig = {
     role: "Founder",
     image: "https://res.cloudinary.com/dxvsqh2jw/image/upload/v1790584426/ChatGPT_Image_Sep_28_2026_02_02_51_PM_n7nhui.png",
   },
+  team: [
+    { name: "Mr. Sudipto Sarkar", role: "AI Automation Engineer", image: "/images/team/sudipto-sarkar.jpg" },
+    { name: "Miss. Prachi Tirole", role: "Meta & WhatsApp Integration Specialist", image: "/images/team/prachi-tirole.jpg" },
+    { name: "Mr. Aryan Chandrawanshi", role: "AI Automation Strategist", image: "/images/team/aryan-chandrawanshi.jpg" },
+    { name: "Mr. Pravesh Baghel", role: "Growth & Sales Lead", image: "/images/team/pravesh-baghel.jpg" },
+  ],
   contact: {
     phone: "+91 62650 22474",
     phoneClean: "+916265022474",

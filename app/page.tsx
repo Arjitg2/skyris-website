@@ -1,12 +1,16 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import LogoTicker from "./components/LogoTicker";
+import ProblemBeforeAfter from "./components/ProblemBeforeAfter";
+import HowAIWorks from "./components/HowAIWorks";
+import WhatsAppDemo from "./components/WhatsAppDemo";
+import CoreSolutions from "./components/CoreSolutions";
+import Industries from "./components/Industries";
+import SalesTeamDivision from "./components/SalesTeamDivision";
 import Works from "./components/Works";
-import Process from "./components/Process";
-import Features from "./components/Features";
-import WhyWebsite from "./components/WhyWebsite";
-import About from "./components/About";
 import Testimonials from "./components/Testimonials";
+import Team from "./components/Team";
+import About from "./components/About";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -16,11 +20,15 @@ export default function Home() {
       <Navbar />
       <Hero />
       <LogoTicker />
-      <Features />
-      <WhyWebsite />
-      <Process />
+      <ProblemBeforeAfter />
+      <HowAIWorks />
+      <WhatsAppDemo />
+      <CoreSolutions />
+      <Industries />
+      <SalesTeamDivision />
       <Works />
       <Testimonials />
+      <Team />
       <About />
       <Footer />
       <WhatsAppButton />

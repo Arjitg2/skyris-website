@@ -72,8 +72,8 @@ function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#fff", marginBottom: 4 }}>Let&apos;s Build Something Great</h3>
-          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.85)", marginTop: -8, marginBottom: 8 }}>Takes 2 minutes to fill. We respond to every enquiry same day.</p>
+          <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#fff", marginBottom: 4 }}>Get a Free Automation Audit</h3>
+          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.85)", marginTop: -8, marginBottom: 8 }}>Takes 2 minutes. We will show you exactly where you are losing leads and how AI can fix it.</p>
 
           {/* Name */}
           <div>
@@ -90,10 +90,10 @@ function ContactForm() {
 
           {/* Business domain */}
           <div>
-            <label style={labelStyle}>Your Business</label>
+            <label style={labelStyle}>Your Business &amp; Industry</label>
             <input
               suppressHydrationWarning
-              type="text" required placeholder="Restaurant / Clinic / Shop / Other"
+              type="text" required placeholder="Coaching Academy / Clinic / Real Estate / Other"
               value={form.domain} onChange={e => setForm({ ...form, domain: e.target.value })}
               style={inputStyle}
               onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "rgba(108,59,255,0.08)"; }}
@@ -121,9 +121,9 @@ function ContactForm() {
 
           {/* Message */}
           <div>
-            <label style={labelStyle}>Tell Us More</label>
+            <label style={labelStyle}>Current Lead Sources &amp; Challenges</label>
             <textarea
-              required placeholder="What does your business do and what do you need from us?"
+              required placeholder="Where do your leads currently come from (Meta ads, Google, Website) and what is your biggest challenge in converting them?"
               value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
               rows={4}
               style={{ ...inputStyle, resize: "vertical", minHeight: 110, lineHeight: 1.6 } as React.CSSProperties}
@@ -142,7 +142,7 @@ function ContactForm() {
             onMouseEnter={e => { if(!isSubmitting){ e.currentTarget.style.background = "#5a2fe0"; e.currentTarget.style.transform = "translateY(-2px)"; } }}
             onMouseLeave={e => { if(!isSubmitting){ e.currentTarget.style.background = "#6c3bff"; e.currentTarget.style.transform = "translateY(0)"; } }}
           >
-            <span>{isSubmitting ? "Sending..." : "Get My Mockup"}</span>
+            <span>{isSubmitting ? "Submitting..." : "Get Free Automation Audit"}</span>
             {!isSubmitting && <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>}
           </button>
         </form>
@@ -167,15 +167,32 @@ export default function Footer() {
         <div style={{ maxWidth: 1280, margin: "0 auto", ...{ borderTopLeftRadius: 40, borderTopRightRadius: 40, overflow: "hidden", background: "#0d0e1a", padding: "var(--pricing-inner-py) var(--pricing-inner-px) calc(var(--pricing-inner-py) / 2)" } }}>
           <div style={{ display: "grid", gridTemplateColumns: "var(--footer-grid-1)", gap: "clamp(24px, 5vw, 80px)", alignItems: "center" }}>
             <div>
+              <div
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  padding: "6px 14px",
+                  borderRadius: 999,
+                  background: "rgba(108,59,255,0.2)",
+                  color: "#c4b5fd",
+                  fontSize: "0.8125rem",
+                  fontWeight: 700,
+                  marginBottom: 16,
+                  letterSpacing: "0.05em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Free Lead Audit
+              </div>
               <h2 style={{
                 fontSize: "var(--title-size)", fontWeight: 700, color: "#fff",
                 lineHeight: 1.15, letterSpacing: "-0.04em", marginBottom: 24,
                 fontFamily: "'FullerSansDT', 'Inter', sans-serif"
               }}>
-                Ready to See<br />What<br />Your Business<br />Looks<br />Like Online?
+                Stop Losing Leads.<br />Put Your WhatsApp<br />Sales on Autopilot.
               </h2>
-              <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.7, maxWidth: 400 }}>
-                Tell us about your business and we will send you a free custom website mockup within 24 hours. See it first, pay only if you love it. Zero risk involved.
+              <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.7, maxWidth: 420 }}>
+                Tell us about your business and monthly lead volume. We will review your current response time and map out a custom WhatsApp qualification &amp; booking workflow — completely free.
               </p>
             </div>
             <ContactForm />
@@ -196,7 +213,7 @@ export default function Footer() {
                 <span style={{ fontWeight: 700, color: "#fff", fontSize: "1.4em" }}>Clivik</span>
               </div>
               <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "1rem", lineHeight: 1.7, maxWidth: 320, marginBottom: 28 }}>
-                Clivik helps Indian businesses automate customer communication, generate more leads, and grow faster using modern digital solutions.
+                Clivik engineers AI-powered WhatsApp sales and automation infrastructure for businesses across India that cannot afford to lose leads.
               </p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                 <a href={siteConfig.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" style={{

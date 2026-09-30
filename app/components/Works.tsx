@@ -87,7 +87,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
 
 export default function Works() {
   return (
-    <section id="projects" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
+    <section id="case-studies" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
       <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div style={{ display: "flex", flexDirection: "var(--works-flex)" as any, justifyContent: "space-between", alignItems: "var(--works-align)" as any, marginBottom: "var(--sec-mb)" as any, gap: "24px", textAlign: "var(--sec-text-align)" as any }}>
@@ -95,15 +95,16 @@ export default function Works() {
             <div style={{
               display: "inline-flex", alignItems: "center", justifyContent: "center",
               padding: "8px 16px", borderRadius: 999,
-              background: "#fff", fontSize: "0.875rem", fontWeight: 500, color: "#111",
-              border: "1px solid rgba(0,0,0,0.08)", marginBottom: 16,
+              background: "#fff", fontSize: "0.875rem", fontWeight: 600, color: "#6c3bff",
+              border: "1px solid rgba(108,59,255,0.2)", marginBottom: 16,
+              boxShadow: "0 2px 8px rgba(108,59,255,0.06)",
               fontFamily: "'FullerSansDT', 'Inter', sans-serif"
-            }}>Works</div>
+            }}>Case Studies</div>
             <h2 style={{
-              fontSize: "var(--title-size)", fontWeight: 600, color: "#0d0e1a",
+              fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
               lineHeight: 1.1, letterSpacing: "-0.04em", maxWidth: "var(--title-max-width)",
               fontFamily: "'FullerSansDT', 'Inter', sans-serif"
-            }}>Explore Featured Businesses</h2>
+            }}>Client Implementations &amp; Case Studies</h2>
           </div>
           <Link href="/portfolio" style={{
             display: "inline-flex", alignItems: "center", justifyContent: "center",
