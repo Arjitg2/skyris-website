@@ -8,7 +8,7 @@ const services = [
     title: "WhatsApp Lead Qualification",
     desc: "Auto-replies, lead screening & calendar bookings — 24/7 on complete autopilot",
     bullets: [
-      "Instant 5-second replies 24/7",
+      "Instant replies in under 10 seconds 24/7",
       "Screen serious buyers from tire-kickers",
       "Automated appointment scheduling",
       "CRM & Google Sheets integration",
@@ -18,7 +18,7 @@ const services = [
   },
   {
     icon: <IconZap size={28} color="#a78bfa" />,
-    title: "Automated Lead Follow-Up",
+    title: "30-Day WhatsApp Follow-up Autopilot",
     desc: "Multi-touch conversational sequences that prevent warm leads from going cold",
     bullets: [
       "Timed gentle WhatsApp check-ins",
@@ -57,14 +57,14 @@ const services = [
   },
   {
     icon: <IconGlobe size={28} color="#a78bfa" />,
-    title: "Website Development",
+    title: "Website & Landing Page Add-on",
     desc: "Fast, mobile-ready websites custom engineered to turn searchers into WhatsApp leads",
     bullets: [
       "Custom premium design (not generic templates)",
       "Mobile-first responsive architecture",
       "WhatsApp click-to-chat integration",
       "High-converting contact & inquiry forms",
-      "5–7 day delivery + free mockup first",
+      "5–7 day delivery + free audit first",
     ],
     accent: "#a78bfa",
   },

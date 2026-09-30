@@ -11,6 +11,7 @@ import Works from "./components/Works";
 import Testimonials from "./components/Testimonials";
 import Team from "./components/Team";
 import About from "./components/About";
+import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -30,6 +31,7 @@ export default function Home() {
       <Testimonials />
       <Team />
       <About />
+      <FAQ />
       <Footer />
       <WhatsAppButton />
     </main>

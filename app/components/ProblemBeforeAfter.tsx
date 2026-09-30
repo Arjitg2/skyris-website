@@ -12,9 +12,9 @@ const withoutPoints = [
 ];
 
 const withPoints = [
-  "Instant sub-second WhatsApp greeting & welcome",
+  "Instant WhatsApp greeting in under 10 seconds",
   "AI screens budget, urgency, grade/treatment & requirement",
-  "Automated multi-touch follow-up sequences",
+  "30-Day WhatsApp follow-up autopilot",
   "24/7 availability — handles leads at midnight and weekends",
   "Demo / appointment automatically booked with Google Meet link",
   "Your human sales team receives only warm, pre-qualified prospects",

@@ -8,7 +8,7 @@ const techPlatforms = [
   { name: "n8n Workflow Automation", icon: "⚙️" },
   { name: "Google Meet & Calendar", icon: "📅" },
   { name: "Google Sheets Sync", icon: "📊" },
-  { name: "Zoho CRM & Webhooks", icon: "💼" },
+  { name: "CRM & Custom Webhooks", icon: "💼" },
 ];
 
 export default function LogoTicker() {

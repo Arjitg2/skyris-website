@@ -14,16 +14,18 @@ const BUSINESS_TYPES = [
 
 const WHATSAPP_NUMBER = "916265022474";
 
-function buildWAMessage(form: { name: string; business: string; phone: string; message: string }) {
-  return encodeURIComponent(
-    `Hi Clivik! My name is ${form.name}.\nBusiness type: ${form.business}.\nWhatsApp: ${form.phone}.\n\n${form.message}`
-  );
+function buildWAMessage(form: { name: string; business: string; phone: string; adSpend?: string; monthlyLeads?: string; message: string }) {
+  let text = `Hi Clivik! I want a free lead audit / live WhatsApp AI demo.\nName: ${form.name}\nBusiness: ${form.business}\nWhatsApp: ${form.phone}`;
+  if (form.adSpend) text += `\nMonthly Ad Spend: ${form.adSpend}`;
+  if (form.monthlyLeads) text += `\nMonthly Leads: ${form.monthlyLeads}`;
+  if (form.message) text += `\nDetails: ${form.message}`;
+  return encodeURIComponent(text);
 }
 
 export default function ContactModal() {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", business: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", business: "", phone: "", adSpend: "", monthlyLeads: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   /* Listen for custom event from any CTA button */
@@ -179,10 +181,10 @@ export default function ContactModal() {
                 fontSize: "clamp(1.3em, 4vw, 1.65em)", fontWeight: 800,
                 color: "#0d0e1a", lineHeight: 1.25, marginBottom: 8,
               }}>
-                Let&apos;s Build Something Great
+                Get a Free Automation Audit
               </h2>
               <p style={{ fontSize: "0.9375rem", color: "#4b5563", lineHeight: 1.5 }}>
-                Takes 2 minutes to fill. We respond to every enquiry same day.
+                Takes 2 minutes to fill. We will analyze your lead response leaks and show you how AI fixes them.
               </p>
             </div>
 
@@ -235,11 +237,35 @@ export default function ContactModal() {
               </div>
             </div>
 
+            {/* Monthly Ad Spend & Monthly Leads */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+              <div>
+                <label style={labelStyle}>Monthly Ad Spend</label>
+                <input
+                  type="text" placeholder="e.g. ₹30,000"
+                  value={form.adSpend} onChange={e => setForm({ ...form, adSpend: e.target.value })}
+                  style={inputStyle}
+                  onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "#f0eeff"; }}
+                  onBlur={e => { e.currentTarget.style.borderColor = "#e0d9ff"; e.currentTarget.style.background = "#f5f4ff"; }}
+                />
+              </div>
+              <div>
+                <label style={labelStyle}>Monthly Leads</label>
+                <input
+                  type="text" placeholder="e.g. 100 leads"
+                  value={form.monthlyLeads} onChange={e => setForm({ ...form, monthlyLeads: e.target.value })}
+                  style={inputStyle}
+                  onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "#f0eeff"; }}
+                  onBlur={e => { e.currentTarget.style.borderColor = "#e0d9ff"; e.currentTarget.style.background = "#f5f4ff"; }}
+                />
+              </div>
+            </div>
+
             {/* Tell us more */}
             <div>
-              <label style={labelStyle}>Tell Us More</label>
+              <label style={labelStyle}>Current Lead Sources &amp; Challenges</label>
               <textarea
-                required placeholder="What does your business do and what do you need from us?"
+                required placeholder="Where do your leads currently come from (Meta ads, Google, etc.) and what is your biggest challenge in converting them?"
                 value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
                 rows={3}
                 style={{ ...inputStyle, resize: "vertical", minHeight: 90, lineHeight: 1.6 } as React.CSSProperties}
@@ -265,7 +291,7 @@ export default function ContactModal() {
               onMouseEnter={e => { if(!isSubmitting){ e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 32px rgba(108,59,255,0.45)"; } }}
               onMouseLeave={e => { if(!isSubmitting){ e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(108,59,255,0.35)"; } }}
             >
-              <span>{isSubmitting ? "Sending..." : "Submit"}</span>
+              <span>{isSubmitting ? "Sending..." : "Claim Free Audit"}</span>
               {!isSubmitting && <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>}
             </button>
 

@@ -16,7 +16,7 @@ const BUSINESS_DOMAINS = [
 ];
 
 function ContactForm() {
-  const [form, setForm] = useState({ name: "", domain: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", domain: "", phone: "", adSpend: "", monthlyLeads: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -113,6 +113,32 @@ function ContactForm() {
                 type="tel" required placeholder="+91 98765 43210"
                 value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })}
                 style={{ ...inputStyle, paddingLeft: 42 }}
+                onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "rgba(108,59,255,0.08)"; }}
+                onBlur={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.16)"; e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
+              />
+            </div>
+          </div>
+
+          {/* Monthly Ad Spend & Monthly Leads */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12 }}>
+            <div>
+              <label style={labelStyle}>Monthly Ad Spend</label>
+              <input
+                suppressHydrationWarning
+                type="text" placeholder="e.g. ₹30,000"
+                value={form.adSpend} onChange={e => setForm({ ...form, adSpend: e.target.value })}
+                style={inputStyle}
+                onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "rgba(108,59,255,0.08)"; }}
+                onBlur={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.16)"; e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
+              />
+            </div>
+            <div>
+              <label style={labelStyle}>Monthly Leads</label>
+              <input
+                suppressHydrationWarning
+                type="text" placeholder="e.g. 100 leads"
+                value={form.monthlyLeads} onChange={e => setForm({ ...form, monthlyLeads: e.target.value })}
+                style={inputStyle}
                 onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "rgba(108,59,255,0.08)"; }}
                 onBlur={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.16)"; e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
               />

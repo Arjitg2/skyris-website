@@ -5,14 +5,14 @@ import { siteConfig } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "About Clivik — Founder Story, Mission & Values",
   description:
-    "Learn about Clivik Digital Solutions, founded by Arjit Gupta in Bhopal, MP. We help local businesses win online through WhatsApp automation and fast custom websites.",
+    "Learn about Clivik Digital Solutions, founded by Arjit Gupta in Bhopal. We engineer AI WhatsApp automation, lead follow-up, Google review automation, and RTO prevention for lead-driven businesses.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About Clivik | Founder Story & Mission",
     description:
-      "Learn about Clivik Digital Solutions, founded by Arjit Gupta in Bhopal, MP. We help local businesses win online through WhatsApp automation and fast custom websites.",
+      "Learn about Clivik Digital Solutions, founded by Arjit Gupta in Bhopal. We engineer AI WhatsApp automation, lead follow-up, Google review automation, and RTO prevention for lead-driven businesses.",
     url: `${siteConfig.url}/about`,
     images: ["/images/clivik-og.png"],
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Clivik | Founder Story & Mission",
     description:
-      "Learn about Clivik Digital Solutions, founded by Arjit Gupta in Bhopal, MP. We help local businesses win online through WhatsApp automation and fast custom websites.",
+      "Learn about Clivik Digital Solutions, founded by Arjit Gupta in Bhopal. We engineer AI WhatsApp automation, lead follow-up, Google review automation, and RTO prevention for lead-driven businesses.",
   },
 };
 

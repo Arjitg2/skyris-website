@@ -16,7 +16,7 @@ const BUSINESS_DOMAINS = [
 ];
 
 export default function ContactContent() {
-  const [form, setForm] = useState({ name: "", domain: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", domain: "", phone: "", adSpend: "", monthlyLeads: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -57,7 +57,7 @@ export default function ContactContent() {
     {
       icon: <IconWhatsApp size={20} color="#25D366" />,
       label: "WhatsApp", value: "+91 62650 22474",
-      href: "https://wa.me/916265022474?text=Hi%20Clivik!%20I%27d%20like%20to%20get%20a%20free%20mockup%20for%20my%20business.",
+      href: "https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20a%20free%20lead%20audit%20/%20live%20WhatsApp%20AI%20demo.",
       color: "#25D366",
     },
     {
@@ -100,13 +100,13 @@ export default function ContactContent() {
 
         <div style={{ position: "relative", zIndex: 1 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", borderRadius: 999, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(139,92,246,0.4)", color: "#fff", fontSize: "0.875rem", fontWeight: 500, marginBottom: 24 }}>
-            Get In Touch
+            Free Automation Audit
           </div>
           <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.15, marginBottom: 16 }}>
-            Ready to See Your<br />Business Online?
+            Turn Missed Leads Into<br />Paying Customers
           </h1>
-          <p style={{ fontSize: "1.125rem", color: "rgba(255,255,255,0.92)", maxWidth: 480, margin: "0 auto" }}>
-            Fill the form below or WhatsApp us directly. We respond same day — always.
+          <p style={{ fontSize: "1.125rem", color: "rgba(255,255,255,0.92)", maxWidth: 520, margin: "0 auto" }}>
+            Tell us about your business and ad channels. We will analyze your lead response gap and show you how WhatsApp AI doubles your conversions.
           </p>
         </div>
 
@@ -121,10 +121,10 @@ export default function ContactContent() {
           {/* Left: Info */}
           <div>
             <h2 style={{ fontSize: "clamp(2em, 3.3vw, 2.6em)", fontWeight: 700, color: "#0d0e1a", marginBottom: "var(--contact-h2-mb, 20px)" }}>
-              Let&apos;s Build Something Great
+              Get Your Free Lead Audit
             </h2>
             <p style={{ color: "#374151", lineHeight: 1.75, fontSize: "1rem", marginBottom: 36 }}>
-              Tell us about your business and we will send you a free custom website mockup within 24 hours. See it first, pay only if you love it. Zero risk.
+              Tell us about your business and current lead sources. We will analyze where leads drop off and send you a custom automation blueprint within 24 hours. Zero risk, 100% free.
             </p>
 
             {/* Contact methods */}
@@ -156,7 +156,7 @@ export default function ContactContent() {
 
             {/* WhatsApp Quick CTA */}
             <a
-              href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%27d%20like%20to%20get%20a%20free%20mockup%20for%20my%20business."
+              href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20a%20free%20lead%20audit%20/%20live%20WhatsApp%20AI%20demo."
               target="_blank" rel="noopener noreferrer"
               style={{
                 display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10,
@@ -199,8 +199,8 @@ export default function ContactContent() {
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
                 <div>
-                  <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#fff", marginBottom: 4 }}>Get Your Free Mockup</h3>
-                  <p style={{ fontSize: "0.9375rem", color: "rgba(255,255,255,0.85)" }}>Takes 2 minutes. We respond to every enquiry same day.</p>
+                  <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#fff", marginBottom: 4 }}>Get Your Free Lead Audit</h3>
+                  <p style={{ fontSize: "0.9375rem", color: "rgba(255,255,255,0.85)" }}>Takes 2 minutes. We analyze your ad response &amp; follow-up leaks.</p>
                 </div>
 
                 <div>
@@ -242,9 +242,31 @@ export default function ContactContent() {
                   </div>
                 </div>
 
+                {/* Monthly Ad Spend & Monthly Leads */}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12 }}>
+                  <div>
+                    <label style={labelStyle}>Monthly Ad Spend</label>
+                    <input type="text" placeholder="e.g. ₹30,000"
+                      value={form.adSpend} onChange={e => setForm({ ...form, adSpend: e.target.value })}
+                      style={inputStyle}
+                      onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "rgba(108,59,255,0.08)"; }}
+                      onBlur={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.16)"; e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
+                    />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>Monthly Leads</label>
+                    <input type="text" placeholder="e.g. 100 leads"
+                      value={form.monthlyLeads} onChange={e => setForm({ ...form, monthlyLeads: e.target.value })}
+                      style={inputStyle}
+                      onFocus={e => { e.currentTarget.style.borderColor = "#6c3bff"; e.currentTarget.style.background = "rgba(108,59,255,0.08)"; }}
+                      onBlur={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.16)"; e.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
+                    />
+                  </div>
+                </div>
+
                 <div>
-                  <label style={labelStyle}>Tell Us More</label>
-                  <textarea required placeholder="What does your business do? What do you need?"
+                  <label style={labelStyle}>Current Lead Sources &amp; Challenges</label>
+                  <textarea required placeholder="Where do your leads currently come from (Meta ads, Google, etc.) and what is your biggest challenge in converting them?"
                     value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
                     rows={4}
                     style={{ ...inputStyle, resize: "vertical", minHeight: 110, lineHeight: 1.6 } as React.CSSProperties}
@@ -263,7 +285,7 @@ export default function ContactContent() {
                   onMouseEnter={e => { if(!isSubmitting){ (e.currentTarget as HTMLElement).style.background = "#5a2fe0"; (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; } }}
                   onMouseLeave={e => { if(!isSubmitting){ (e.currentTarget as HTMLElement).style.background = "#6c3bff"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; } }}
                 >
-                  <span>{isSubmitting ? "Sending..." : "Get My Free Mockup"}</span>
+                  <span>{isSubmitting ? "Sending..." : "Claim Free Lead Audit"}</span>
                   {!isSubmitting && <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>}
                 </button>
               </form>

@@ -13,8 +13,8 @@ const flowSteps = [
   {
     step: "02",
     label: "Instant WhatsApp AI",
-    detail: "Sub-second WhatsApp message greets the lead personally with zero human delay.",
-    tag: "< 3s Response",
+    detail: "Instant WhatsApp message greets the lead personally in under 10 seconds with zero human delay.",
+    tag: "<10s Response",
     icon: <IconZap size={22} color="#c4b5fd" />,
   },
   {
@@ -26,8 +26,8 @@ const flowSteps = [
   },
   {
     step: "04",
-    label: "Automated Follow-Up",
-    detail: "If the lead goes silent, persistent multi-touch sequences re-engage them automatically.",
+    label: "30-Day Follow-Up Autopilot",
+    detail: "If the lead goes silent, our 30-day multi-touch follow-up autopilot re-engages them automatically.",
     tag: "Zero Cold Leads",
     icon: <IconCheck size={22} color="#c4b5fd" />,
   },

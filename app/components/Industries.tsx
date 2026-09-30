@@ -13,6 +13,15 @@ const industries = [
     metric: "0 Missed Ad Leads",
   },
   {
+    emoji: "🛍️",
+    title: "E-Commerce & D2C Brands",
+    subtitle: "Direct-to-Consumer, Shopify & Online Stores",
+    pipeline: ["Order Placed", "WhatsApp COD Confirmation", "Abandoned Cart Nudge", "Delivery Update"],
+    description:
+      "Automate instant Cash-on-Delivery (COD) verification to slash RTO losses, recover abandoned checkouts, and prompt repeat purchases on complete autopilot.",
+    metric: "Reduce RTO with WhatsApp COD confirmation",
+  },
+  {
     emoji: "🏥",
     title: "Clinics & Healthcare",
     subtitle: "Specialists, Diagnostics, Skin & Hair Clinics",
@@ -42,11 +51,11 @@ const industries = [
   {
     emoji: "💼",
     title: "High-Intent Local Businesses",
-    subtitle: "Fitness Centers, Car Consultants & Premium Services",
+    subtitle: "Fitness Centers, Salons & Premium Services",
     pipeline: ["Ad Click", "Instant WhatsApp", "Objection Handling", "High-Ticket Conversion"],
     description:
-      "Engage searchers and Meta ad respondents within 3 seconds, address pricing objections gracefully, and schedule private consultations on complete autopilot.",
-    metric: "< 3s Lead Response",
+      "Engage searchers and Meta ad respondents in under 10 seconds, address pricing objections gracefully, and schedule private consultations on complete autopilot.",
+    metric: "<10s Lead Response",
   },
 ];
 

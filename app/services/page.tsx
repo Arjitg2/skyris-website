@@ -3,16 +3,16 @@ import ServicesContent from "./ServicesContent";
 import { siteConfig } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Core Services — WhatsApp Automation, Review Automation & Websites",
+  title: "Core Services — WhatsApp AI Agents, Follow-Up Autopilot & Review Automation",
   description:
-    "Explore Clivik's core services: WhatsApp Lead Qualification, Automated Lead Follow-Up, WhatsApp Marketing, Customer Review Automation, and Custom Website Development.",
+    "Explore Clivik's core services: WhatsApp Lead Qualification, 30-Day Follow-Up Autopilot, WhatsApp Marketing, Google Review Automation, and RTO/COD Confirmation.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
     title: "Core Services | Clivik Digital Solutions",
     description:
-      "Explore Clivik's core services: WhatsApp Lead Qualification, Automated Lead Follow-Up, WhatsApp Marketing, Customer Review Automation, and Custom Website Development.",
+      "Explore Clivik's core services: WhatsApp Lead Qualification, 30-Day Follow-Up Autopilot, WhatsApp Marketing, Google Review Automation, and RTO/COD Confirmation.",
     url: `${siteConfig.url}/services`,
     images: ["/images/clivik-og.png"],
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Core Services | Clivik Digital Solutions",
     description:
-      "Explore Clivik's core services: WhatsApp Lead Qualification, Automated Lead Follow-Up, WhatsApp Marketing, Customer Review Automation, and Custom Website Development.",
+      "Explore Clivik's core services: WhatsApp Lead Qualification, 30-Day Follow-Up Autopilot, WhatsApp Marketing, Google Review Automation, and RTO/COD Confirmation.",
   },
 };
 

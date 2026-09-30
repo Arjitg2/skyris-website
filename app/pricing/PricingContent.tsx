@@ -7,66 +7,94 @@ import { IconCheck, IconShield, IconWhatsApp } from "../components/icons";
 
 const plans = [
   {
-    name: "Starter Plan",
-    desc: "Great for local businesses starting out online",
-    price: "₹4,999", featured: false, type: "One-time",
+    name: "Lead Reply Plan",
+    desc: "Instant response & qualification for businesses losing ad leads",
+    price: "₹4,999",
+    featured: false,
+    type: "One-time setup",
     features: [
-      "Free Custom Website Mockup First",
-      "5-Page Premium Responsive Website",
-      "Basic WhatsApp Auto-Replies",
-      "Google Business Profile Setup",
-      "WhatsApp Click-to-Chat Button",
-      "15 Days Free Post-Launch Support"
+      "Free 7-Day Lead Audit First",
+      "Instant WhatsApp Auto-Reply (<10s)",
+      "Lead Qualification & Intent Screening",
+      "Google Calendar & Meet Slot Booking",
+      "Instant Team Notifications on WhatsApp",
+      "15 Days Free Post-Launch Support",
     ],
     btnText: "Get Started →",
-    waMsg: "Hi Clivik! I am interested in the Starter plan (₹4,999). Please guide me.",
+    waMsg: "Hi Clivik! I am interested in the Lead Reply plan (₹4,999). Please guide me.",
   },
   {
-    name: "Growth Plan",
-    desc: "For businesses serious about converting leads",
-    price: "₹14,999", featured: true, badge: "Most Popular", type: "One-time",
+    name: "Follow-up Autopilot",
+    desc: "Multi-day smart follow-ups that turn cold leads into closed customers",
+    price: "₹14,999",
+    featured: true,
+    badge: "Most Popular",
+    type: "One-time setup",
     features: [
-      "Free Custom Website Mockup First",
-      "10-Page Premium Responsive Website",
-      "Advanced WhatsApp Lead Qualification & Booking",
-      "Full Google Business Profile Optimization",
-      "Lead Capture Integration (Google Sheets / CRM)",
-      "Social Media Accounts Setup",
-      "30 Days Free Post-Launch Support"
+      "Free 7-Day Lead Audit First",
+      "Everything in Lead Reply Plan",
+      "30-Day WhatsApp Follow-up Autopilot",
+      "Smart Stop-on-Reply Conversational Logic",
+      "Meta Ads & Inbound Lead Webhook Sync",
+      "Live Google Sheets / CRM Integration",
+      "30 Days Free Post-Launch Support",
     ],
     btnText: "Get Started →",
-    waMsg: "Hi Clivik! I am interested in the Growth plan (₹14,999). Please guide me.",
+    waMsg: "Hi Clivik! I am interested in the Follow-up Autopilot plan (₹14,999). Please guide me.",
   },
   {
-    name: "Pro AI Plan",
-    desc: "Full automated follow-ups & AI sales agents",
-    price: "₹29,999", featured: false, type: "One-time",
+    name: "Full Sales Engine",
+    desc: "End-to-end sales automation with review collection & multi-channel routing",
+    price: "₹29,999",
+    featured: false,
+    type: "One-time setup",
     features: [
-      "Free Custom Website Mockup First",
-      "E-commerce or Online Booking Website",
-      "Dedicated 24/7 AI Sales Agent on WhatsApp",
-      "Automated Lead Follow-Up Sequences",
-      "Google Review Automation System",
+      "Free 7-Day Lead Audit First",
+      "Everything in Follow-up Autopilot",
+      "Google Review Automation (Private bad review filter)",
+      "RTO & COD Order Confirmation Workflows",
+      "Multi-Agent Objection Handling & Voice Handoff",
       "Priority Same-Day WhatsApp Support",
-      "60 Days Free Post-Launch Support"
+      "60 Days Free Post-Launch Support",
     ],
     btnText: "Get Started →",
-    waMsg: "Hi Clivik! I am interested in the Pro AI plan (₹29,999). Please guide me.",
+    waMsg: "Hi Clivik! I am interested in the Full Sales Engine plan (₹29,999). Please guide me.",
+  },
+];
+
+const websiteAddons = [
+  {
+    title: "Starter Website",
+    desc: "5-page fast responsive website with WhatsApp click-to-chat & local SEO setup.",
+    price: "₹4,999",
+    delivery: "5-Day Delivery",
+  },
+  {
+    title: "Growth Website",
+    desc: "10-page custom website with lead capture forms, local SEO, and full mobile optimization.",
+    price: "₹9,999",
+    delivery: "5-Day Delivery",
+  },
+  {
+    title: "E-Commerce / Custom Store",
+    desc: "Product catalog, online ordering, and automated WhatsApp order notifications.",
+    price: "₹19,999",
+    delivery: "7-Day Delivery",
   },
 ];
 
 const stats = [
   { n: "₹4,999", label1: "Starting", label2: "Price" },
-  { n: "5 Days", label1: "Live", label2: "Delivery" },
-  { n: "100%", label1: "Free", label2: "Mockup First" },
+  { n: "5 Days", label1: "Live", label2: "Deployment" },
+  { n: "100%", label1: "Free", label2: "Lead Audit" },
 ];
 
 const faqs = [
-  { q: "Do I need to pay upfront?", a: "No. We build your free mockup first. You only pay once you love the design." },
-  { q: "Are there any hidden charges?", a: "Absolutely none. The price we quote is the final price — forever." },
-  { q: "What is the delivery time?", a: "Starter: 5–7 days. Growth: 5 days. Pro: 7 days. We guarantee on-time delivery." },
-  { q: "Can I upgrade my plan later?", a: "Yes! You can move from Starter to Growth or Pro at any time, paying only the difference." },
-  { q: "What if I need changes after delivery?", a: "Support is included for 15–60 days depending on your plan. Minor changes and updates are free." },
+  { q: "Do I need to pay upfront?", a: "No. We start with a free 7-day lead audit and live demo workflow. You only pay once you approve the automation plan." },
+  { q: "How long does setup take?", a: "Setup takes only 3 to 5 business days. Our engineering team handles Meta WhatsApp Cloud API verification, workflow configuration, CRM/Sheets integration, and end-to-end testing." },
+  { q: "Are there any hidden software charges?", a: "None. Our setup is a transparent one-time investment. Meta includes 1,000 free service conversations per month, and we show you exact operational costs beforehand." },
+  { q: "What support is included after launch?", a: "Every plan includes 15 to 60 days of free dedicated support. We monitor live conversations, optimize prompt handling, and tune follow-up triggers at no extra cost." },
+  { q: "Can I add a website later?", a: "Yes! Websites are available as an add-on at any time, custom engineered to route visitors straight into your WhatsApp AI sales system." },
 ];
 
 export default function PricingContent() {
@@ -75,16 +103,18 @@ export default function PricingContent() {
       <Navbar />
 
       {/* Hero — matches home page gradient */}
-      <section style={{
-        background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
-        paddingTop: "var(--subpage-hero-pt, 208px)",
-        paddingBottom: 32,
-        paddingLeft: "clamp(20px,6vw,120px)",
-        paddingRight: "clamp(20px,6vw,120px)",
-        textAlign: "center",
-        position: "relative",
-        overflow: "hidden",
-      }}>
+      <section
+        style={{
+          background: "linear-gradient(160deg, #1a1040 0%, #261565 28%, #3730a3 52%, #9ca3e0 78%, #c4b5fd 92%, #ede9ff 100%)",
+          paddingTop: "var(--subpage-hero-pt, 208px)",
+          paddingBottom: 32,
+          paddingLeft: "clamp(20px,6vw,120px)",
+          paddingRight: "clamp(20px,6vw,120px)",
+          textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
         {/* Orbs */}
         <div style={{ position: "absolute", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.28) 0%, transparent 70%)", top: "-80px", left: "-80px", pointerEvents: "none" }} />
         <div style={{ position: "absolute", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(196,181,253,0.2) 0%, transparent 70%)", bottom: "0px", right: "10%", pointerEvents: "none" }} />
@@ -95,36 +125,63 @@ export default function PricingContent() {
             Transparent Pricing
           </div>
           <h1 style={{ fontSize: "clamp(3.1em, 7.1vw, 5.1em)", fontWeight: 700, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1.15, marginBottom: 16 }}>
-            Smart Pricing for<br />Local Businesses
+            Smart Pricing for<br />WhatsApp AI Automation
           </h1>
-          <p style={{ fontSize: "1.125rem", color: "rgba(255,255,255,0.92)", maxWidth: 480, margin: "0 auto" }}>
-            Everything you need to get customers online — without agency overhead or hidden fees.
+          <p style={{ fontSize: "1.125rem", color: "rgba(255,255,255,0.92)", maxWidth: 520, margin: "0 auto" }}>
+            Capture, qualify, follow up and close leads on WhatsApp — without manual overhead or hidden fees.
           </p>
 
           <div style={{ marginTop: 24, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, position: "relative", zIndex: 10 }}>
-            {["Free mockup first", "No upfront payment", "5-day delivery"].map(trust => (
-              <span key={trust} style={{
-                padding: "8px 16px", borderRadius: 999, fontSize: "0.875rem", fontWeight: 700,
-                background: "rgba(0,0,0,0.5)", color: "#fff", border: "1px solid rgba(255,255,255,0.15)",
-                backdropFilter: "blur(10px)"
-              }}>
+            {["Free lead audit first", "No upfront payment", "5-day deployment"].map(trust => (
+              <span
+                key={trust}
+                style={{
+                  padding: "8px 16px",
+                  borderRadius: 999,
+                  fontSize: "0.875rem",
+                  fontWeight: 700,
+                  background: "rgba(0,0,0,0.5)",
+                  color: "#fff",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  backdropFilter: "blur(10px)",
+                }}
+              >
                 {trust}
               </span>
             ))}
           </div>
 
-          <Link href="/contact" style={{
-            display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
-            marginTop: 48, padding: "14px 32px", minHeight: 48, borderRadius: 12,
-            background: "#fff", color: "#3730a3", textDecoration: "none",
-            fontSize: "1rem", fontWeight: 700, position: "relative", zIndex: 10,
-            boxShadow: "0 4px 24px rgba(255,255,255,0.3)",
-            transition: "transform 0.2s, box-shadow 0.2s",
-          }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 32px rgba(255,255,255,0.4)"; }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 24px rgba(255,255,255,0.3)"; }}
+          <Link
+            href="/#get-in-touch"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+              marginTop: 48,
+              padding: "14px 32px",
+              minHeight: 48,
+              borderRadius: 12,
+              background: "#fff",
+              color: "#3730a3",
+              textDecoration: "none",
+              fontSize: "1rem",
+              fontWeight: 700,
+              position: "relative",
+              zIndex: 10,
+              boxShadow: "0 4px 24px rgba(255,255,255,0.3)",
+              transition: "transform 0.2s, box-shadow 0.2s",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.transform = "scale(1.04)";
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 32px rgba(255,255,255,0.4)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 24px rgba(255,255,255,0.3)";
+            }}
           >
-            <span>Get Your Free Mockup</span>
+            <span>Get a Free Lead Audit</span>
             <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
           </Link>
         </div>
@@ -138,17 +195,23 @@ export default function PricingContent() {
         <div style={{ maxWidth: 1280, margin: "0 auto", paddingTop: 40 }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24, alignItems: "start", marginBottom: 60 }}>
             {plans.map(plan => (
-              <div key={plan.name} style={{
-                background: plan.featured ? "#fff" : "#12131f",
-                border: plan.featured ? "2px solid #6c3bff" : "1px solid rgba(255,255,255,0.06)",
-                borderRadius: 24, padding: "40px 32px",
-                color: plan.featured ? "#0d0e1a" : "#fff",
-                transform: plan.featured ? "scale(1.04)" : "scale(1)",
-                boxShadow: plan.featured ? "0 28px 80px rgba(108,59,255,0.28)" : "0 8px 30px rgba(0,0,0,0.15)",
-                display: "flex", flexDirection: "column", height: "100%",
-                position: plan.featured ? "relative" : "static",
-                zIndex: plan.featured ? 10 : 1,
-              }}>
+              <div
+                key={plan.name}
+                style={{
+                  background: plan.featured ? "#fff" : "#12131f",
+                  border: plan.featured ? "2px solid #6c3bff" : "1px solid rgba(255,255,255,0.06)",
+                  borderRadius: 24,
+                  padding: "40px 32px",
+                  color: plan.featured ? "#0d0e1a" : "#fff",
+                  transform: plan.featured ? "scale(1.04)" : "scale(1)",
+                  boxShadow: plan.featured ? "0 28px 80px rgba(108,59,255,0.28)" : "0 8px 30px rgba(0,0,0,0.15)",
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%",
+                  position: plan.featured ? "relative" : "static",
+                  zIndex: plan.featured ? 10 : 1,
+                }}
+              >
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                   <h2 style={{ fontSize: "1.4em", fontWeight: 800 }}>{plan.name}</h2>
                   {plan.badge && (
@@ -172,25 +235,80 @@ export default function PricingContent() {
                 </div>
                 <a
                   href={`https://wa.me/916265022474?text=${encodeURIComponent(plan.waMsg)}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
-                    display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
-                    width: "100%", padding: "14px 20px", minHeight: 48, borderRadius: 12,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 8,
+                    width: "100%",
+                    padding: "14px 20px",
+                    minHeight: 48,
+                    borderRadius: 12,
                     background: plan.featured ? "#6c3bff" : "rgba(255,255,255,0.12)",
-                    color: "#fff", textDecoration: "none",
-                    fontSize: "1rem", fontWeight: 700, textAlign: "center",
+                    color: "#fff",
+                    textDecoration: "none",
+                    fontSize: "1rem",
+                    fontWeight: 700,
+                    textAlign: "center",
                     transition: "transform 0.2s, background 0.2s, opacity 0.2s",
                     border: plan.featured ? "none" : "1px solid rgba(255,255,255,0.15)",
                     boxSizing: "border-box",
                   }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = plan.featured ? "#5a2fe0" : "rgba(255,255,255,0.2)"; (e.currentTarget as HTMLElement).style.transform = "scale(1.02)"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = plan.featured ? "#6c3bff" : "rgba(255,255,255,0.12)"; (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLElement).style.background = plan.featured ? "#5a2fe0" : "rgba(255,255,255,0.2)";
+                    (e.currentTarget as HTMLElement).style.transform = "scale(1.02)";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLElement).style.background = plan.featured ? "#6c3bff" : "rgba(255,255,255,0.12)";
+                    (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+                  }}
                 >
                   <span>{plan.btnText.replace("→", "").trim()}</span>
                   <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* Add-on: Website Block */}
+          <div
+            style={{
+              background: "#ffffff",
+              borderRadius: 24,
+              padding: "clamp(28px, 4vw, 44px)",
+              border: "1px solid rgba(0,0,0,0.08)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.06)",
+              marginBottom: 60,
+            }}
+          >
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", gap: 20, marginBottom: 32, borderBottom: "1px solid rgba(0,0,0,0.08)", paddingBottom: 24 }}>
+              <div>
+                <span style={{ padding: "6px 14px", borderRadius: 999, background: "rgba(108,59,255,0.08)", color: "#6c3bff", fontSize: "0.8125rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", display: "inline-block", marginBottom: 12 }}>
+                  ADD-ON PACKAGES
+                </span>
+                <h3 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "#0d0e1a", margin: 0, letterSpacing: "-0.03em" }}>
+                  Add-on: Websites &amp; Digital Storefronts
+                </h3>
+              </div>
+              <p style={{ color: "#4b5563", fontSize: "0.95rem", maxWidth: 480, margin: 0, lineHeight: 1.6 }}>
+                Need a modern website to pair with your WhatsApp AI? Custom-designed to drive visitors directly into WhatsApp conversations.
+              </p>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
+              {websiteAddons.map((addon, i) => (
+                <div key={i} style={{ background: "#f8f9fa", borderRadius: 16, padding: "24px", border: "1px solid rgba(0,0,0,0.06)", display: "flex", flexDirection: "column" }}>
+                  <h4 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#0d0e1a", marginBottom: 6 }}>{addon.title}</h4>
+                  <p style={{ fontSize: "0.9rem", color: "#4b5563", lineHeight: 1.5, marginBottom: 16, flexGrow: 1 }}>{addon.desc}</p>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 14 }}>
+                    <span style={{ fontSize: "1.4rem", fontWeight: 800, color: "#6c3bff" }}>{addon.price}</span>
+                    <span style={{ fontSize: "0.8rem", color: "#6b7280", fontWeight: 500 }}>{addon.delivery}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Stats */}
@@ -206,14 +324,15 @@ export default function PricingContent() {
           {/* Not sure */}
           <div style={{ background: "#fff", borderRadius: 24, padding: "36px", textAlign: "center", border: "1px solid rgba(0,0,0,0.07)", marginBottom: 120 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontSize: "1.3em", fontWeight: 700, color: "#0d0e1a", marginBottom: 12 }}>
-              <IconShield size={22} color="#6c3bff" /> Not sure which plan is right for you?
+              <IconShield size={22} color="#6c3bff" /> Not sure which plan is right for your lead volume?
             </div>
             <p style={{ color: "#4b5563", lineHeight: 1.7, marginBottom: 28, fontSize: "1rem" }}>
-              WhatsApp us — we&apos;ll suggest the best package for YOUR business. Free advice. Zero pressure.
+              WhatsApp us — we&apos;ll audit your current lead flow and suggest the most profitable setup for YOUR business. Free consultation. Zero pressure.
             </p>
             <a
-              href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20need%20help%20choosing%20the%20right%20plan%20for%20my%20business."
-              target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20a%20free%20lead%20audit%20/%20live%20WhatsApp%20AI%20demo."
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10, background: "#25D366", color: "#fff", padding: "14px 36px", minHeight: 48, borderRadius: 12, fontSize: "1rem", fontWeight: 700, textDecoration: "none", transition: "transform 0.2s" }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}

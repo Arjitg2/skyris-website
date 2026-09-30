@@ -12,13 +12,13 @@ const primaryCapabilities = [
   {
     num: "02",
     title: "Instant WhatsApp Response",
-    desc: "Responds immediately within seconds — proving your speed to the lead 24/7, even outside business hours.",
-    bullets: ["Sub-3 second automated reply", "100% response rate round the clock", "Prevents leads from checking competitors"],
+    desc: "Responds immediately in under 10 seconds — proving your speed to the lead 24/7, even outside business hours.",
+    bullets: ["Under 10-second automated reply", "24/7 round-the-clock availability", "Prevents leads from checking competitors"],
   },
   {
     num: "03",
-    title: "Automated Follow-Up",
-    desc: "Keeps following up with polite, timed conversational check-ins until the lead responds or converts.",
+    title: "30-Day Follow-Up Autopilot",
+    desc: "Multi-touch conversational check-ins across 30 days that gently nurture quiet leads until they convert.",
     bullets: ["Brings cold & unanswered leads back", "Smart stop-on-reply logic", "Zero manual texting required from staff"],
   },
   {
@@ -27,31 +27,37 @@ const primaryCapabilities = [
     desc: "Offers real-time slots and books calls, demos and appointments automatically without back-and-forth.",
     bullets: ["Direct Google Calendar integration", "Auto-generates Google Meet links", "Instant confirmation to customer & team"],
   },
+  {
+    num: "05",
+    title: "Google Review Automation",
+    desc: "Automated post-service prompts with private filtering of bad reviews so unhappy clients give private feedback while happy customers are guided to leave 5-star Google reviews.",
+    bullets: ["Private filtering of bad ratings (1-3 stars)", "Direct 5-star Google Maps review links", "Boosts local search rankings & trust"],
+  },
+  {
+    num: "06",
+    title: "RTO & COD Order Confirmation",
+    desc: "Instant WhatsApp confirmation & address validation for Cash-on-Delivery orders, reducing fake orders and cutting return shipping losses.",
+    bullets: ["Instant order verification via WhatsApp", "Detects incorrect addresses & fake orders", "Cuts RTO losses by 30% to 45%"],
+  },
 ];
 
 const additionalSolutions = [
   {
     icon: <IconWhatsApp size={24} color="#a78bfa" />,
-    title: "WhatsApp Marketing",
+    title: "WhatsApp Marketing & Broadcasts",
     desc: "Meta-verified broadcast campaigns and seasonal offers with high engagement for existing customer re-activation.",
     tag: "Campaigns & Offers",
   },
   {
-    icon: <IconCheck size={24} color="#a78bfa" />,
-    title: "Review Automation",
-    desc: "Systematic post-service WhatsApp prompts that guide happy customers to leave authentic 5-star Google reviews.",
-    tag: "Local SEO & Reputation",
-  },
-  {
     icon: <IconGlobe size={24} color="#a78bfa" />,
-    title: "Business Websites",
+    title: "Conversion-Focused Websites",
     desc: "Modern, high-converting digital storefronts custom-built to drive visitors straight into WhatsApp conversations.",
-    tag: "Conversion-Focused",
+    tag: "Add-On: Web Design",
   },
   {
     icon: <IconZap size={24} color="#a78bfa" />,
     title: "CRM & API Integrations",
-    desc: "Connect your WhatsApp AI with n8n, Meta Ads, Google Sheets, Zoho CRM, and webhook-driven backend workflows.",
+    desc: "Connect your WhatsApp AI with n8n, Meta Ads, Google Sheets, internal CRMs, and webhook-driven backend workflows.",
     tag: "Custom Automations",
   },
 ];
@@ -256,6 +262,26 @@ export default function CoreSolutions() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Compliance Banner */}
+            <div
+              style={{
+                marginTop: 32,
+                padding: "16px 24px",
+                borderRadius: 16,
+                background: "rgba(108, 59, 255, 0.12)",
+                border: "1px solid rgba(108, 59, 255, 0.28)",
+                display: "flex",
+                alignItems: "center",
+                gap: 14,
+                flexWrap: "wrap",
+              }}
+            >
+              <span style={{ fontSize: "1.25rem" }}>🛡️</span>
+              <p style={{ color: "rgba(255, 255, 255, 0.9)", fontSize: "0.875rem", margin: 0, lineHeight: 1.5 }}>
+                <strong style={{ color: "#c4b5fd" }}>Built on Meta&apos;s official WhatsApp Cloud API.</strong> Opt-in based messaging, approved templates for follow-ups, instant unsubscribe honoring.
+              </p>
             </div>
           </div>
 

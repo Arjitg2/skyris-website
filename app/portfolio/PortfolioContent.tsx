@@ -183,8 +183,8 @@ export default function PortfolioContent() {
       {/* CTA */}
       <section style={{ background: "#f2f2f7", padding: "64px clamp(20px,6vw,120px) 64px", textAlign: "center" }}>
         <div style={{ background: "linear-gradient(135deg, #0d0e1a, #131525)", borderRadius: 32, padding: "64px 32px", maxWidth: 800, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(2em, 3.8vw, 3.1em)", fontWeight: 700, color: "#fff", marginBottom: 16 }}>Want a website like these?</h2>
-          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "1.1em", marginBottom: 32 }}>We&apos;ll build you a free mockup first. See it before you pay for it.</p>
+          <h2 style={{ fontSize: "clamp(2em, 3.8vw, 3.1em)", fontWeight: 700, color: "#fff", marginBottom: 16 }}>Ready to Automate Your Business?</h2>
+          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "1.1em", marginBottom: 32 }}>We&apos;ll run a free lead audit and live WhatsApp demo for your business.</p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/contact" style={{ 
               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
@@ -193,7 +193,7 @@ export default function PortfolioContent() {
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1.04)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "scale(1)"; }}
             >
-              <span>Get Free Mockup</span>
+              <span>Claim Free Lead Audit</span>
               <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
             </Link>
             <Link href="/pricing" style={{ 

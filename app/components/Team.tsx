@@ -1,55 +1,8 @@
 "use client";
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
+import { teamMembers } from "@/lib/teamData";
 
-interface TeamMember {
-  name: string;
-  role: string;
-  categoryIcon: string;
-  bio: string;
-  skills: string[];
-  imageSrc: string;
-  objectPosition?: string;
-}
-
-const teamMembers: TeamMember[] = [
-  {
-    name: "Mr. Sudipto Sarkar",
-    role: "AI Automation Engineer",
-    categoryIcon: "👨‍💻",
-    bio: "Designs and builds the AI-powered automation systems that handle lead qualification, follow-ups, appointment booking and customer conversations.",
-    skills: ["AI Agents", "n8n Workflows", "APIs", "Sales Automations"],
-    imageSrc: "/images/team/sudipto-sarkar.jpg",
-    objectPosition: "center 20%",
-  },
-  {
-    name: "Miss. Prachi Tirole",
-    role: "Meta & WhatsApp Integration Specialist",
-    categoryIcon: "🔗",
-    bio: "Handles Meta, WhatsApp Business and API integrations to connect your ads, conversations and business workflows into one seamless system.",
-    skills: ["Meta API", "WhatsApp Cloud", "Webhooks", "Ad Routing"],
-    imageSrc: "/images/team/prachi-tirole.jpg",
-    objectPosition: "center 15%", // Crop tighter around face/upper body
-  },
-  {
-    name: "Mr. Aryan Chandrawanshi",
-    role: "AI Automation Strategist",
-    categoryIcon: "🧠",
-    bio: "Turns business problems into practical AI workflows designed to reduce manual work, respond faster and capture more opportunities.",
-    skills: ["AI Strategy", "Workflow Architecture", "Process Optimization"],
-    imageSrc: "/images/team/aryan-chandrawanshi.jpg",
-    objectPosition: "center 25%",
-  },
-  {
-    name: "Mr. Pravesh Baghel",
-    role: "Growth & Sales Lead",
-    categoryIcon: "📈",
-    bio: "Focuses on customer acquisition, sales systems and growth strategies that turn automation into measurable business outcomes.",
-    skills: ["B2B Acquisition", "Funnel Strategy", "Lead Economics", "Growth"],
-    imageSrc: "/images/team/pravesh-baghel.jpg",
-    objectPosition: "center 25%",
-  },
-];
 
 export default function Team() {
   return (
@@ -189,9 +142,10 @@ export default function Team() {
                     alt={`${member.name} — ${member.role}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top"
                     style={{
                       objectFit: "cover",
-                      objectPosition: member.objectPosition || "center",
+                      objectPosition: "top",
                       transition: "transform 0.4s ease",
                     }}
                   />

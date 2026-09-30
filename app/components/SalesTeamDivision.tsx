@@ -3,10 +3,10 @@ import ScrollReveal from "./ScrollReveal";
 import { IconBot, IconUser, IconCheck, IconZap } from "./icons";
 
 const aiTasks = [
-  { title: "Sub-Second Inbound Response", desc: "Instantly greets leads within seconds of ad submission, 24/7/365." },
+  { title: "Instant Inbound Response (<10s)", desc: "Instantly greets leads in under 10 seconds of ad submission, 24/7/365." },
   { title: "Deep Criteria Qualification", desc: "Asks 2-3 essential questions to identify real intent, timeline and budget." },
   { title: "Automated FAQ & Objection Handling", desc: "Answers batch timings, doctor credentials, and common questions." },
-  { title: "Persistent Multi-Day Follow-Ups", desc: "Nurtures unresponsive leads with polite check-ins on autopilot." },
+  { title: "30-Day Follow-Up Autopilot", desc: "Nurtures unresponsive leads with polite check-ins for up to 30 days on autopilot." },
   { title: "Calendar & Google Meet Generation", desc: "Coordinates meeting slots and sends calendar invites with zero friction." },
 ];
 

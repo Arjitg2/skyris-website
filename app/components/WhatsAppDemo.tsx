@@ -37,7 +37,7 @@ const scenarios: DemoScenario[] = [
         sender: "ai",
         text: "Absolutely! 👋 Thanks for reaching out to Apex Academy. Are you looking for NEET 2027 preparation or the current dropper batch?",
         time: "10:14 AM",
-        meta: "⚡ Replied in 1.4s",
+        meta: "⚡ Replied in 6s",
       },
       {
         sender: "lead",
@@ -206,7 +206,7 @@ export default function WhatsAppDemo() {
               See the WhatsApp AI in Action
             </h2>
             <p style={{ color: "#4b5563", fontSize: "1.0625rem", maxWidth: 660, margin: "0 auto", lineHeight: 1.6 }}>
-              No long forms or delayed phone calls. The AI responds within seconds, qualifies the prospect, and schedules appointments automatically.
+              No long forms or delayed phone calls. The AI responds in under 10 seconds, qualifies the prospect, and schedules appointments automatically.
             </p>
           </div>
 
@@ -321,7 +321,7 @@ export default function WhatsAppDemo() {
                     </span>
                   </div>
                   <div style={{ fontSize: "0.75rem", opacity: 0.9 }}>
-                    Online · Average response time: &lt; 2 seconds
+                    Online · Average response time: under 10 seconds
                   </div>
                 </div>
               </div>

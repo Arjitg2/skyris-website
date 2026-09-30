@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Solutions", href: "/#solutions" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Industries", href: "/#industries" },
-  { label: "Case Studies", href: "/#case-studies" },
+  { label: "Demo Flows", href: "/#demo-flows" },
   { label: "About", href: "/about" },
   { label: "Pricing", href: "/pricing" },
 ];
@@ -194,7 +194,7 @@ export default function Navbar() {
           </button>
         ) : (
           <Link
-            href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20to%20audit%20my%20lead%20automation."
+            href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20a%20free%20lead%20audit%20/%20live%20WhatsApp%20AI%20demo."
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -268,7 +268,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20to%20audit%20my%20lead%20automation."
+              href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20a%20free%20lead%20audit%20/%20live%20WhatsApp%20AI%20demo."
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}

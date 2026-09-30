@@ -2,7 +2,7 @@
 import { IconWhatsApp } from "./icons";
 
 const WHATSAPP_NUMBER = "916265022474";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi Clivik! I'd like to get a free mockup for my business.");
+const WHATSAPP_MESSAGE = encodeURIComponent("Hi Clivik! I want a free lead audit / live WhatsApp AI demo.");
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
 export default function WhatsAppButton() {

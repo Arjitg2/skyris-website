@@ -1,16 +1,17 @@
 # Clivik Digital Solutions
 
-> WhatsApp lead automation, customer review automation, and conversion-focused websites for local businesses.
+> WhatsApp lead automation, 30-Day Follow-Up Autopilot, customer review automation, and RTO reduction for local and D2C businesses.
 
 ## About
-Clivik Digital Solutions is a digital growth and automation agency based in Bhopal, Madhya Pradesh, India. Founded by Arjit Gupta, Clivik helps local and lead-driven businesses capture, qualify, follow up with, and convert customers using automated WhatsApp communication, Google review automation, and modern web development.
+Clivik Digital Solutions is an AI automation agency based in Bhopal, Madhya Pradesh, India. Founded by Arjit Gour, Clivik helps local and lead-driven businesses capture, qualify, follow up with, and convert customers using automated WhatsApp AI agents, Google review automation, and COD/RTO confirmation systems.
 
 ## Core Services
-- WhatsApp Lead Qualification: 24/7 automated qualification of inbound inquiries that filters serious buyers and schedules appointments without human delay.
-- Automated Lead Follow-Up: Multi-step conversational follow-ups on WhatsApp that re-engage prospects who did not buy or schedule on their first contact.
+- WhatsApp Lead Qualification: 24/7 automated qualification of inbound inquiries in under 10 seconds that filters serious buyers and schedules appointments without human delay.
+- 30-Day WhatsApp Follow-Up Autopilot: Multi-step conversational follow-ups on WhatsApp (Day 1, 3, 7, 14, 30) that re-engage prospects who did not buy on first contact.
 - WhatsApp Marketing: Targeted broadcast campaigns, customer retention sequences, and promotional messaging with high open and response rates.
 - Customer Review Automation: Automated post-service review collection sent via WhatsApp directing satisfied clients to Google Maps profiles to build local SEO authority.
-- Website Development: Fast, custom-built, mobile-optimized websites delivered within 5 to 7 days, complete with WhatsApp click-to-chat and lead capture forms.
+- COD & RTO Confirmation: Instant WhatsApp address verification and pre-dispatch confirmation to reduce return-to-origin rates for e-commerce.
+- Website Add-On: Fast, custom-built websites as an optional add-on to WhatsApp automation systems.
 
 ## Target Customers
 Local businesses and lead-driven enterprises, including:

@@ -29,7 +29,7 @@ const principles = [
   {
     icon: <IconCheck size={28} color="#a78bfa" />,
     title: "End-to-End Integration",
-    desc: "Meta ads, WhatsApp Cloud API, Google Calendar, and your CRM connected into one reliable, self-healing sales machine.",
+    desc: "Meta ads, WhatsApp Cloud API, Google Calendar, and your CRM connected into one reliable, high-uptime sales machine.",
     accent: "#a78bfa",
   },
 ];
@@ -248,7 +248,7 @@ export default function AboutContent() {
               Our team combines AI automation, WhatsApp &amp; Meta integrations, sales strategy and growth systems to build automation that actually works inside your business.
             </p>
             <p>
-              When a lead submits an inquiry, every second of hesitation reduces the probability of a conversion. By giving local and growing businesses the same instant AI response infrastructure used by multi-billion dollar tech companies, we level the playing field.
+              When a lead submits an inquiry, every second of hesitation reduces the probability of a conversion. By giving local and growing businesses the same instant AI response infrastructure used by modern high-growth companies, we level the playing field.
             </p>
 
             <div

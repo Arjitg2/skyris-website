@@ -51,7 +51,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
         <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f57" }} />
         <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#febc2e" }} />
         <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#28c840" }} />
-        <span style={{ marginLeft: "auto", fontSize: 12, color: "#4b5563", fontWeight: 500, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "80%" }}>{work.title}</span>
+        <span style={{ marginLeft: "auto", fontSize: 11, background: "rgba(108,59,255,0.1)", color: "#6c3bff", padding: "3px 8px", borderRadius: 999, fontWeight: 600 }}>Website template</span>
       </div>
 
       {/* Image Preview */}
@@ -76,7 +76,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
           }} 
         >
            <div style={{ color: "#fff", fontWeight: 600, fontSize: "1rem", display: "flex", alignItems: "center", gap: 8 }}>
-             <span>Visit Website</span>
+             <span>View Website Template</span>
              <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
            </div>
         </div>
@@ -87,7 +87,7 @@ function WorkCard({ work }: { work: typeof works[0] }) {
 
 export default function Works() {
   return (
-    <section id="case-studies" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
+    <section id="demo-flows" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
       <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <div style={{ display: "flex", flexDirection: "var(--works-flex)" as any, justifyContent: "space-between", alignItems: "var(--works-align)" as any, marginBottom: "var(--sec-mb)" as any, gap: "24px", textAlign: "var(--sec-text-align)" as any }}>
@@ -99,12 +99,12 @@ export default function Works() {
               border: "1px solid rgba(108,59,255,0.2)", marginBottom: 16,
               boxShadow: "0 2px 8px rgba(108,59,255,0.06)",
               fontFamily: "'FullerSansDT', 'Inter', sans-serif"
-            }}>Case Studies</div>
+            }}>Demo Flows</div>
             <h2 style={{
               fontSize: "var(--title-size)", fontWeight: 700, color: "#0d0e1a",
               lineHeight: 1.1, letterSpacing: "-0.04em", maxWidth: "var(--title-max-width)",
               fontFamily: "'FullerSansDT', 'Inter', sans-serif"
-            }}>Client Implementations &amp; Case Studies</h2>
+            }}>Demo Flows &amp; Templates</h2>
           </div>
           <Link href="/portfolio" style={{
             display: "inline-flex", alignItems: "center", justifyContent: "center",
@@ -114,7 +114,7 @@ export default function Works() {
           }}
             onMouseEnter={e => { e.currentTarget.style.background = "#5a2fe0"; e.currentTarget.style.transform = "translateY(-2px)"; }}
             onMouseLeave={e => { e.currentTarget.style.background = "#6c3bff"; e.currentTarget.style.transform = "translateY(0)"; }}
-          >View All Works</Link>
+          >View All Demo Flows</Link>
         </div>
 
         <div className="slider-wrapper">

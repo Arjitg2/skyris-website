@@ -5,14 +5,14 @@ import { siteConfig } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Pricing & Packages — Transparent Plans for Local Businesses",
   description:
-    "Honest, upfront pricing starting at ₹4,999. Custom websites, WhatsApp automation, and Google review automation with 100% free mockup first.",
+    "Transparent pricing starting at ₹4,999 for WhatsApp automation, lead follow-up, Google review automation, and RTO prevention in Bhopal. Get a free lead audit.",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
     title: "Pricing & Packages | Clivik Digital Solutions",
     description:
-      "Honest, upfront pricing starting at ₹4,999. Custom websites, WhatsApp automation, and Google review automation with 100% free mockup first.",
+      "Transparent pricing starting at ₹4,999 for WhatsApp automation, lead follow-up, Google review automation, and RTO prevention in Bhopal. Get a free lead audit.",
     url: `${siteConfig.url}/pricing`,
     images: ["/images/clivik-og.png"],
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pricing & Packages | Clivik Digital Solutions",
     description:
-      "Honest, upfront pricing starting at ₹4,999. Custom websites, WhatsApp automation, and Google review automation with 100% free mockup first.",
+      "Transparent pricing starting at ₹4,999 for WhatsApp automation, lead follow-up, Google review automation, and RTO prevention in Bhopal. Get a free lead audit.",
   },
 };
 

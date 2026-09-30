@@ -123,7 +123,7 @@ export default function Hero() {
             }}
           >
             {[
-              { icon: <IconZap size={16} color="#3730a3" />, text: "Instant WhatsApp Response (< 3s)" },
+              { icon: <IconZap size={16} color="#3730a3" />, text: "Instant WhatsApp Response (<10s)" },
               { icon: <IconBot size={16} color="#3730a3" />, text: "Automated Lead Qualification" },
               { icon: <IconCalendar size={16} color="#3730a3" />, text: "Google Meet Demo Booking" },
             ].map((chip, i) => (
@@ -159,7 +159,7 @@ export default function Hero() {
             className="hero-cta-row"
           >
             <Link
-              href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20to%20build%20a%20WhatsApp%20AI%20system%20for%20my%20business."
+              href="https://wa.me/916265022474?text=Hi%20Clivik!%20I%20want%20a%20free%20lead%20audit%20/%20live%20WhatsApp%20AI%20demo."
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -189,7 +189,7 @@ export default function Hero() {
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              <span>Build My WhatsApp AI System</span>
+              <span>Claim Free Lead Audit</span>
               <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
             </Link>
 
@@ -340,7 +340,7 @@ export default function Hero() {
               >
                 Hey Rahul! 👋 Thanks for reaching out. Are you preparing for NEET 2027 or targetting this year&apos;s batch?
                 <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.6875rem", color: "#a78bfa", marginTop: 4 }}>
-                  <span>⚡ Replied in 1.2s</span>
+                  <span>⚡ Replied in 6s</span>
                   <span style={{ color: "rgba(255,255,255,0.5)" }}>10:14 AM</span>
                 </div>
               </div>
