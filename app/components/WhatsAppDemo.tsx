@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
-import { IconCheck, IconZap, IconCalendar, IconBot } from "./icons";
 
 interface DemoScenario {
   id: string;

@@ -241,7 +241,7 @@ export default function FAQ() {
       <ScrollReveal>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           {/* Header */}
-          <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
+          <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" }}>
             <div
               style={{
                 display: "inline-flex",

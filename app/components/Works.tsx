@@ -90,7 +90,7 @@ export default function Works() {
     <section id="demo-flows" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
       <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-        <div style={{ display: "flex", flexDirection: "var(--works-flex)" as any, justifyContent: "space-between", alignItems: "var(--works-align)" as any, marginBottom: "var(--sec-mb)" as any, gap: "24px", textAlign: "var(--sec-text-align)" as any }}>
+        <div style={{ display: "flex", flexDirection: "var(--works-flex)" as React.CSSProperties["flexDirection"], justifyContent: "space-between", alignItems: "var(--works-align)" as React.CSSProperties["alignItems"], marginBottom: "var(--sec-mb)", gap: "24px", textAlign: "var(--sec-text-align)" as React.CSSProperties["textAlign"] }}>
           <div style={{ flex: "1 1 100%" }}>
             <div style={{
               display: "inline-flex", alignItems: "center", justifyContent: "center",

@@ -1,6 +1,6 @@
 "use client";
 import ScrollReveal from "./ScrollReveal";
-import { IconBot, IconZap, IconCalendar, IconCheck, IconWhatsApp, IconGlobe } from "./icons";
+import { IconZap, IconWhatsApp, IconGlobe } from "./icons";
 
 const primaryCapabilities = [
   {

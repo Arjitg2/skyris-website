@@ -2,18 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
-import { IconCloud, IconInstagram, IconX, IconYoutube, IconDribbble, IconBehance, IconSend, IconPhone, IconFacebook, IconWhatsApp, IconMail, IconMapPin, IconClock2 } from "./icons";
-
-const BUSINESS_DOMAINS = [
-  "E-commerce & Retail",
-  "Healthcare & Wellness",
-  "Real Estate & Property",
-  "Education & E-learning",
-  "Finance & Banking",
-  "Restaurant & Food",
-  "Technology & SaaS",
-  "Creative & Media",
-];
+import { IconCloud, IconInstagram, IconX, IconYoutube, IconDribbble, IconBehance, IconSend, IconPhone, IconWhatsApp, IconMail, IconMapPin, IconClock2 } from "./icons";
 
 function ContactForm() {
   const [form, setForm] = useState({ name: "", domain: "", phone: "", adSpend: "", monthlyLeads: "", message: "" });
@@ -176,14 +165,6 @@ function ContactForm() {
     </div>
   );
 }
-
-const socialIcons = [
-  { icon: <IconInstagram size={18} color="currentColor" />, href: "#" },
-  { icon: <IconX size={18} color="currentColor" />, href: "#" },
-  { icon: <IconYoutube size={18} color="currentColor" />, href: "#" },
-  { icon: <IconDribbble size={18} color="currentColor" />, href: "#" },
-  { icon: <IconBehance size={18} color="currentColor" />, href: "#" },
-];
 
 export default function Footer() {
   return (

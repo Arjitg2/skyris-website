@@ -1,6 +1,5 @@
 "use client";
 import ScrollReveal from "./ScrollReveal";
-import { IconArrowRight } from "./icons";
 
 const industries = [
   {

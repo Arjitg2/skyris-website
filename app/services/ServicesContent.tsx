@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 import FAQ from "../components/FAQ";
 import Link from "next/link";
-import { IconGlobe, IconBot, IconZap, IconStar, IconCheck, IconWhatsApp, IconArrowRight, IconRefreshCw, IconCalendar } from "../components/icons";
+import { IconGlobe, IconBot, IconZap, IconStar, IconRefreshCw } from "../components/icons";
 
 interface CoreService {
   id: string;

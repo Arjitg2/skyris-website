@@ -1,7 +1,7 @@
 "use client";
 import ScrollReveal from "./ScrollReveal";
 import Link from "next/link";
-import { IconCheck, IconZap, IconStar, IconBot, IconArrowRight } from "./icons";
+import { IconZap, IconStar } from "./icons";
 
 export default function Testimonials() {
   return (
@@ -9,7 +9,7 @@ export default function Testimonials() {
       <ScrollReveal>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           {/* Header */}
-          <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" as any }}>
+          <div style={{ textAlign: "center", marginBottom: "var(--sec-mb)" }}>
             <div
               style={{
                 display: "inline-flex",

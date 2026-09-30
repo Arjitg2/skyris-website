@@ -1,6 +1,6 @@
 "use client";
 import ScrollReveal from "./ScrollReveal";
-import { IconWhatsApp, IconGlobe, IconBot, IconShield, IconZap, IconMapPin, IconSmartphone, IconCheck } from "./icons";
+import { IconWhatsApp, IconGlobe, IconBot, IconZap, IconCheck } from "./icons";
 
 const services = [
   {

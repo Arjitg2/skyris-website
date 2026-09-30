@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { IconBot, IconZap, IconCalendar, IconCheck, IconTarget } from "./icons";
+import { IconBot, IconZap, IconCalendar } from "./icons";
 
 export default function Hero() {
   return (
