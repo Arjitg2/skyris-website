@@ -20,7 +20,7 @@ export default function Home() {
       <WhyWebsite />
       <Process />
       <Works />
-      <Testimonials />
+      {/* Testimonials hidden until real paying client reviews are available */}
       <About />
       <Footer />
       <WhatsAppButton />

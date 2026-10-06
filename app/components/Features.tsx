@@ -3,11 +3,11 @@ import ScrollReveal from "./ScrollReveal";
 import { IconLightning, IconSparkle, IconRefreshCw, IconCheck, IconCloud, IconBot, IconClock, IconTarget, IconGlobe, IconBarChart } from "./icons";
 
 const rightSteps = [
-  { text: "Instant WhatsApp auto-replies", icon: <IconCheck size={14} color="#fff" /> },
-  { text: "24/7 AI-powered customer support", icon: <IconCheck size={14} color="#fff" /> },
-  { text: "Automated appointment booking", icon: <IconCheck size={14} color="#fff" /> },
-  { text: "Lead capture — no missed inquiry", icon: <IconCheck size={14} color="#fff" /> },
-  { text: "CRM & Google Sheets integration", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "Instant 7-Second WhatsApp replies", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "24/7 AI lead qualification", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "30-Day Automated follow-up sequences", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "Google Review automation workflows", icon: <IconCheck size={14} color="#fff" /> },
+  { text: "Free Lead-Gen Website included", icon: <IconCheck size={14} color="#fff" /> },
 ];
 
 const bottomDarkFeatures = [
@@ -38,7 +38,7 @@ export default function Features() {
             wordBreak: "normal", overflowWrap: "normal",
           }}>
             Everything Your Business Needs<br/>
-            to Grow Online
+            To Stop Losing Leads
           </h2>
         </div>
 
@@ -53,11 +53,10 @@ export default function Features() {
               <IconLightning size={20} color="#6c3bff" />
             </div>
             <h3 style={{ fontSize: "1.4em", fontWeight: 800, color: "#0d0e1a", marginBottom: 12, lineHeight: 1.25 }}>
-              Affordable premium custom websites at a fraction of the cost.
+              Enterprise AI Automation at a fraction of the cost.
             </h3>
             <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6, marginBottom: 32 }}>
-              Premium Custom Websites — Without the Premium Price<br />
-              Get a fully customized website at a fraction of the cost
+              Traditional agencies charge a fortune for manual lead management. Get a fully automated 24/7 AI system for the cost of a utility bill.
             </p>
             
             <div style={{ display: "flex", flexDirection: "column", gap: 24, marginTop: "auto" }}>
@@ -104,8 +103,8 @@ export default function Features() {
               flex: 1, background: "#0d0e1a", borderRadius: 16, padding: "24px 20px",
               display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, minHeight: 120,
             }}>
-              <div style={{ color: "#fff", fontWeight: 700, fontSize: "1.25rem" }}>₹14,999</div>
-              <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.9375rem" }}>Growth Plan — Most Popular</div>
+              <div style={{ color: "#fff", fontWeight: 700, fontSize: "1.25rem" }}>₹5,999 / month</div>
+              <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.9375rem" }}>Growth Autopilot — Most Popular</div>
             </div>
           </div>
         </div>
@@ -118,8 +117,8 @@ export default function Features() {
               <IconRefreshCw size={18} color="#6c3bff" />
             </div>
             <h3 style={{ fontSize: "1.35em", fontWeight: 800, color: "#0d0e1a", lineHeight: 1.3, marginBottom: 12 }}>&quot;Live in 5 Days. Guaranteed.&quot;</h3>
-            <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6, marginBottom: 16 }}>While big agencies take 45 days — your website is live in just 5 days.</p>
-            <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6 }}>Fast. Premium.<br/>Zero compromise on quality.</p>
+            <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6, marginBottom: 16 }}>While big agencies take months to deploy, your custom AI WhatsApp Bot and Lead-Gen Website will be live in just 5 days.</p>
+            <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6 }}>Fast. Premium.<br/>Zero compromise.</p>
           </div>
 
           {/* Card 2 */}
@@ -128,14 +127,14 @@ export default function Features() {
               <IconSparkle size={18} color="#6c3bff" />
             </div>
             <h3 style={{ fontSize: "1.35em", fontWeight: 800, color: "#0d0e1a", lineHeight: 1.3, marginBottom: 12 }}>&quot;Same Day Reply. Every Single Time.&quot;</h3>
-            <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6, marginBottom: 16 }}>WhatsApp karo — same day response. Guaranteed.</p>
+            <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6, marginBottom: 16 }}>We don&apos;t use ticketing systems. Aap direct WhatsApp karo — get a same-day response from the founder.</p>
             <p style={{ fontSize: "1rem", color: "#4b5563", lineHeight: 1.6 }}>No waiting.<br/>No ghosting.<br/>No excuses.</p>
           </div>
 
           {/* Card 3 Dark */}
           <div style={{ background: "#12131f", borderRadius: 20, padding: "32px 24px", boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}>
             <h3 style={{ fontSize: "1.35em", fontWeight: 800, color: "#fff", lineHeight: 1.3, marginBottom: 12 }}>&quot;No Hidden Charges. Ever.&quot;</h3>
-            <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.6, marginBottom: 20 }}>Jo price bataya — wahi final price hai.</p>
+            <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.6, marginBottom: 20 }}>Jo price bataya — wahi final price hai. No surprise API bills or hidden retainer fees.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {bottomDarkFeatures.map((f, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.9375rem", color: "rgba(255,255,255,0.92)" }}>
