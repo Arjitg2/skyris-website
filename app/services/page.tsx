@@ -138,22 +138,21 @@ export default function ServicesPage() {
             justifyContent: "center", 
             alignItems: "center",
             gap: 16,
-            background: "#0d0e1a", 
+            background: "#fff", 
             padding: "16px 28px", 
             borderRadius: 16, 
-            border: "1px solid rgba(255,255,255,0.15)", 
-            boxShadow: "0 12px 30px rgba(0,0,0,0.15)",
+            border: "1px solid rgba(0,0,0,0.08)", 
+            boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
             backdropFilter: "none",
             fontSize: "0.9375rem",
-            color: "#fff"
+            color: "#161726",
+            fontWeight: 500
           }}>
-            <span style={{ display: "flex", alignItems: "center", gap: 6 }}><span style={{ color: "#c4b5fd", fontWeight: 700 }}>150+</span> Websites Built</span>
-            <span style={{ color: "rgba(255,255,255,0.4)" }}>•</span>
-            <span style={{ display: "flex", alignItems: "center", gap: 6 }}><span style={{ color: "#c4b5fd", fontWeight: 700 }}>5 Day</span> Delivery</span>
-            <span style={{ color: "rgba(255,255,255,0.4)" }}>•</span>
-            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>Free Mockup First</span>
-            <span style={{ color: "rgba(255,255,255,0.4)" }}>•</span>
-            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>Same-Day WhatsApp Reply</span>
+            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>⚡ AI-Powered Automation</span>
+            <span style={{ color: "rgba(0,0,0,0.2)" }}>•</span>
+            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>5-Day Delivery</span>
+            <span style={{ color: "rgba(0,0,0,0.2)" }}>•</span>
+            <span style={{ display: "flex", alignItems: "center", gap: 6 }}>Same-Day WhatsApp Setup</span>
           </div>
         </div>
 
@@ -163,34 +162,36 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section style={{ background: "#f2f2f7", padding: "72px clamp(20px,6vw,120px)" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 32 }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 32 }}>
           {services.map((s) => (
             <div key={s.title} style={{
-              flex: "1 1 300px",
-              maxWidth: 400,
-              background: "#161726", borderRadius: 24, padding: "32px 24px",
-              boxShadow: "0 8px 30px rgba(0,0,0,0.15)",
-              border: "1px solid rgba(255,255,255,0.06)",
+              flex: "1 1 330px",
+              maxWidth: 440,
+              background: "#fff", borderRadius: 24, padding: "40px 32px",
+              boxShadow: "0 8px 30px rgba(0,0,0,0.06)",
+              border: "1px solid rgba(0,0,0,0.06)",
               display: "flex", flexDirection: "column",
               height: "100%",
               transition: "transform 0.25s, box-shadow 0.25s, border-color 0.25s",
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 48px rgba(0,0,0,0.3)"; (e.currentTarget as HTMLElement).style.borderColor = s.accent; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 30px rgba(0,0,0,0.15)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.06)"; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 48px rgba(0,0,0,0.12)"; (e.currentTarget as HTMLElement).style.borderColor = s.accent; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 30px rgba(0,0,0,0.06)"; (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,0,0,0.06)"; }}
             >
               <div style={{ width: 44, height: 44, borderRadius: 12, background: `${s.accent}15`, display: "inline-flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
                 {/* Clone icon with smaller size since container is smaller */}
                 {s.icon.type({ ...s.icon.props, size: 22 })}
               </div>
-              <h2 style={{ fontSize: "1.35em", fontWeight: 700, color: "#fff", marginBottom: 10 }}>{s.title}</h2>
-              <p style={{ color: "rgba(255,255,255,0.88)", fontSize: "0.95em", lineHeight: 1.6, marginBottom: 24 }}>{s.desc}</p>
+              <h2 style={{ fontSize: "1.35em", fontWeight: 700, color: "#161726", marginBottom: 10 }}>{s.title}</h2>
+              <p style={{ color: "rgba(0,0,0,0.7)", fontSize: "0.95em", lineHeight: 1.6, marginBottom: 24 }}>{s.desc}</p>
               
-              <div style={{ height: "1px", background: "rgba(255,255,255,0.06)", marginBottom: 24, width: "100%" }} />
+              <div style={{ height: "1px", background: "rgba(0,0,0,0.06)", marginBottom: 24, width: "100%" }} />
 
               <ul style={{ listStyle: "none", padding: 0, margin: 0, marginTop: "auto", display: "flex", flexDirection: "column", gap: 12 }}>
                 {s.bullets.map(b => (
-                  <li key={b} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.9em", color: "rgba(255,255,255,0.92)" }}>
-                    <IconCheck size={16} color={s.accent} />
+                  <li key={b} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.9em", color: "rgba(0,0,0,0.78)" }}>
+                    <div style={{ flexShrink: 0, display: "flex" }}>
+                      <IconCheck size={16} color={s.accent} />
+                    </div>
                     <span>{b}</span>
                   </li>
                 ))}
