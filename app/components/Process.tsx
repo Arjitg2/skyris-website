@@ -38,7 +38,8 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
+    <section id="how-it-works" style={{ background: "#f2f2f7", padding: "var(--sec-py) var(--sec-px) 0" }}>
+      <span id="process" style={{ position: "relative", top: 0, display: "block" }} />
       <ScrollReveal>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         

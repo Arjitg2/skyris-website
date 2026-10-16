@@ -91,7 +91,7 @@ export default function Hero() {
             color: "#fff", letterSpacing: "-0.04em", marginBottom: 24,
             maxWidth: "100%", fontFamily: "'FullerSansDT', 'Inter', sans-serif",
           }}>
-            Stop Losing Leads.<br />AI & WhatsApp Automation<br />That Grows Your Business.
+            Stop Losing Leads.<br className="desktop-br" />AI & WhatsApp Automation<br className="desktop-br" />That Grows Your Business.
           </h1>
 
           <p className="hero-subtext" style={{
@@ -117,58 +117,6 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* Satisfied Clients Social Proof Badge (Mobile & Skyris layout) */}
-          <div className="hero-satisfied-badge" style={{
-            alignItems: "center",
-            justifyContent: "var(--hero-chips-justify)" as any,
-            gap: 8,
-            marginBottom: 24,
-            width: "100%",
-          }}>
-            <img src="/hero/bracket-left.svg" alt="" width={18} height={40} style={{ display: "block", flexShrink: 0, opacity: 0.9 }} />
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-              {/* Overlapping avatars */}
-              <div style={{ display: "inline-flex", alignItems: "center" }}>
-                {[
-                  "/hero/avatar-1.png",
-                  "/hero/avatar-2.png",
-                  "/hero/avatar-3.png",
-                  "/hero/avatar-4.png",
-                  "/hero/avatar-5.png"
-                ].map((src, idx, arr) => (
-                  <div key={idx} style={{
-                    width: idx === arr.length - 1 ? 28 : 16,
-                    height: 28,
-                    flexShrink: 0,
-                    position: "relative",
-                    zIndex: idx + 1
-                  }}>
-                    <img
-                      src={src}
-                      alt="Client"
-                      width={28}
-                      height={28}
-                      style={{
-                        width: 28,
-                        height: 28,
-                        borderRadius: "50%",
-                        border: "2px solid #ffffff",
-                        objectFit: "cover",
-                        display: "block",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.2)"
-                      }}
-                    />
-                  </div>
-                ))}
-              </div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 5, whiteSpace: "nowrap" }}>
-                <span style={{ color: "#ffffff", fontWeight: 700, fontSize: "0.875rem" }}>+94</span>
-                <span style={{ color: "rgba(255,255,255,0.85)", fontWeight: 500, fontSize: "0.875rem" }}>Satisfied clients</span>
-              </div>
-            </div>
-            <img src="/hero/bracket-right.svg" alt="" width={18} height={40} style={{ display: "block", flexShrink: 0, opacity: 0.9 }} />
-          </div>
-
           {/* CTAs matching Skyris */}
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "var(--hero-chips-justify)" }} className="hero-cta-row">
             <Link href="https://wa.me/916265022474" target="_blank" rel="noopener noreferrer" style={{
@@ -186,7 +134,7 @@ export default function Hero() {
               <span>Open WhatsApp</span>
               <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&rarr;</span>
             </Link>
-            <Link href="/portfolio" style={{
+            <Link href="#how-it-works" style={{
               display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 36px", minHeight: 52,
               borderRadius: 12, background: "rgba(255,255,255,0.12)", color: "#fff",
               textDecoration: "none", fontSize: "1rem", fontWeight: 600,
@@ -199,7 +147,8 @@ export default function Hero() {
               onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.2)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.12)"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
-              <span>View Our Work</span>
+              <span>See How It Works</span>
+              <span className="optical-arrow" style={{ fontSize: "1.1em" }}>&darr;</span>
             </Link>
           </div>
         </div>

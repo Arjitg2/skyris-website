@@ -31,6 +31,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-dark);
@@ -268,17 +272,17 @@ body {
 
     /* Hero layout mobile */
     --hero-grid: 1fr;
-    --hero-gap: 40px;
+    --hero-gap: 24px;
     --hero-min-height: auto;
     --hero-cards-height: 420px;
-    --hero-title-size: clamp(2.1rem, 7.8vw, 2.75rem);
+    --hero-title-size: clamp(1.75rem, 6vw, 2.25rem);
     --hero-sub-size: 1em;
     --hero-sub-max: 340px;
     --hero-sub-wrap: normal;
     --hero-text-align: center;
     --hero-chips-justify: center;
     --hero-btn-flex: 1 1 0;
-    --hero-py: 40px;
+    --hero-py: 24px;
   }
 }
 
@@ -445,20 +449,12 @@ img, video, iframe { max-width: 100%; height: auto; }
 /* ============================================================
    HERO RESPONSIVE — Mobile layout matching reference
    ============================================================ */
-.hero-satisfied-badge {
-  display: none;
-}
 @media (max-width: 768px) {
   .hero-subtext {
     display: none !important;
   }
   .hero-service-chips {
     display: none !important;
-  }
-  .hero-satisfied-badge {
-    display: inline-flex !important;
-    justify-content: center !important;
-    margin: 0 auto 24px !important;
   }
   .hero-cta-row {
     flex-direction: column !important;
